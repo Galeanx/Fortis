@@ -6,16 +6,14 @@
     font-family: "Montserrat", system-ui;
 }
 
-/* El cambio para verificar que esta funcionando todo*/
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1d938a;
+    background-color:rgb(255, 230, 0);
     color: white;
-    padding: 80px 50px;
+    padding: 60px 30px;
 }
-
 
 .logo {
     font-size: 1.5em;
