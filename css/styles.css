@@ -11,12 +11,16 @@
     background-color: #1d938a;
     color: white;
     padding: 10px 0;
+    margin-inline-end: 30px;
   }
   
+/* le agregue para lo que dijo sanchez es el margin inline -end : 30px */
+
   /* Logo */
   .logo-image {
     max-width: 100%;
     height: auto;
+  
   }
   
   /* Barra de búsqueda */
