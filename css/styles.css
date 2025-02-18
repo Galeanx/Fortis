@@ -6,155 +6,88 @@
     font-family: "Montserrat", system-ui;
   }
   
-  /* General */
+
   header {
     background-color: #1d938a;
-    color: white;
-    padding: 10px 0;
-    margin-inline-end: 30px;
-  }
-  
-/* le agregue para lo que dijo sanchez es el margin inline -end : 30px */
-
-  /* Logo */
-  .logo-image {
-    max-width: 100%;
-    height: auto;
-  
-  }
-  
-  /* Barra de búsqueda */
-  .search-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background: white;
-    border-radius: 20px;
-    padding: 5px 8px;
-    position: relative;
-    z-index: 10; /* Asegura que la barra de búsqueda esté siempre por encima de otros elementos */
-  }
-  
-  .search-container input {
-    flex: 1;
-    border: none;
-    padding: 8px 10px;
-    font-size: 14px;
-    border-radius: 20px;
-  }
-  
-  .search-container button {
-    border: none;
-    background: transparent;
-    color: #1d938a;
-    font-size: 18px;
-    padding: 5px;
-  }
-  
-  /* Corregimos la visibilidad en dispositivos móviles */
-  @media (max-width: 576px) {
-    .search-container {
-      width: 100%; /* Aseguramos que ocupe todo el espacio disponible */
-      padding: 10px;
-    }
-  
-    .search-container input {
-      font-size: 16px;
-    }
-  }
-  
-  @media (min-width: 576px) and (max-width: 768px) {
-    .search-container {
-      padding: 10px;
-    }
-  
-    .search-container input {
-      font-size: 16px;
-    }
-  }
-  
-  @media (min-width: 769px) {
-    .search-container {
-      width: 70%;
-    }
-  }
-  
-  /* Botones */
-  .btn-nav {
-    display: inline-block;
-    padding: 8px 15px;
-    margin: 0;
-    border-radius: 20px;
-    background-color: transparent;
+    padding: 15px 30px;
+    height: auto; /* Permite que el header se ajuste a su contenido */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
     color: white;
-    font-size: 14px;
-    text-align: center;
-    transition: all 0.3s;
-  }
-  
-  .btn-nav:hover {
+    /* Define un tamaño máximo para el logo, pero puedes modificarlo */
+    max-width: 150px; /* Ajusta este valor según lo que necesites */
+    height: auto; /* Mantiene la proporción original del logo */
+    transition: font-size 0.3s ease; /* Suaviza el cambio de tamaño si es necesario */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+/* Línea solo para los enlaces normales */
+nav ul li a:not(.ingresar)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:not(.ingresar):hover::after {
+    width: 100%;
+}
+
+nav ul li .ingresar {
     background-color: white;
     color: #1d938a;
-  }
-  
-  .btn-highlight {
-    background-color: #ffffff;
-    color: #1d938a;
-    border: 1px solid #ffffff;
-  }
-  
-  .btn-highlight:hover {
-    background-color: #1a766e;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    text-decoration: none; /* Elimina la línea de debajo del botón 'Ingresar' */
+}
+
+nav ul li .ingresar:hover {
+    transform: scale(1.2);
+    background-color: #136f66;
     color: white;
-  }
-  
-  .btn-menu {
-    background-color: #ffffff;
-    color: #1d938a;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 20px;
-  }
-  
-  .btn-menu:hover {
-    background-color: #1a766e;
-    color: white;
-  }
-  
-  #mobileMenu {
-    background-color: #1d938a;
-    padding: 15px;
-  }
-  
-  /* Responsividad */
-  @media (max-width: 576px) {
-    .btn-nav {
-      font-size: 16px;
-      width: 100%;
-      padding: 12px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
     }
-  
-    .search-container {
-      width: 100%;
+    nav ul {
+        padding-top: 10px;
     }
-  
-    #mobileMenu .dropdown-menu {
-      background-color: #1d938a;
-    }
-  
-    .btn-menu {
-      padding: 12px;
-      font-size: 24px;
-    }
-  }
-  
-  @media (min-width: 576px) and (max-width: 768px) {
-    .btn-nav {
-      font-size: 16px;
-      margin-left: 10;
-      padding: 12px 0;
-    }
-  }
-  
+}
   /* Hero section */
   .hero-section {
     background-color: #f8f9fa;
