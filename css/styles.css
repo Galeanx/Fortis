@@ -6,89 +6,60 @@
     font-family: "Montserrat", system-ui;
   }
   
-
-  header {
-    background-color: #1d938a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    height: auto; /* Permite que el header se ajuste a su contenido */
+  /* Estilos generales */
+header {
+  background-color: #1d938a;
+  padding: 15px 30px;
 }
-
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    /* Define un tamaño máximo para el logo, pero puedes modificarlo */
-    max-width: 150px; /* Ajusta este valor según lo que necesites */
-    height: auto; /* Mantiene la proporción original del logo */
-    transition: font-size 0.3s ease; /* Suaviza el cambio de tamaño si es necesario */
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.navbar-nav {
+  gap: 25px; /* Aumenta la separación entre botones */
+}
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+/* Animación de la línea en los enlaces, excepto en 'Ingresar' */
+.navbar-nav .nav-link:not(.ingresar)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0; /* Inicia invisible */
+  height: 2px;
+  background: white;
+  transition: width 0.4s ease-out, left 0.4s ease-out;
+  transform: translateX(-50%);
+}
+.navbar-nav .nav-link:not(.ingresar):hover::after {
+  width: 50%; /* Línea más corta */
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Estilos del botón 'Ingresar' */
+.ingresar {
+  background-color: white;
+  color: #1d938a !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.4s ease-out, color 0.4s ease-out, transform 0.3s ease-out;
+}
+.ingresar:hover {
+  background-color: #136f66;
+  color: white !important;
+  transform: scale(1.05); /* Aumento más sutil del tamaño */
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    position: relative;
-    padding-bottom: 5px;
-    transition: color 0.3s;
-}
-
-/* Línea solo para los enlaces normales */
-nav ul li a:not(.ingresar)::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: width 0.3s ease-in-out;
-}
-
-nav ul li a:not(.ingresar):hover::after {
-    width: 100%;
-}
-
-nav ul li .ingresar {
-    background-color: white;
-    color: #1d938a;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
-    text-decoration: none; /* Elimina la línea de debajo del botón 'Ingresar' */
-}
-
-nav ul li .ingresar:hover {
-    transform: scale(1.2);
-    background-color: #136f66;
-    color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul {
-        padding-top: 10px;
-    }
-}
-  /* Hero section */
   .hero-section {
     background-color: #f8f9fa;
     padding: 80px 0;
