@@ -4,90 +4,70 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Montserrat", system-ui;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  }
+  
+  /* Estilos generales */
+  header {
     background-color: #1d938a;
+    padding: 15px 30px;
+  }
+  
+  /* Logo */
+  .logo img {
+    width: 140px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Evita espacios adicionales */
+    margin-left: 150px;
+  }
+  
+  .navbar-nav {
+    gap: 30px; /* Ajuste de separación más visible entre botones */
+    margin-right: 70px;
+  }
+  
+  .navbar-nav .nav-link {
     color: white;
-    padding: 60px 30px;
-}
-
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 30px;
-    padding: 12px;
-    width: 300px;
-}
-
-.search-container input {
-    border: none;
-    padding: 5px;
-    flex: 1;
-}
-
-.search-container button {
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    color: #1d938a;
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
     font-size: 18px;
-}
-
-.header-buttons {
-    display: flex;
-    align-items: center;
-}
-
-.header-buttons a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    margin: 0 5px;
-    border-radius: 20px;
-}
-
-.header-buttons .Inicio,
-.header-buttons .Ingresar {
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+  }
+  
+  /* Animación de la línea en los enlaces, excepto en 'Ingresar' */
+  .navbar-nav .nav-link:not(.ingresar)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0; /* Inicia invisible */
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-nav .nav-link:not(.ingresar):hover::after {
+    width: 40%; /* Línea más corta y menos agresiva */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Estilos del botón 'Ingresar' */
+  .ingresar {
     background-color: white;
-    color: #1d938a;
-}
-
-.Ingresar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 10px;
-    background-color: white;
-    color: #1d938a;
+    color: #1d938a !important;
+    padding: 8px 15px;
     border-radius: 5px;
-    font-size: 16px;
-    gap: 20px;
-}
-
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .ingresar:hover {
+    background-color: #136f66;
+    color: white !important;
+    transform: scale(1.03); /* Aumento más sutil del tamaño */
+  }
+  
 section {
     background-image: url('../sources/images/fondo-formulario.png'); /* Cambia esto por la ruta de tu imagen */
     background-size: cover; /* Ajusta la imagen para que cubra toda la página */

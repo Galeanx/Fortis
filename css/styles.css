@@ -1,25 +1,30 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Montserrat", system-ui;
-  }
-  
-  /* Estilos generales */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", system-ui;
+}
+
+/* Estilos generales */
 header {
   background-color: #1d938a;
   padding: 15px 30px;
 }
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
+
+/* Logo */
+.logo img {
+  width: 140px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Evita espacios adicionales */
+  margin-left: 150px;
 }
+
 .navbar-nav {
-  gap: 25px; /* Aumenta la separación entre botones */
+  gap: 30px; /* Ajuste de separación más visible entre botones */
+  margin-right: 70px;
 }
+
 .navbar-nav .nav-link {
   color: white;
   font-size: 18px;
@@ -27,6 +32,7 @@ header {
   padding-bottom: 5px;
   transition: color 0.3s;
 }
+
 /* Animación de la línea en los enlaces, excepto en 'Ingresar' */
 .navbar-nav .nav-link:not(.ingresar)::after {
   content: '';
@@ -36,14 +42,16 @@ header {
   width: 0; /* Inicia invisible */
   height: 2px;
   background: white;
-  transition: width 0.4s ease-out, left 0.4s ease-out;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
   transform: translateX(-50%);
 }
+
 .navbar-nav .nav-link:not(.ingresar):hover::after {
-  width: 50%; /* Línea más corta */
+  width: 40%; /* Línea más corta y menos agresiva */
   left: 50%;
   transform: translateX(-50%);
 }
+
 /* Estilos del botón 'Ingresar' */
 .ingresar {
   background-color: white;
@@ -51,12 +59,13 @@ header {
   padding: 8px 15px;
   border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.4s ease-out, color 0.4s ease-out, transform 0.3s ease-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
+
 .ingresar:hover {
   background-color: #136f66;
   color: white !important;
-  transform: scale(1.05); /* Aumento más sutil del tamaño */
+  transform: scale(1.03); /* Aumento más sutil del tamaño */
 }
 
 
@@ -279,7 +288,7 @@ header {
   }
   
   .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px);+
   }
   
   .card-img-top {
