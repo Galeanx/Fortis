@@ -3,7 +3,7 @@ const container = document.querySelector('.container');
 const textobusqueda = document.querySelector('#textobusqueda');
 const buscador = document.querySelector('#search-container');
 
-/* Actualización código */
+/* Actualización codigo */
 
 document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('.menu').classList.toggle('open');
