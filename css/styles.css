@@ -34,7 +34,7 @@ header {
 }
 
 /* Animación de la línea en los enlaces, excepto en 'Ingresar' */
-.navbar-nav .nav-link:not(.ingresar)::after {
+.navbar-nav .nav-link:not(.ingresar,.perfil)::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -68,6 +68,27 @@ header {
   transform: scale(1.03); /* Aumento más sutil del tamaño */
 }
 
+.perfil {
+        background-color: white;
+        color: #1d938a !important;
+        padding: 8px 12px;
+        border-radius: 50%;
+        font-weight: bold;
+        transition: background-color 0.4s ease-out, color 0.4s ease-out, transform 0.3s ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+    }
+    .perfil i {
+        font-size: 20px;
+    }
+    .perfil:hover {
+        background-color: #136f66;
+        color: white !important;
+        transform: scale(1.05);
+    }
 
   .hero-section {
     background-color: #f8f9fa;
@@ -288,7 +309,7 @@ header {
   }
   
   .card:hover {
-    transform: translateY(-10px);+
+    transform: translateY(-10px);
   }
   
   .card-img-top {

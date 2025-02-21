@@ -43,25 +43,6 @@ function mostrarResults(filtro) {
     });
 }
 
-function filtrar(e) {
-    e.preventDefault();
-    container.innerHTML = "";
-
-    let filtro = modulos;
-
-    // Filtrar por búsqueda de texto
-    if (textobusqueda.value) {
-        filtro = filtro.filter(modulo =>
-            modulo.nombre.toLowerCase().includes(textobusqueda.value.toLowerCase())
-        );
-    }
-
-    console.log("Resultado del filtro:", filtro);
-
-    // Mostrar los resultados filtrados
-    mostrarResults(filtro);
-}
-
 // Event listener para el formulario de búsqueda
 buscador.addEventListener('submit', filtrar);
 
@@ -95,4 +76,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mostrar todos los módulos al cargar la página
     mostrarResults(modulos);
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let usuario = localStorage.getItem("usuario");
+        let perfilContainer = document.getElementById("perfil-container");
+        let ingresarBtn = document.querySelector(".ingresar");
+        
+        if (usuario) {
+            perfilContainer.style.display = "block";
+            ingresarBtn.style.display = "none";
+        }
+    });
+    
 });
