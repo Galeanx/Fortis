@@ -11,10 +11,8 @@
     background-color: #1d938a;
     color: white;
     padding: 10px 0;
-    margin-inline-end: 30px;
   }
   
-/* le agregue para lo que dijo sanchez es el margin inline -end : 30px */
 
   /* Logo */
   .logo-image {
@@ -500,7 +498,7 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 200px;
+    height: 300px;
     color: #ffffff;
     font-size: 18px;
 }
@@ -508,6 +506,7 @@ footer {
 .social-buttons {
     display: flex;
     gap: 20px;
+    
 }
 
 .social-btn {
