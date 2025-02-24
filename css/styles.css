@@ -1,20 +1,4 @@
 * {
-<<<<<<< HEAD
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Montserrat", system-ui;
-  }
-  
-  /* General */
-  header {
-    background-color: #1d938a;
-    color: white;
-    padding: 10px 0;
-  }
-  
-=======
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -84,9 +68,6 @@ header {
   transform: scale(1.03); /* Aumento más sutil del tamaño */
 }
 
-<<<<<<< HEAD
->>>>>>> 3aa06f33f9ae190d3aa735674392e4f51f338bfc
-=======
 .perfil {
         background-color: white;
         color: #1d938a !important;
@@ -99,16 +80,18 @@ header {
         justify-content: center;
         width: 40px;
         height: 40px;
+        gap: 8px;
     }
-    .perfil i {
-        font-size: 20px;
-    }
+  .perfil span {
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+  }
     .perfil:hover {
         background-color: #136f66;
         color: white !important;
         transform: scale(1.05);
     }
->>>>>>> db5ec8e0ab6cbea8006ddfb9857284f3d31e1c2e
 
   .hero-section {
     background-color: #f8f9fa;
@@ -454,7 +437,7 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 200px;
     color: #ffffff;
     font-size: 18px;
 }
@@ -462,7 +445,6 @@ footer {
 .social-buttons {
     display: flex;
     gap: 20px;
-    
 }
 
 .social-btn {
