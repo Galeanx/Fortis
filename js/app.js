@@ -3,6 +3,11 @@ const container = document.querySelector('.container');
 const textobusqueda = document.querySelector('#textobusqueda');
 const buscador = document.querySelector('#search-container');
 
+/* Prueba codigo */
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.menu').classList.toggle('open');
+});
 function ingresar() {
     window.location = './vistas/ingreso.html';
 }

@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,147 +14,78 @@
     padding: 10px 0;
   }
   
+=======
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", system-ui;
+}
 
-  /* Logo */
-  .logo-image {
-    max-width: 100%;
-    height: auto;
-  
-  }
-  
-  /* Barra de búsqueda */
-  .search-container {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 20px;
-    padding: 5px 8px;
-    position: relative;
-    z-index: 10; /* Asegura que la barra de búsqueda esté siempre por encima de otros elementos */
-  }
-  
-  .search-container input {
-    flex: 1;
-    border: none;
-    padding: 8px 10px;
-    font-size: 14px;
-    border-radius: 20px;
-  }
-  
-  .search-container button {
-    border: none;
-    background: transparent;
-    color: #1d938a;
-    font-size: 18px;
-    padding: 5px;
-  }
-  
-  /* Corregimos la visibilidad en dispositivos móviles */
-  @media (max-width: 576px) {
-    .search-container {
-      width: 100%; /* Aseguramos que ocupe todo el espacio disponible */
-      padding: 10px;
-    }
-  
-    .search-container input {
-      font-size: 16px;
-    }
-  }
-  
-  @media (min-width: 576px) and (max-width: 768px) {
-    .search-container {
-      padding: 10px;
-    }
-  
-    .search-container input {
-      font-size: 16px;
-    }
-  }
-  
-  @media (min-width: 769px) {
-    .search-container {
-      width: 70%;
-    }
-  }
-  
-  /* Botones */
-  .btn-nav {
-    display: inline-block;
-    padding: 8px 15px;
-    margin: 0;
-    border-radius: 20px;
-    background-color: transparent;
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    transition: all 0.3s;
-  }
-  
-  .btn-nav:hover {
-    background-color: white;
-    color: #1d938a;
-  }
-  
-  .btn-highlight {
-    background-color: #ffffff;
-    color: #1d938a;
-    border: 1px solid #ffffff;
-  }
-  
-  .btn-highlight:hover {
-    background-color: #1a766e;
-    color: white;
-  }
-  
-  .btn-menu {
-    background-color: #ffffff;
-    color: #1d938a;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 20px;
-  }
-  
-  .btn-menu:hover {
-    background-color: #1a766e;
-    color: white;
-  }
-  
-  #mobileMenu {
-    background-color: #1d938a;
-    padding: 15px;
-  }
-  
-  /* Responsividad */
-  @media (max-width: 576px) {
-    .btn-nav {
-      font-size: 16px;
-      width: 100%;
-      padding: 12px 0;
-    }
-  
-    .search-container {
-      width: 100%;
-    }
-  
-    #mobileMenu .dropdown-menu {
-      background-color: #1d938a;
-    }
-  
-    .btn-menu {
-      padding: 12px;
-      font-size: 24px;
-    }
-  }
-  
-  @media (min-width: 576px) and (max-width: 768px) {
-    .btn-nav {
-      font-size: 16px;
-      margin-left: 10;
-      padding: 12px 0;
-    }
-  }
-  
-  /* Hero section */
+/* Estilos generales */
+header {
+  background-color: #1d938a;
+  padding: 15px 30px;
+}
+
+/* Logo */
+.logo img {
+  width: 140px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Evita espacios adicionales */
+  margin-left: 150px;
+}
+
+.navbar-nav {
+  gap: 30px; /* Ajuste de separación más visible entre botones */
+  margin-right: 70px;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+/* Animación de la línea en los enlaces, excepto en 'Ingresar' */
+.navbar-nav .nav-link:not(.ingresar)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0; /* Inicia invisible */
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:not(.ingresar):hover::after {
+  width: 40%; /* Línea más corta y menos agresiva */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilos del botón 'Ingresar' */
+.ingresar {
+  background-color: white;
+  color: #1d938a !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.ingresar:hover {
+  background-color: #136f66;
+  color: white !important;
+  transform: scale(1.03); /* Aumento más sutil del tamaño */
+}
+
+>>>>>>> 3aa06f33f9ae190d3aa735674392e4f51f338bfc
+
   .hero-section {
     background-color: #f8f9fa;
     padding: 80px 0;
@@ -373,7 +305,7 @@
   }
   
   .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px);+
   }
   
   .card-img-top {

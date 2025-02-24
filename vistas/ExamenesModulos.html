@@ -1,0 +1,71 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortis - Bienestar Deportivo</title>
+    <link rel="stylesheet" href="/css/examenesModulos.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a Fortis</h1>
+        <p>Tu Camino Hacia el Bienestar Deportivo</p>
+        <nav>
+            <ul class="navbar-nav">
+                <li><a href="#" class="nav-link" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+                <li><a href="#" class="nav-link" onclick="mostrarSeccion('nosotros')">Nosotros</a></li>
+                <li><a href="#" class="nav-link" onclick="mostrarSeccion('modulos')">Módulos</a></li>
+                <li><a href="#" class="nav-link" onclick="mostrarSeccion('examenes')">Exámenes</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="inicio" class="seccion">
+        <h2>Bienvenido a Fortis</h2>
+        <p>En <strong>Fortis</strong>, creemos que el deporte es mucho más que actividad física...</p>
+    </section>
+
+    <section id="nosotros" class="seccion">
+        <h2>Sobre Nosotros</h2>
+        <p>En <strong>Fortis</strong>, creemos que el deporte es clave para el bienestar físico y mental...</p>
+    </section>
+
+    <section id="modulos" class="seccion">
+        <h2>Nuestros Módulos</h2>
+        <div class="modulo">
+            <h3>Fundamentos del Bienestar Deportivo</h3>
+            <p>Comprende los principios esenciales del deporte y su impacto en la salud...</p>
+            <p>Duración: 4 semanas</p>
+            <p>Requisitos: Ninguno</p>
+        </div>
+        <div class="modulo">
+            <h3>Entrenamiento Físico Personalizado</h3>
+            <p>Descubre cómo diseñar planes de entrenamiento adaptados...</p>
+            <p>Duración: 6 semanas</p>
+            <p>Requisitos: Evaluación inicial</p>
+        </div>
+    </section>
+
+    <section id="examenes" class="seccion">
+        <h2>Exámenes</h2>
+        <div class="examen">
+            <h3>Examen: Fundamentos del Bienestar Deportivo</h3>
+            <form>
+                <p>1. ¿Cuál es el principal beneficio del deporte?</p>
+                <input type="radio" name="q1" value="a"> a) Diversión <br>
+                <input type="radio" name="q1" value="b"> b) Bienestar físico y mental <br>
+                <input type="radio" name="q1" value="c"> c) Competencia <br>
+
+                <p>2. ¿Qué es clave para una rutina de ejercicio efectiva?</p>
+                <input type="radio" name="q2" value="a"> a) La motivación <br>
+                <input type="radio" name="q2" value="b"> b) La constancia <br>
+                <input type="radio" name="q2" value="c"> c) Ambas <br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>

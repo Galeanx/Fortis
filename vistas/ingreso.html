@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortis</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -13,31 +21,25 @@
     <link rel="icon" type="image/x-icon" href="../sources/images/Mini-logo.png">
 </head>
 <body>
-<header>
-    <div class="logo">Logo</div>
-    <div class="search-container">
-        <input type="text" placeholder="Escribe aquí...">
-        <a href="#" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
-    </div>
-    <nav class="header-buttons">
-        <a href="../index.html" class="Inicio">Inicio</a>
-        <div class="dropdown">
-            <a href="#" class="dropbtn">Módulos</a>
-            <div class="dropdown-content">
-                <a href="./modulo1.html">Módulo 1</a>
-                <a href="./modulo2.html">Módulo 2</a>
-                <a href="./modulo3.html">Módulo 3</a>
-                <a href="./modulo4.html">Módulo 4</a>
-                <a href="./modulo5.html">Módulo 5</a>
-                <a href="./modulo6.html">Módulo 6</a>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand logo">
+                    <img src="../sources/images/Logoblanco.svg" alt="Logo de Fortis">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="/index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="/vistas/nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li class="nav-item"><a href="/vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <a href="#">Nosotros</a>
-        <a href="#" class="Ingresar">Ingresar
-            <i class="fas fa-sign-in-alt"></i>
-        </a>
-    </nav>
-</header>
+        </nav>
+    </header>
 <section>
     <div class="form-container">
         <div class="form-header">
