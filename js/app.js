@@ -78,14 +78,15 @@ document.addEventListener('DOMContentLoaded', function() {
     mostrarResults(modulos);
 
     document.addEventListener("DOMContentLoaded", function () {
-        let usuario = localStorage.getItem("usuario");
+        let usuario = JSON.parse(localStorage.getItem("usuario"));
         let perfilContainer = document.getElementById("perfil-container");
         let ingresarBtn = document.querySelector(".ingresar");
+        let nombreUsuario = document.getElementById("nombre-usuario");
         
-        if (usuario) {
+        if (usuario && usuario.nombre) {
             perfilContainer.style.display = "block";
             ingresarBtn.style.display = "none";
+            nombreUsuario.textContent = usuario.nombre;
         }
     });
-    
 });
