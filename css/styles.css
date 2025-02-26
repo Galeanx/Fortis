@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 * {
 
     margin: 0;
@@ -16,11 +15,9 @@
     padding: 10px 0;
   }
   
-=======
-{
-=======
+
 * {
->>>>>>> 47108855d246f31a772c7fe13169fcd5e44f87c6
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -102,12 +99,6 @@ header {
         justify-content: center;
         width: 40px;
         height: 40px;
-<<<<<<< HEAD
-    };
-    .perfil i {
-        font-size: 20px;
-    }
-=======
         gap: 8px;
     }
   .perfil span {
@@ -115,7 +106,6 @@ header {
       color: white;
       font-weight: bold;
   }
->>>>>>> 47108855d246f31a772c7fe13169fcd5e44f87c6
     .perfil:hover {
         background-color: #136f66;
         color: white !important;
