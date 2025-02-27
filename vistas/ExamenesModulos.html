@@ -14,10 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/examenesModulos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="sources/images/Mini-logo.png">
 </head>
 
@@ -25,8 +29,8 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand logo">
-                    <img src="sources/images/Logoblanco.svg" alt="Logo de Fortis">
+                <a href="/index.html" class="navbar-brand logo">
+                    <img src="../sources/images/Logoblanco.svg" alt="Logo de Fortis">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,63 +38,581 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                        <li class="nav-item">
+                            <!-- Enlace corregido para redirigir correctamente a la pantalla de inicio -->
+                            <a href="/index.html" class="nav-link">Inicio</a>
+                        </li>
                         <li class="nav-item"><a href="/vistas/nosotros.html" class="nav-link">Nosotros</a></li>
                         <li class="nav-item"><a href="/vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
-                        <li class="nav-item" id="perfil-container" style="display: none;">
-                            <a href="/vistas/perfil.html" class="nav-link perfil">
-                                <i class="fa-solid fa-user"></i> <span id="nombre-usuario"></span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <h2>Nuestros Módulos</h2>
 
-    <section id="modulos" class="seccion" class="carta">
-        <div class="contenedor-grid">
+<section>
+    <div class="container text-center mt-5">
+        <h2>Nuestros Módulos</h2>
 
-            <div class="modulo">
-                <h3>Fundamentos del Bienestar Deportivo</h3>
-                <p>Comprende los principios esenciales del deporte y su impacto en la salud...</p>
-                <p>Duración: 4 semanas</p>
-                <p>Requisitos: Ninguno</p>
-            </div>
-            <div class="modulo" class="carta">
-                <h3>Entrenamiento Físico Personalizado</h3>
-                <p>Descubre cómo diseñar planes de entrenamiento adaptados...</p>
-                <p>Duración: 6 semanas</p>
-                <p>Requisitos: Evaluación inicial</p>
-            </div>
-            <div class="modulo" class="carta">
-                <h3>Entrenamiento Físico Personalizado</h3>
-                <p>Descubre cómo diseñar planes de entrenamiento adaptados...</p>
-                <p>Duración: 6 semanas</p>
-                <p>Requisitos: Evaluación inicial</p>
-            </div>
-            <div class="modulo" class="carta">
-                <h3>Entrenamiento Físico Personalizado</h3>
-                <p>Descubre cómo diseñar planes de entrenamiento adaptados...</p>
-                <p>Duración: 6 semanas</p>
-                <p>Requisitos: Evaluación inicial</p>
-            </div>
-            <div class="modulo" class="carta">
-                <h3>Entrenamiento Físico Personalizado</h3>
-                <p>Descubre cómo diseñar planes de entrenamiento adaptados...</p>
-                <p>Duración: 6 semanas</p>
-                <p>Requisitos: Evaluación inicial</p>
-            </div>
-            <div class="modulo" class="carta">
-                <h3>Entrenamiento Físico Personalizado</h3>
-                <p>Descubre cómo diseñar planes de entrenamiento adaptados...</p>
-                <p>Duración: 6 semanas</p>
-                <p>Requisitos: Evaluación inicial</p>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card p-3 shadow">
+                    <h3>Fundamentos del Bienestar Deportivo</h3>
+                    <p>Comprende los principios esenciales del deporte y su impacto en la salud.</p>
+                    <p><strong>Duración:</strong> 4 semanas</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modulo1Modal">
+                        Ir al curso
+                    </button>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Modal de Contenido del Curso -->
+    <div class="modal fade" id="modulo1Modal" tabindex="-1" aria-labelledby="modulo1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modulo1ModalLabel">Fundamentos del Bienestar Deportivo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Video del curso -->
+                    <div class="video-container text-center">
+                        <h3>Video introductorio</h3>
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <hr>
+
+                    <!-- Contenido del curso -->
+                    <h3>1. Importancia del Ejercicio Físico</h3>
+                    <p>El ejercicio regular mejora la salud cardiovascular, fortalece los músculos y mantiene un peso
+                        saludable. También contribuye a reducir el estrés y mejorar el estado de ánimo.</p>
+
+                    <h3>2. Nutrición Balanceada</h3>
+                    <p>Una buena alimentación es clave para el rendimiento deportivo y la recuperación muscular.</p>
+
+                    <h3>3. Descanso y Recuperación</h3>
+                    <p>El descanso es fundamental para el proceso de recuperación muscular y la prevención de lesiones.</p>
+
+                    <hr>
+
+                    <!-- Quiz del curso -->
+                    <div class="quiz-container">
+                        <h3>Quiz: Fundamentos del Bienestar Deportivo</h3>
+
+                        <p><strong>1. ¿Cuántos minutos de ejercicio recomienda la OMS a la semana?</strong></p>
+                        <input type="radio" name="q1" value="a"> A) 30 minutos <br>
+                        <input type="radio" name="q1" value="b"> B) 150 minutos <br>
+                        <input type="radio" name="q1" value="c"> C) 300 minutos <br>
+
+                        <p><strong>2. ¿Cuál de estos NO es un macronutriente?</strong></p>
+                        <input type="radio" name="q2" value="a"> A) Vitaminas <br>
+                        <input type="radio" name="q2" value="b"> B) Carbohidratos <br>
+                        <input type="radio" name="q2" value="c"> C) Proteínas <br>
+
+                        <p><strong>3. ¿Cuál es un beneficio del ejercicio regular?</strong></p>
+                        <input type="radio" name="q3" value="a"> A) Aumenta el estrés <br>
+                        <input type="radio" name="q3" value="b"> B) Mejora la salud cardiovascular <br>
+                        <input type="radio" name="q3" value="c"> C) Disminuye la masa muscular <br>
+
+                        <p><strong>4. ¿Cuántas horas de sueño se recomiendan para una buena recuperación?</strong></p>
+                        <input type="radio" name="q4" value="a"> A) 4-5 horas <br>
+                        <input type="radio" name="q4" value="b"> B) 7-9 horas <br>
+                        <input type="radio" name="q4" value="c"> C) 10-12 horas <br>
+
+                        <button class="btn btn-success mt-2" onclick="revisarQuiz()">Enviar Respuestas</button>
+                        <p id="resultado"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <h3>Fundamentos del Bienestar Deportivo</h3>
+                <p>Comprende los principios esenciales del deporte y su impacto en la salud.</p>
+                <p><strong>Duración:</strong> 4 semanas</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modulo1Modal">
+                    Ir al curso
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Contenido del Curso -->
+<div class="modal fade" id="modulo1Modal" tabindex="-1" aria-labelledby="modulo1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modulo1ModalLabel">Fundamentos del Bienestar Deportivo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Video del curso -->
+                <div class="video-container text-center">
+                    <h3>Video introductorio</h3>
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+
+                <hr>
+
+                <!-- Contenido del curso -->
+                <h3>1. Importancia del Ejercicio Físico</h3>
+                <p>El ejercicio regular mejora la salud cardiovascular, fortalece los músculos y mantiene un peso
+                    saludable. También contribuye a reducir el estrés y mejorar el estado de ánimo.</p>
+
+                <h3>2. Nutrición Balanceada</h3>
+                <p>Una buena alimentación es clave para el rendimiento deportivo y la recuperación muscular.</p>
+
+                <h3>3. Descanso y Recuperación</h3>
+                <p>El descanso es fundamental para el proceso de recuperación muscular y la prevención de lesiones.</p>
+
+                <hr>
+
+                <!-- Quiz del curso -->
+                <div class="quiz-container">
+                    <h3>Quiz: Fundamentos del Bienestar Deportivo</h3>
+
+                    <p><strong>1. ¿Cuántos minutos de ejercicio recomienda la OMS a la semana?</strong></p>
+                    <input type="radio" name="q1" value="a"> A) 30 minutos <br>
+                    <input type="radio" name="q1" value="b"> B) 150 minutos <br>
+                    <input type="radio" name="q1" value="c"> C) 300 minutos <br>
+
+                    <p><strong>2. ¿Cuál de estos NO es un macronutriente?</strong></p>
+                    <input type="radio" name="q2" value="a"> A) Vitaminas <br>
+                    <input type="radio" name="q2" value="b"> B) Carbohidratos <br>
+                    <input type="radio" name="q2" value="c"> C) Proteínas <br>
+
+                    <p><strong>3. ¿Cuál es un beneficio del ejercicio regular?</strong></p>
+                    <input type="radio" name="q3" value="a"> A) Aumenta el estrés <br>
+                    <input type="radio" name="q3" value="b"> B) Mejora la salud cardiovascular <br>
+                    <input type="radio" name="q3" value="c"> C) Disminuye la masa muscular <br>
+
+                    <p><strong>4. ¿Cuántas horas de sueño se recomiendan para una buena recuperación?</strong></p>
+                    <input type="radio" name="q4" value="a"> A) 4-5 horas <br>
+                    <input type="radio" name="q4" value="b"> B) 7-9 horas <br>
+                    <input type="radio" name="q4" value="c"> C) 10-12 horas <br>
+
+                    <button class="btn btn-success mt-2" onclick="revisarQuiz()">Enviar Respuestas</button>
+                    <p id="resultado"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card p-3 shadow">
+            <h3>Fundamentos del Bienestar Deportivo</h3>
+            <p>Comprende los principios esenciales del deporte y su impacto en la salud.</p>
+            <p><strong>Duración:</strong> 4 semanas</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modulo1Modal">
+                Ir al curso
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Modal de Contenido del Curso -->
+<div class="modal fade" id="modulo1Modal" tabindex="-1" aria-labelledby="modulo1ModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modulo1ModalLabel">Fundamentos del Bienestar Deportivo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Video del curso -->
+            <div class="video-container text-center">
+                <h3>Video introductorio</h3>
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+
+            <hr>
+
+            <!-- Contenido del curso -->
+            <h3>1. Importancia del Ejercicio Físico</h3>
+            <p>El ejercicio regular mejora la salud cardiovascular, fortalece los músculos y mantiene un peso
+                saludable. También contribuye a reducir el estrés y mejorar el estado de ánimo.</p>
+
+            <h3>2. Nutrición Balanceada</h3>
+            <p>Una buena alimentación es clave para el rendimiento deportivo y la recuperación muscular.</p>
+
+            <h3>3. Descanso y Recuperación</h3>
+            <p>El descanso es fundamental para el proceso de recuperación muscular y la prevención de lesiones.</p>
+
+            <hr>
+
+            <!-- Quiz del curso -->
+            <div class="quiz-container">
+                <h3>Quiz: Fundamentos del Bienestar Deportivo</h3>
+
+                <p><strong>1. ¿Cuántos minutos de ejercicio recomienda la OMS a la semana?</strong></p>
+                <input type="radio" name="q1" value="a"> A) 30 minutos <br>
+                <input type="radio" name="q1" value="b"> B) 150 minutos <br>
+                <input type="radio" name="q1" value="c"> C) 300 minutos <br>
+
+                <p><strong>2. ¿Cuál de estos NO es un macronutriente?</strong></p>
+                <input type="radio" name="q2" value="a"> A) Vitaminas <br>
+                <input type="radio" name="q2" value="b"> B) Carbohidratos <br>
+                <input type="radio" name="q2" value="c"> C) Proteínas <br>
+
+                <p><strong>3. ¿Cuál es un beneficio del ejercicio regular?</strong></p>
+                <input type="radio" name="q3" value="a"> A) Aumenta el estrés <br>
+                <input type="radio" name="q3" value="b"> B) Mejora la salud cardiovascular <br>
+                <input type="radio" name="q3" value="c"> C) Disminuye la masa muscular <br>
+
+                <p><strong>4. ¿Cuántas horas de sueño se recomiendan para una buena recuperación?</strong></p>
+                <input type="radio" name="q4" value="a"> A) 4-5 horas <br>
+                <input type="radio" name="q4" value="b"> B) 7-9 horas <br>
+                <input type="radio" name="q4" value="c"> C) 10-12 horas <br>
+
+                <button class="btn btn-success mt-2" onclick="revisarQuiz()">Enviar Respuestas</button>
+                <p id="resultado"></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card p-3 shadow">
+            <h3>Fundamentos del Bienestar Deportivo</h3>
+            <p>Comprende los principios esenciales del deporte y su impacto en la salud.</p>
+            <p><strong>Duración:</strong> 4 semanas</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modulo1Modal">
+                Ir al curso
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Modal de Contenido del Curso -->
+<div class="modal fade" id="modulo1Modal" tabindex="-1" aria-labelledby="modulo1ModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modulo1ModalLabel">Fundamentos del Bienestar Deportivo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Video del curso -->
+            <div class="video-container text-center">
+                <h3>Video introductorio</h3>
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+
+            <hr>
+
+            <!-- Contenido del curso -->
+            <h3>1. Importancia del Ejercicio Físico</h3>
+            <p>El ejercicio regular mejora la salud cardiovascular, fortalece los músculos y mantiene un peso
+                saludable. También contribuye a reducir el estrés y mejorar el estado de ánimo.</p>
+
+            <h3>2. Nutrición Balanceada</h3>
+            <p>Una buena alimentación es clave para el rendimiento deportivo y la recuperación muscular.</p>
+
+            <h3>3. Descanso y Recuperación</h3>
+            <p>El descanso es fundamental para el proceso de recuperación muscular y la prevención de lesiones.</p>
+
+            <hr>
+
+            <!-- Quiz del curso -->
+            <div class="quiz-container">
+                <h3>Quiz: Fundamentos del Bienestar Deportivo</h3>
+
+                <p><strong>1. ¿Cuántos minutos de ejercicio recomienda la OMS a la semana?</strong></p>
+                <input type="radio" name="q1" value="a"> A) 30 minutos <br>
+                <input type="radio" name="q1" value="b"> B) 150 minutos <br>
+                <input type="radio" name="q1" value="c"> C) 300 minutos <br>
+
+                <p><strong>2. ¿Cuál de estos NO es un macronutriente?</strong></p>
+                <input type="radio" name="q2" value="a"> A) Vitaminas <br>
+                <input type="radio" name="q2" value="b"> B) Carbohidratos <br>
+                <input type="radio" name="q2" value="c"> C) Proteínas <br>
+
+                <p><strong>3. ¿Cuál es un beneficio del ejercicio regular?</strong></p>
+                <input type="radio" name="q3" value="a"> A) Aumenta el estrés <br>
+                <input type="radio" name="q3" value="b"> B) Mejora la salud cardiovascular <br>
+                <input type="radio" name="q3" value="c"> C) Disminuye la masa muscular <br>
+
+                <p><strong>4. ¿Cuántas horas de sueño se recomiendan para una buena recuperación?</strong></p>
+                <input type="radio" name="q4" value="a"> A) 4-5 horas <br>
+                <input type="radio" name="q4" value="b"> B) 7-9 horas <br>
+                <input type="radio" name="q4" value="c"> C) 10-12 horas <br>
+
+                <button class="btn btn-success mt-2" onclick="revisarQuiz()">Enviar Respuestas</button>
+                <p id="resultado"></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card p-3 shadow">
+            <h3>Fundamentos del Bienestar Deportivo</h3>
+            <p>Comprende los principios esenciales del deporte y su impacto en la salud.</p>
+            <p><strong>Duración:</strong> 4 semanas</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modulo1Modal">
+                Ir al curso
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Modal de Contenido del Curso -->
+<div class="modal fade" id="modulo1Modal" tabindex="-1" aria-labelledby="modulo1ModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modulo1ModalLabel">Fundamentos del Bienestar Deportivo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Video del curso -->
+            <div class="video-container text-center">
+                <h3>Video introductorio</h3>
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+
+            <hr>
+
+            <!-- Contenido del curso -->
+            <h3>1. Importancia del Ejercicio Físico</h3>
+            <p>El ejercicio regular mejora la salud cardiovascular, fortalece los músculos y mantiene un peso
+                saludable. También contribuye a reducir el estrés y mejorar el estado de ánimo.</p>
+
+            <h3>2. Nutrición Balanceada</h3>
+            <p>Una buena alimentación es clave para el rendimiento deportivo y la recuperación muscular.</p>
+
+            <h3>3. Descanso y Recuperación</h3>
+            <p>El descanso es fundamental para el proceso de recuperación muscular y la prevención de lesiones.</p>
+
+            <hr>
+
+            <!-- Quiz del curso -->
+            <div class="quiz-container">
+                <h3>Quiz: Fundamentos del Bienestar Deportivo</h3>
+
+                <p><strong>1. ¿Cuántos minutos de ejercicio recomienda la OMS a la semana?</strong></p>
+                <input type="radio" name="q1" value="a"> A) 30 minutos <br>
+                <input type="radio" name="q1" value="b"> B) 150 minutos <br>
+                <input type="radio" name="q1" value="c"> C) 300 minutos <br>
+
+                <p><strong>2. ¿Cuál de estos NO es un macronutriente?</strong></p>
+                <input type="radio" name="q2" value="a"> A) Vitaminas <br>
+                <input type="radio" name="q2" value="b"> B) Carbohidratos <br>
+                <input type="radio" name="q2" value="c"> C) Proteínas <br>
+
+                <p><strong>3. ¿Cuál es un beneficio del ejercicio regular?</strong></p>
+                <input type="radio" name="q3" value="a"> A) Aumenta el estrés <br>
+                <input type="radio" name="q3" value="b"> B) Mejora la salud cardiovascular <br>
+                <input type="radio" name="q3" value="c"> C) Disminuye la masa muscular <br>
+
+                <p><strong>4. ¿Cuántas horas de sueño se recomiendan para una buena recuperación?</strong></p>
+                <input type="radio" name="q4" value="a"> A) 4-5 horas <br>
+                <input type="radio" name="q4" value="b"> B) 7-9 horas <br>
+                <input type="radio" name="q4" value="c"> C) 10-12 horas <br>
+
+                <button class="btn btn-success mt-2" onclick="revisarQuiz()">Enviar Respuestas</button>
+                <p id="resultado"></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card p-3 shadow">
+            <h3>Fundamentos del Bienestar Deportivo</h3>
+            <p>Comprende los principios esenciales del deporte y su impacto en la salud.</p>
+            <p><strong>Duración:</strong> 4 semanas</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modulo1Modal">
+                Ir al curso
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Modal de Contenido del Curso -->
+<div class="modal fade" id="modulo1Modal" tabindex="-1" aria-labelledby="modulo1ModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modulo1ModalLabel">Fundamentos del Bienestar Deportivo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Video del curso -->
+            <div class="video-container text-center">
+                <h3>Video introductorio</h3>
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+
+            <hr>
+
+            <!-- Contenido del curso -->
+            <h3>1. Importancia del Ejercicio Físico</h3>
+            <p>El ejercicio regular mejora la salud cardiovascular, fortalece los músculos y mantiene un peso
+                saludable. También contribuye a reducir el estrés y mejorar el estado de ánimo.</p>
+
+            <h3>2. Nutrición Balanceada</h3>
+            <p>Una buena alimentación es clave para el rendimiento deportivo y la recuperación muscular.</p>
+
+            <h3>3. Descanso y Recuperación</h3>
+            <p>El descanso es fundamental para el proceso de recuperación muscular y la prevención de lesiones.</p>
+
+            <hr>
+
+            <!-- Quiz del curso -->
+            <div class="quiz-container">
+                <h3>Quiz: Fundamentos del Bienestar Deportivo</h3>
+
+                <p><strong>1. ¿Cuántos minutos de ejercicio recomienda la OMS a la semana?</strong></p>
+                <input type="radio" name="q1" value="a"> A) 30 minutos <br>
+                <input type="radio" name="q1" value="b"> B) 150 minutos <br>
+                <input type="radio" name="q1" value="c"> C) 300 minutos <br>
+
+                <p><strong>2. ¿Cuál de estos NO es un macronutriente?</strong></p>
+                <input type="radio" name="q2" value="a"> A) Vitaminas <br>
+                <input type="radio" name="q2" value="b"> B) Carbohidratos <br>
+                <input type="radio" name="q2" value="c"> C) Proteínas <br>
+
+                <p><strong>3. ¿Cuál es un beneficio del ejercicio regular?</strong></p>
+                <input type="radio" name="q3" value="a"> A) Aumenta el estrés <br>
+                <input type="radio" name="q3" value="b"> B) Mejora la salud cardiovascular <br>
+                <input type="radio" name="q3" value="c"> C) Disminuye la masa muscular <br>
+
+                <p><strong>4. ¿Cuántas horas de sueño se recomiendan para una buena recuperación?</strong></p>
+                <input type="radio" name="q4" value="a"> A) 4-5 horas <br>
+                <input type="radio" name="q4" value="b"> B) 7-9 horas <br>
+                <input type="radio" name="q4" value="c"> C) 10-12 horas <br>
+
+                <button class="btn btn-success mt-2" onclick="revisarQuiz()">Enviar Respuestas</button>
+                <p id="resultado"></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card p-3 shadow">
+            <h3>Fundamentos del Bienestar Deportivo</h3>
+            <p>Comprende los principios esenciales del deporte y su impacto en la salud.</p>
+            <p><strong>Duración:</strong> 4 semanas</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modulo1Modal">
+                Ir al curso
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Modal de Contenido del Curso -->
+<div class="modal fade" id="modulo1Modal" tabindex="-1" aria-labelledby="modulo1ModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modulo1ModalLabel">Fundamentos del Bienestar Deportivo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Video del curso -->
+            <div class="video-container text-center">
+                <h3>Video introductorio</h3>
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+
+            <hr>
+
+            <!-- Contenido del curso -->
+            <h3>1. Importancia del Ejercicio Físico</h3>
+            <p>El ejercicio regular mejora la salud cardiovascular, fortalece los músculos y mantiene un peso
+                saludable. También contribuye a reducir el estrés y mejorar el estado de ánimo.</p>
+
+            <h3>2. Nutrición Balanceada</h3>
+            <p>Una buena alimentación es clave para el rendimiento deportivo y la recuperación muscular.</p>
+
+            <h3>3. Descanso y Recuperación</h3>
+            <p>El descanso es fundamental para el proceso de recuperación muscular y la prevención de lesiones.</p>
+
+            <hr>
+
+            <!-- Quiz del curso -->
+            <div class="quiz-container">
+                <h3>Quiz: Fundamentos del Bienestar Deportivo</h3>
+
+                <p><strong>1. ¿Cuántos minutos de ejercicio recomienda la OMS a la semana?</strong></p>
+                <input type="radio" name="q1" value="a"> A) 30 minutos <br>
+                <input type="radio" name="q1" value="b"> B) 150 minutos <br>
+                <input type="radio" name="q1" value="c"> C) 300 minutos <br>
+
+                <p><strong>2. ¿Cuál de estos NO es un macronutriente?</strong></p>
+                <input type="radio" name="q2" value="a"> A) Vitaminas <br>
+                <input type="radio" name="q2" value="b"> B) Carbohidratos <br>
+                <input type="radio" name="q2" value="c"> C) Proteínas <br>
+
+                <p><strong>3. ¿Cuál es un beneficio del ejercicio regular?</strong></p>
+                <input type="radio" name="q3" value="a"> A) Aumenta el estrés <br>
+                <input type="radio" name="q3" value="b"> B) Mejora la salud cardiovascular <br>
+                <input type="radio" name="q3" value="c"> C) Disminuye la masa muscular <br>
+
+                <p><strong>4. ¿Cuántas horas de sueño se recomiendan para una buena recuperación?</strong></p>
+                <input type="radio" name="q4" value="a"> A) 4-5 horas <br>
+                <input type="radio" name="q4" value="b"> B) 7-9 horas <br>
+                <input type="radio" name="q4" value="c"> C) 10-12 horas <br>
+
+                <button class="btn btn-success mt-2" onclick="revisarQuiz()">Enviar Respuestas</button>
+                <p id="resultado"></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+</div>
+</div>
+          
+</section>
 
     <section id="examenes" class="seccion oculto">
         <h2>Exámenes</h2>
@@ -132,6 +654,11 @@
         </div>
     </footer>
 
+
+    <!-- Bootstrap JS -->
+    <script src="/js/examenesmodulos.js"></script>
+
+     
 </body>
 
 </html>
