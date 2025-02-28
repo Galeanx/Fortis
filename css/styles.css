@@ -87,30 +87,42 @@ header {
   transform: scale(1.03); /* Aumento más sutil del tamaño */
 }
 
+/* Estilos para el botón de perfil */
 .perfil {
-        background-color: white;
-        color: #1d938a !important;
-        padding: 8px 12px;
-        border-radius: 50%;
-        font-weight: bold;
-        transition: background-color 0.4s ease-out, color 0.4s ease-out, transform 0.3s ease-out;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        gap: 8px;
-    }
-  .perfil span {
-      font-size: 16px;
-      color: white;
-      font-weight: bold;
-  }
-    .perfil:hover {
-        background-color: #136f66;
-        color: white !important;
-        transform: scale(1.05);
-    }
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre el icono y el nombre */
+  background-color: transparent;
+  padding: 8px 12px;
+  border-radius: 50px;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.perfil i {
+  font-size: 20px;
+  color: white;
+}
+
+.perfil span {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap; /* Evita que el nombre se corte */
+}
+
+/* Ajuste en el navbar cuando el perfil aparece */
+#perfil-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Efecto al pasar el mouse */
+.perfil:hover {
+  background-color: rgba(34, 70, 51, 0.604);
+  transform: scale(1);
+}
+
+
 
   .hero-section {
     background-color: #f8f9fa;

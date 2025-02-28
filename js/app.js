@@ -1,92 +1,35 @@
-const Ingresar = document.getElementById('btnIngresar');
-const container = document.querySelector('.container');
-const textobusqueda = document.querySelector('#textobusqueda');
-const buscador = document.querySelector('#search-container');
-
-/* Prueba codigo */
-
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('.menu').classList.toggle('open');
-});
-function ingresar() {
-    window.location = './vistas/ingreso.html';
-}
-
-Ingresar.addEventListener('click', ingresar);
-
-function mostrarResults(filtro) {
-    container.innerHTML = ""; // Limpiar los módulos previos
-    console.log("Módulos a mostrar:", filtro);
-
-    if (filtro.length === 0) {
-        console.log("No se encontraron módulos que coincidan con la búsqueda.");
-    }
-
-    filtro.forEach(modulo => {
-        const mod = document.createElement('div');
-        mod.classList.add('mod');
-
-        mod.innerHTML = `
-            <div class="card">
-                <div class="card-header">
-                    <img src="${modulo.img}" alt="${modulo.nombre}">
-                </div>
-                <div class="card-body">
-                    <h1 class="nombre">${modulo.nombre}</h1>
-                    <p class="text">${modulo.descripcion}</p>
-                    <a href="${modulo.link}">Ver más</a>
-                </div>
-            </div>
-        `;
-
-        container.appendChild(mod);
-    });
-}
-
-// Event listener para el formulario de búsqueda
-buscador.addEventListener('submit', filtrar);
-
-document.addEventListener('DOMContentLoaded', function() {
-    const btnCerrarSesion = document.getElementById('btnCerrarSesion');
-    const saludoUsuario = document.getElementById('saludoUsuario');
+document.addEventListener("DOMContentLoaded", function () {
+    const perfilContainer = document.getElementById("perfil-container");
+    const logoutBtn = document.getElementById("logout-btn");
+    const ingresarBtn = document.querySelector(".ingresar");
+    const nombreUsuario = document.getElementById("nombre-usuario");
+    const perfilDropdown = document.getElementById("perfilDropdown");
 
     function verificarSesion() {
-        let currentUser = JSON.parse(localStorage.getItem('user'));
+        let usuario = JSON.parse(localStorage.getItem("usuario"));
 
-        if (currentUser) {
-            // Si hay un usuario logueado, mostrar su nombre y ocultar botones
-            saludoUsuario.textContent = `Bienvenido ${currentUser.userName}`;
-            Ingresar.style.display = 'none';
-            btnCerrarSesion.style.display = 'inline-block';
+        if (usuario && usuario.nombre) {
+            perfilContainer.style.display = "block";
+            nombreUsuario.textContent = usuario.nombre.trim();
+            if (ingresarBtn) ingresarBtn.style.display = "none";
         } else {
-            // Si no hay usuario logueado, mostrar los botones y ocultar el nombre
-            saludoUsuario.textContent = '';
-            Ingresar.style.display = 'inline-block';
-            btnCerrarSesion.style.display = 'none';
+            perfilContainer.style.display = "none";
+            if (ingresarBtn) ingresarBtn.style.display = "inline-block";
         }
     }
 
-    btnCerrarSesion.addEventListener('click', function() {
-        localStorage.removeItem('user');
-        verificarSesion(); // Actualiza la vista después de cerrar sesión
-    });
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function () {
+            localStorage.removeItem("usuario");
+            verificarSesion();
+            window.location.href = "./vistas/ingreso.html";
+        });
+    }
 
-    // Inicializa la verificación de sesión
+    // 🔹 Forzar inicialización del dropdown
+    if (perfilDropdown) {
+        new bootstrap.Dropdown(perfilDropdown);
+    }
+
     verificarSesion();
-
-    // Mostrar todos los módulos al cargar la página
-    mostrarResults(modulos);
-
-    document.addEventListener("DOMContentLoaded", function () {
-        let usuario = JSON.parse(localStorage.getItem("usuario"));
-        let perfilContainer = document.getElementById("perfil-container");
-        let ingresarBtn = document.querySelector(".ingresar");
-        let nombreUsuario = document.getElementById("nombre-usuario");
-        
-        if (usuario && usuario.nombre) {
-            perfilContainer.style.display = "block";
-            ingresarBtn.style.display = "none";
-            nombreUsuario.textContent = usuario.nombre;
-        }
-    });
 });
