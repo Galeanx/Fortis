@@ -280,3 +280,238 @@ footer {
 h2{
     text-align: center;
 }
+
+::-webkit-meter-even-less-good-value
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", system-ui;
+}
+
+/* General */
+header {
+  background-color: #1d938a;
+  color: white;
+  padding: 10px 0;
+}
+
+
+* {
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+font-family: "Montserrat", system-ui;
+}
+
+/* Estilos generales */
+header {
+background-color: #1d938a;
+padding: 15px 30px;
+}
+
+/* Logo */
+.logo img {
+width: 140px; /* Ajusta el tamaño del logo */
+height: auto; /* Mantiene la proporción */
+display: block; /* Evita espacios adicionales */
+margin-left: 150px;
+}
+
+.navbar-nav {
+gap: 30px; /* Ajuste de separación más visible entre botones */
+margin-right: 70px;
+}
+
+.navbar-nav .nav-link {
+color: white;
+font-size: 18px;
+position: relative;
+padding-bottom: 5px;
+transition: color 0.3s;
+}
+
+/* Animación de la línea en los enlaces, excepto en 'Ingresar' */
+.navbar-nav .nav-link:not(.ingresar,.perfil)::after {
+content: '';
+position: absolute;
+left: 50%;
+bottom: 0;
+width: 0; /* Inicia invisible */
+height: 2px;
+background: white;
+transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:not(.ingresar):hover::after {
+width: 40%; /* Línea más corta y menos agresiva */
+left: 50%;
+transform: translateX(-50%);
+}
+
+/* Estilos del botón 'Ingresar' */
+.ingresar {
+background-color: white;
+color: #1d938a !important;
+padding: 8px 15px;
+border-radius: 5px;
+font-weight: bold;
+transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.ingresar:hover {
+background-color: #136f66;
+color: white !important;
+transform: scale(1.03); /* Aumento más sutil del tamaño */
+}
+
+.perfil {
+      background-color: white;
+      color: #1d938a !important;
+      padding: 8px 12px;
+      border-radius: 50%;
+      font-weight: bold;
+      transition: background-color 0.4s ease-out, color 0.4s ease-out, transform 0.3s ease-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      gap: 8px;
+  }
+.perfil span {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+  .perfil:hover {
+      background-color: #136f66;
+      color: white !important;
+      transform: scale(1.05);
+  }
+
+.hero-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-section .display-4 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d938a;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-section .lead {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 30px;
+  color: #333;
+  font-size: 1rem;
+  border: 2px solid #1d938a;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.btn-social i {
+  font-size: 1.5rem;
+}
+
+.btn-social:hover {
+  background-color: #1d938a;
+  color: white;
+  transform: scale(1.1);
+}
+
+.btn-instagram {
+  border-color: #1d938a;
+}
+
+.btn-instagram:hover {
+  background-color: #1d938a;
+}
+
+.btn-youtube {
+  border-color: #1d938a;
+}
+
+.btn-youtube:hover {
+  background-color: #1d938a;
+}
+
+@media (max-width: 768px) {
+  .hero-section .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1.3rem;
+  }
+
+  .social-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .btn-social {
+    padding: 8px 12px;
+    font-size: 1rem;
+    width: auto;
+    height: 45px;
+  }
+
+  .btn-social i {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section .display-4 {
+    font-size: 2rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1.2rem;
+  }
+
+  .btn-social {
+    width: auto;
+    height: 40px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .btn-social i {
+    font-size: 1.2rem;
+  }
+}
