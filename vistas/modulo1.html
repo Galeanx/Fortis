@@ -14,69 +14,101 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="sources/images/" alt="Logo" class="logo-img">
-        </div>
-        <div class="search-container">
-            <input type="text" placeholder="Escribe aquí...">
-            <a href="#" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
-        <nav class="header-buttons">
-            <a href="../index.html" class="Inicio">Inicio</a>
-            <div class="dropdown">
-                <a href="#" class="dropbtn">Módulos</a>
-                <div class="dropdown-content">
-                    <a href="./modulo1.html">Módulo 1</a>
-                    <a href="./modulo2.html">Módulo 2</a>
-                    <a href="./modulo3.html">Módulo 3</a>
-                    <a href="./modulo4.html">Módulo 4</a>
-                    <a href="./modulo5.html">Módulo 5</a>
-                    <a href="./modulo6.html">Módulo 6</a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="/index.html" class="navbar-brand logo">
+                    <img src="/sources/images/Logoblanco.svg" alt="Logo de Fortis">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="/index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="/vistas/nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li class="nav-item"><a href="/vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
+                        <li class="nav-item" id="perfil-container" style="display: none;">
+                            <a href="/vistas/perfil.html" class="nav-link perfil">
+                                <i class="fa-solid fa-user"></i></a> <span id="nombre-usuario"></span>
+                        </li>
+                        <li class="nav-item" id="logout-container" style="display: none;">
+                            <button id="logout-btn" class="nav-link logout">Cerrar sesión</button>
+                        </li>
+                                            
+                    </ul>
                 </div>
             </div>
-            <a href="#">Nosotros</a>
-            <a href="./vistas/ingreso.html" class="Ingresar">Ingresar
-                <i class="fas fa-sign-in-alt"></i>
-            </a>
         </nav>
     </header>
-<section>
-    <div class="content">
-        <h1>MÓDULO 1</h1>
-        <h2>FUNDAMENTOS DEL BIENESTAR DEPORTIVO</h2>
-    </div>
-
-    <div class="objective-container">
-        <div class="course-objective">
-            Objetivo del curso
-        </div>
-        <div class="objective-text">
-            El objetivo principal del curso es proporcionar los conocimientos esenciales sobre los principios del
-            bienestar deportivo,
-            enfocándose en la importancia del ejercicio físico, la nutrición balanceada y el descanso adecuado para el
-            desarrollo integral del cuerpo.
-            A través de un enfoque teórico, aprenderán a diseñar rutinas de entrenamiento seguras y efectivas,
-            así como a adoptar hábitos de vida saludables que fomenten el rendimiento físico y mental.
-        </div>
-    </div>
-
-</section>
-    <div class="custom-image-container">
-        <img src="../sources/images/Fondo1.png" alt="Descripción de la imagen" class="custom-image">
-        <div class="text-overlay" id="text-overlay">
-        </div>
-    </div>
-    <footer class="custom-footer">
-        <div class="footer-content">
-            <div class="footer-text">FORTIS</div>
-            <div class="social-buttons">
-                <a href="https://www.facebook.com" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://x.com/?lang=es" class="social-btn"><i class="fa-brands fa-x-twitter"></i>
-                <a href="https://www.instagram.com" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://web.whatsapp.com" class="social-btn"><i class="fa-brands fa-whatsapp"></i>
-                <a href="https://www.youtube.com" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Módulos de Bienestar Deportivo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Módulos de Bienestar Deportivo</h2>
+            
+            <div class="row">
+                <div class="col-md-12 mb-5">
+                    <h3>Fundamentos del Bienestar Deportivo</h3>
+                    <p><strong>Objetivo:</strong> Entender los principios esenciales para lograr un equilibrio entre el rendimiento físico y el bienestar general.</p>
+                    <img src="fundamentos.jpg" class="img-fluid mb-3" alt="Fundamentos del Bienestar Deportivo">
+                    <p>En este módulo aprenderás sobre la importancia del calentamiento, el estiramiento, la recuperación y cómo prevenir lesiones en la práctica deportiva.</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/example1" title="Video sobre Fundamentos del Bienestar Deportivo" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 mb-5">
+                    <h3>Nutrición Deportiva y Salud</h3>
+                    <p><strong>Objetivo:</strong> Comprender la relación entre una alimentación equilibrada y el rendimiento deportivo óptimo.</p>
+                    <img src="nutricion.jpg" class="img-fluid mb-3" alt="Nutrición Deportiva y Salud">
+                    <p>Este módulo aborda los macronutrientes esenciales, la hidratación y estrategias alimenticias para potenciar la energía y recuperación muscular.</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/example2" title="Video sobre Nutrición Deportiva" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 mb-5">
+                    <h3>Manejo del Estrés y la Ansiedad en el Deporte</h3>
+                    <p><strong>Objetivo:</strong> Desarrollar habilidades para gestionar la presión emocional en el entorno deportivo.</p>
+                    <img src="estres.jpg" class="img-fluid mb-3" alt="Manejo del Estrés y la Ansiedad en el Deporte">
+                    <p>Aprenderás técnicas de respiración, mindfulness y estrategias psicológicas para mejorar tu concentración y control emocional.</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/example3" title="Video sobre Manejo del Estrés en el Deporte" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 mb-5">
+                    <h3>Psicología del Deporte y Bienestar Emocional</h3>
+                    <p><strong>Objetivo:</strong> Explorar el impacto de la mente en el rendimiento deportivo y bienestar general.</p>
+                    <img src="psicologia.jpg" class="img-fluid mb-3" alt="Psicología del Deporte y Bienestar Emocional">
+                    <p>Este módulo aborda la motivación, la resiliencia y la preparación mental para enfrentar desafíos deportivos.</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/example4" title="Video sobre Psicología del Deporte" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 mb-5">
+                    <h3>Entrenamiento Físico Personalizado</h3>
+                    <p><strong>Objetivo:</strong> Diseñar un plan de entrenamiento adaptado a tus necesidades y metas.</p>
+                    <img src="entrenamiento.jpg" class="img-fluid mb-3" alt="Entrenamiento Físico Personalizado">
+                    <p>Descubre cómo estructurar rutinas efectivas, prevenir lesiones y optimizar tu rendimiento físico.</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/example5" title="Video sobre Entrenamiento Personalizado" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
+    
         <div class="derechos-text">Derechos de autor © Fortis. Todos los derechos reservados.</div>
     </footer>
     <script src="../js/modulo1.js"></script>
