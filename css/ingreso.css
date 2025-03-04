@@ -67,93 +67,134 @@
     color: white !important;
     transform: scale(1.03); /* Aumento más sutil del tamaño */
   }
-  
-  
+  :root {
+    --main-color: #1D938A;
+    --light-color: #2AC4B5;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+}
 
-section {
-    background-image: url('../sources/images/fondo-formulario.png'); /* Cambia esto por la ruta de tu imagen */
-    background-size: cover; /* Ajusta la imagen para que cubra toda la página */
-    background-position: center; /* Centra la imagen en la página */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Hace que la imagen de fondo se mantenga fija cuando se desplaza la página */
-    color: #fff; /* Opcional: Cambia el color del texto en toda la página para que sea visible sobre el fondo */
-    font-family: 'Montserrat', sans-serif; /* Asegura que el texto mantenga la fuente definida */
-    padding: 100px;
+
+
+.container {
+    width: 100%;
+    margin-top: 30px;
+    max-width: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgb(29, 147, 137);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin: 0 15px;
+    cursor: pointer;
+    color: var(--text-color);
+    opacity: 0.6;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.form-toggle.active {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.form-toggle.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--main-color);
 }
 
 .form-container {
-    background-image: url('../sources/images/Fondo-ingresar.png'); /* Cambia esto por la ruta de tu imagen */
-    background-size: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    text-align: center;
-    margin: auto; /* Centra el div en la página */
-    position: relative; /* Permite que los elementos absolutos dentro se posicionen en relación a este contenedor */
-    width: 750px; /* Ajusta el ancho del contenedor según sea necesario */
-    height: 760px; /* Ajusta la altura del contenedor según sea necesario */
-    padding: 20px; /* Opcional: Espacio interno del contenedor */
+    display: none;
 }
 
-.form-header h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 600;
-    color: #1d938a;
-    text-transform: uppercase;
+.form-container.active {
+    display: block;
+    animation: slideIn 0.4s ease;
 }
 
-.user-form {
-    position: absolute;
-    bottom: 10%; /* Posiciona el formulario en la parte inferior del contenedor */
-    left: 50%; /* Centra el formulario horizontalmente */
-    transform: translateX(-50%); /* Ajusta la posición horizontal para centrar el formulario */
-    width: 270px; /* Define un ancho para el formulario */
-    padding-bottom: 60px; /* Espacio interior del formulario */
-    color: #fff; /* Color del texto */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-
-.user-form input {
+.form-input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 35px;
-    border: none;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.8);
-    font-size: 16px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-.user-form button {
-    width: 80%;
-    padding: 10px;
+.form-input:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 2px rgba(29, 147, 138, 0.2);
+}
+
+.form-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--main-color);
+    color: white;
     border: none;
-    border-radius: 4px;
-    background-color: #1d938a; /* Color del botón */
-    color: #fff;
-    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 50px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
 }
 
-.user-form button:hover {
-    background-color: #17867c; /* Color del botón al pasar el mouse */
+.form-submit:hover {
+    background-color: var(--light-color);
+    transform: translateY(-3px);
 }
 
-.user-form p {
-    color: black;
-    font-size: 16px;
+.message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
 }
 
-.user-form a {
-    color: #1d938a;
-    font-size: 16px;
+.error-message {
+    color: red;
 }
 
-.user-form a:hover {
-    color: #156760;
-    font-size: 16px;
+.success-message {
+    color: green;
 }
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+}
+  
+
 
 footer {
     background-image: url('../sources/images/footer.png');
@@ -161,6 +202,7 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
+    margin-top: 80px;
     height: 200px;
     color: #ffffff;
     font-size: 18px;
