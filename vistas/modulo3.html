@@ -14,68 +14,74 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="sources/images/" alt="Logo" class="logo-img">
-        </div>
-        <div class="search-container">
-            <input type="text" placeholder="Escribe aquí...">
-            <a href="#" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
-        </div>
-        <nav class="header-buttons">
-            <a href="../index.html" class="Inicio">Inicio</a>
-            <div class="dropdown">
-                <a href="#" class="dropbtn">Módulos</a>
-                <div class="dropdown-content">
-                    <a href="./modulo1.html">Módulo 1</a>
-                    <a href="./modulo2.html">Módulo 2</a>
-                    <a href="./modulo3.html">Módulo 3</a>
-                    <a href="./modulo4.html">Módulo 4</a>
-                    <a href="./modulo5.html">Módulo 5</a>
-                    <a href="./modulo6.html">Módulo 6</a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="/index.html" class="navbar-brand logo">
+                    <img src="/sources/images/Logoblanco.svg" alt="Logo de Fortis">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="/index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="/vistas/nosotros.html" class="nav-link">Nosotros</a></li>
+                        <div class="dropdown">
+                            <a href="#" class="dropbtn">Módulos</a>
+                            <div class="dropdown-content">
+                                <a href="./modulo1.html">Módulo 1</a>
+                                <a href="./modulo2.html">Módulo 2</a>
+                                <a href="./modulo3.html">Módulo 3</a>
+                                <a href="./modulo4.html">Módulo 4</a>
+                                <a href="./modulo5.html">Módulo 5</a>
+                            </div>
+                        </div>
+                        <li class="nav-item"><a href="/vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
+                        <li class="nav-item" id="perfil-container" style="display: none;">
+                            <a href="/vistas/perfil.html" class="nav-link perfil">
+                                <i class="fa-solid fa-user"></i></a> <span id="nombre-usuario"></span>
+                        </li>
+                        <li class="nav-item" id="logout-container" style="display: none;">
+                            <button id="logout-btn" class="nav-link logout">Cerrar sesión</button>
+                        </li>
+                                            
+                    </ul>
                 </div>
             </div>
-            <a href="#">Nosotros</a>
-            <a href="./vistas/ingreso.html" class="Ingresar">Ingresar
-                <i class="fas fa-sign-in-alt"></i>
-            </a>
         </nav>
     </header>
-<section>
-    <div class="content">
-        <h1>MÓDULO 3</h1>
-        <h2>NUTRICION DEPORTIVA Y SALUD</h2>
-    </div>
-
-    <div class="objective-container">
-        <div class="course-objective">
-            Objetivo del curso
-        </div>
-        <div class="objective-text">
-            El objetivo de este curso es enseñar a los estudiantes los principios clave de la nutrición deportiva y su
-            impacto en la salud y el rendimiento físico. Se abordarán estrategias nutricionales personalizadas para
-            optimizar el rendimiento, promover la recuperación y mantener un equilibrio saludable en atletas y personas
-            activas.
-        </div>
-    </div>
-</section>
-    <div class="custom-image-container">
-        <img src="../sources/images/Fondo3.png" alt="Descripción de la imagen" class="custom-image">
-        <div class="text-overlay" id="text-overlay">
-        </div>
-    </div>
-    <footer class="custom-footer">
-        <div class="footer-content">
-            <div class="footer-text">FORTIS</div>
-            <div class="social-buttons">
-                <a href="https://www.facebook.com" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://x.com/?lang=es" class="social-btn"><i class="fa-brands fa-x-twitter"></i>
-                <a href="https://www.instagram.com" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://web.whatsapp.com" class="social-btn"><i class="fa-brands fa-whatsapp"></i>
-                <a href="https://www.youtube.com" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Módulos de Bienestar Deportivo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Módulos de Bienestar Deportivo</h2>
+            
+            <div class="row">
+                
+                <div class="col-md-12 mb-5">
+                    <h3>Manejo del Estrés y la Ansiedad en el Deporte</h3>
+                    <p><strong>Objetivo:</strong> Desarrollar habilidades para gestionar la presión emocional en el entorno deportivo.</p>
+                    <img src="estres.jpg" class="img-fluid mb-3" alt="Manejo del Estrés y la Ansiedad en el Deporte">
+                    <p>Aprenderás técnicas de respiración, mindfulness y estrategias psicológicas para mejorar tu concentración y control emocional.</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/example3" title="Video sobre Manejo del Estrés en el Deporte" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
+    
         <div class="derechos-text">Derechos de autor © Fortis. Todos los derechos reservados.</div>
     </footer>
-    <script src="../js/modulo3.js"></script>
+    <script src="../js/modulo1.js"></script>
 </body>
 </html>
