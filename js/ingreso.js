@@ -77,7 +77,7 @@
       users.push({ username, password });
       localStorage.setItem('users', JSON.stringify(users));
 
-      messageEl.textContent = 'Registration Successful!';
+      messageEl.textContent = 'Registro2  Successful!';
       messageEl.classList.add('success-message');
       this.reset();
   });
