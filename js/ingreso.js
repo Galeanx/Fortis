@@ -48,7 +48,6 @@
       });
   });
 
-  // Registration Form Handling
   document.getElementById('registerForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const username = document.getElementById('registerUsername').value;
@@ -77,7 +76,7 @@
       users.push({ username, password });
       localStorage.setItem('users', JSON.stringify(users));
 
-      messageEl.textContent = 'Registro2  Successful!';
+      messageEl.textContent = 'Registro completado!';
       messageEl.classList.add('success-message');
       this.reset();
   });
