@@ -63,4 +63,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     textOverlay.innerHTML = createContentHTML();
 });
-
