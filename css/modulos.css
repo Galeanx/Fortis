@@ -60,20 +60,22 @@ header {
     transform: scale(1.03);
 }
 
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
 .dropbtn {
     background-color: transparent;
     color: white;
-    padding: 14px 16px;
-    font-size: 16px;
+    padding: 10px 15px; /* Ajuste del padding */
+    font-size: 18px; /* Igual que los otros botones */
     border: none;
     cursor: pointer;
     text-decoration: none;
+    display: flex; 
+    align-items: center; /* Alinea el texto verticalmente */
+}
+
+.dropdown {
+    position: relative;
+    display: flex; /* Asegura alineación con los otros elementos */
+    align-items: center; /* Alinea el botón con la barra */
 }
 
 .dropdown-content {
@@ -83,6 +85,8 @@ header {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    top: 100%; /* Asegura que se despliegue justo debajo del botón */
+    left: 0;  /* Alineado con el botón */
 }
 
 .dropdown-content a {
@@ -300,7 +304,7 @@ header {
     text-decoration: underline;
 }
 
-.fundamentos-bienestar {
+.estilos-intro {
     margin: 50px auto;
     max-width: 1100px;
     padding: 20px;
@@ -309,14 +313,14 @@ header {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.fundamentos-bienestar h3 {
+.estilos-intro h3 {
     text-align: center;
     color: #1d938a;
     font-size: 40px;
     margin-bottom: 10px;
 }
 
-.fundamentos-bienestar p {
+.estilos-intro p {
     font-size: 25px;
     color: #333;
     text-align: justify;
