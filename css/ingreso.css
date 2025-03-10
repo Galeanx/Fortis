@@ -254,24 +254,26 @@ footer {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Ajuste del icono y texto de usuario */
-.nav-link.perfil i {
-    font-size: 1.2rem;
-    color: white; /* Cambiar por el color de tus enlaces */
+/* Estilo del icono de usuario */
+.nav-link.dropdown-toggle i {
+    font-size: 1.3rem;
+    color: white;
 }
 
-.nav-link.perfil span {
-    margin-left: 5px;
-    color: white; /* Cambiar por el color de tus enlaces */
+/* Nombre del usuario */
+#nombre-usuario {
+    color: white;
     font-weight: bold;
 }
 
-/* Botón Cerrar sesión como enlace */
-.nav-link.logout {
-    color: white; /* Cambiar por el color de tus enlaces */
-    cursor: pointer;
+/* Hover del dropdown */
+.dropdown-menu a.dropdown-item:hover, 
+.dropdown-menu button.dropdown-item:hover {
+    background-color: #2ECC71;
+    color: white;
 }
 
-.nav-link.logout:hover {
-    color: #2ECC71; /* Color al pasar el mouse */
+/* Botón Cerrar sesión como enlace */
+.dropdown-item {
+    cursor: pointer;
 }
