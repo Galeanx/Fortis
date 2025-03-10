@@ -21,33 +21,46 @@
     <link rel="icon" type="image/x-icon" href="sources/images/Mini-logo.png">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a href="../index.html" class="navbar-brand logo">
-                <img src="../sources/images/Logoblanco.svg" alt="Logo de Fortis">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
-                    <li class="nav-item"><a href="./ingreso.html" class="nav-link ingresar">Ingresar</a></li>
-                    <li class="nav-item" id="perfil-container" style="display: none;">
-                        <a href="./perfil.html" class="nav-link perfil">
-                            <i class="fa-solid fa-user"></i></a> <span id="nombre-usuario"></span>
-                    </li>
-                    <li class="nav-item" id="logout-container" style="display: none;">
-                        <button id="logout-btn" class="nav-link logout">Cerrar sesión</button>
-                    </li>
-                                        
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a href="../index.html" class="navbar-brand logo">
+                    <img src="../sources/images/Logoblanco.svg" alt="Logo de Fortis">
+                </a>
+    
+                <!-- Botón Responsive -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
+                        <!-- Botón Ingresar, visible solo cuando NO hay sesión -->
+                        <li class="nav-item" id="ingresar-container">
+                            <a href="./ingreso.html" class="nav-link">Ingresar</a>
+                        </li>
+                        
+                        <!-- Dropdown Usuario, visible solo cuando HAY sesión -->
+                        <li class="nav-item dropdown" id="perfil-dropdown" style="display: none;">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user me-2"></i><span id="nombre-usuario"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="./perfil.html">Perfil</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><button class="dropdown-item" id="logout-btn">Cerrar sesión</button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
+    
 <section>
 <div class="container">
     <div class="form-header">

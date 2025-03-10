@@ -102,3 +102,30 @@
           messageEl.classList.add('error-message');
       }
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const perfilContainer = document.getElementById('perfil-container');
+    const logoutContainer = document.getElementById('logout-container');
+    const nombreUsuario = document.getElementById('nombre-usuario');
+    const ingresarBtn = document.querySelector('.ingresar');
+
+    // Verificar en qué página está
+    const esPaginaPrincipal = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
+
+    // Simulación de sesión (ajusta según tu lógica real)
+    const usuario = JSON.parse(localStorage.getItem('usuarioLogueado'));
+
+    // Solo mostrar icono y logout si está logueado y NO está en la página principal
+    if (usuario && !esPaginaPrincipal) {
+        perfilContainer.style.display = 'flex';
+        logoutContainer.style.display = 'flex';
+        ingresarBtn.style.display = 'none'; // Oculta botón ingresar
+        nombreUsuario.textContent = usuario.nombre; // Muestra nombre del usuario
+    }
+
+    // Función para cerrar sesión
+    document.getElementById('logout-btn').addEventListener('click', function () {
+        localStorage.removeItem('usuarioLogueado');
+        location.reload(); // Recargar para actualizar vista
+    });
+});

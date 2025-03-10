@@ -253,3 +253,27 @@ footer {
     color: #1d938a;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+/* Estilo del icono de usuario */
+.nav-link.dropdown-toggle i {
+    font-size: 1.3rem;
+    color: white;
+}
+
+/* Nombre del usuario */
+#nombre-usuario {
+    color: white;
+    font-weight: bold;
+}
+
+/* Hover del dropdown */
+.dropdown-menu a.dropdown-item:hover, 
+.dropdown-menu button.dropdown-item:hover {
+    background-color: #2ECC71;
+    color: white;
+}
+
+/* Botón Cerrar sesión como enlace */
+.dropdown-item {
+    cursor: pointer;
+}
