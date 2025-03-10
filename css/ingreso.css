@@ -253,3 +253,25 @@ footer {
     color: #1d938a;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+/* Ajuste del icono y texto de usuario */
+.nav-link.perfil i {
+    font-size: 1.2rem;
+    color: white; /* Cambiar por el color de tus enlaces */
+}
+
+.nav-link.perfil span {
+    margin-left: 5px;
+    color: white; /* Cambiar por el color de tus enlaces */
+    font-weight: bold;
+}
+
+/* Botón Cerrar sesión como enlace */
+.nav-link.logout {
+    color: white; /* Cambiar por el color de tus enlaces */
+    cursor: pointer;
+}
+
+.nav-link.logout:hover {
+    color: #2ECC71; /* Color al pasar el mouse */
+}
