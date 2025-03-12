@@ -4,11 +4,32 @@ const password = document.querySelector('.password');
 
 function registrarUsuario(e) {
     e.preventDefault();
+    let user = {
+        userN: Username.value,
+        userP: Password.value,
+        userC: Correo.value,
+        userA: Apellidos.value,
+        userLogged: false
+    }
 
-    let newUser = {
-        userName: username.value,
-        userPass: password.value
-    };
+let usuarios = JSON.parse(localStorage.getItem("usuarios")) || []
+
+for (let i= 0; i <usuarios.length; i++) {
+    if(Username.value ===)
+}
+
+
+
+
+usuarios.push(user)
+
+localStorage.setItem("usuarios", JSON.stringify(usuarios));
+formulario.reset()
+window.location = "../vistas/ingresar.html"
+
+
+
+
 
     // Guardar usuario en localStorage
     localStorage.setItem('user', JSON.stringify(newUser));

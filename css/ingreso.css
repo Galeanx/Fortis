@@ -67,145 +67,130 @@
     color: white !important;
     transform: scale(1.03); /* Aumento más sutil del tamaño */
   }
-  :root {
-    --main-color: #1D938A;
-    --light-color: #2AC4B5;
-    --text-color: #333;
-    --background-color: #f4f4f4;
+
+:root {
+  --main-color: #1D938A;
+  --light-color: #2AC4B5;
+  --text-color: #333;
+  --background-color: #f4f4f4;
 }
 
-
-
 .container {
-    width: 100%;
-    margin-top: 30px;
-    max-width: 400px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgb(29, 147, 137);
-    padding: 30px;
-    transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 30px;
+  max-width: 400px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgb(29, 147, 137);
+  padding: 30px;
+  transition: all 0.3s ease;
 }
 
 .form-header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .form-toggle {
-    background: none;
-    border: none;
-    font-size: 18px;
-    margin: 0 15px;
-    cursor: pointer;
-    color: var(--text-color);
-    opacity: 0.6;
-    position: relative;
-    transition: all 0.3s ease;
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin: 0 15px;
+  cursor: pointer;
+  color: var(--text-color);
+  opacity: 0.6;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .form-toggle.active {
-    opacity: 1;
-    font-weight: bold;
+  opacity: 1;
+  font-weight: bold;
 }
 
 .form-toggle.active::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background-color: var(--main-color);
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--main-color);
 }
 
 .form-container {
-    display: none;
+  display: none;
 }
 
 .form-container.active {
-    display: block;
-    animation: slideIn 0.4s ease;
+  display: block;
+  animation: slideIn 0.4s ease;
 }
 
 @keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 .form-input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .form-input:focus {
-    outline: none;
-    border-color: var(--main-color);
-    box-shadow: 0 0 0 2px rgba(29, 147, 138, 0.2);
+  outline: none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 2px rgba(29, 147, 138, 0.2);
 }
 
 .form-submit {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--main-color);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 .form-submit:hover {
-    background-color: var(--light-color);
-    transform: translateY(-3px);
+  background-color: var(--light-color);
+  transform: translateY(-3px);
 }
 
 .message {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
 }
 
 .error-message {
-    color: red;
+  color: red;
 }
 
 .success-message {
-    color: green;
+  color: green;
 }
 
 @media (max-width: 480px) {
-    .container {
-        width: 100%;
-        padding: 20px;
-    }
-}
-  
-
-
-footer {
-    background-image: url('../sources/images/footer.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px;
-    margin-top: 80px;
-    height: 200px;
-    color: #ffffff;
-    font-size: 18px;
+  .container {
+      width: 100%;
+      padding: 20px;
+  }
 }
 
 .footer-content {
@@ -252,28 +237,4 @@ footer {
     text-align: end;
     color: #1d938a;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilo del icono de usuario */
-.nav-link.dropdown-toggle i {
-    font-size: 1.3rem;
-    color: white;
-}
-
-/* Nombre del usuario */
-#nombre-usuario {
-    color: white;
-    font-weight: bold;
-}
-
-/* Hover del dropdown */
-.dropdown-menu a.dropdown-item:hover, 
-.dropdown-menu button.dropdown-item:hover {
-    background-color: #2ECC71;
-    color: white;
-}
-
-/* Botón Cerrar sesión como enlace */
-.dropdown-item {
-    cursor: pointer;
 }
