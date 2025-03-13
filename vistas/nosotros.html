@@ -18,52 +18,53 @@
     <link rel="stylesheet" href="../css/nosotros.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" type="image/x-icon" href="../sources/images/Mini-logo.png">
+    <link rel="icon" type="image/x-icon" href="../sources/images/Logo-fortis.svg">
     
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand logo">
-                    <img src="../sources/images/Logoblanco.svg"  alt="Logo de Fortis">
+                <a href="../index.html" class="navbar-brand logo">
+                    <img src="../sources/images/Logo-fortis.svg" alt="Logo de Fortis">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-
-                        <li class="nav-item"><a href="/index.html" class="nav-link">Inicio</a></li>
-                        <li class="nav-item"><a href="../vistas/nosotros.html" class="nav-link">Nosotros</a></li>
-                        <li class="nav-item"><a href="../vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li class="nav-item"><a href="./ingreso.html" class="nav-link ingresar">Ingresar</a></li>
                         <li class="nav-item" id="perfil-container" style="display: none;">
-                            <a href="../vistas/perfil.html" class="nav-link perfil">
-                                <i class="fa-solid fa-user"></i></a> <span id="nombre-usuario"></span>
+                            <a href="./perfil.html" class="nav-link perfil">
+                                <i class="fa-solid fa-user"></i> <span id="nombre-usuario"></span>
+                            </a>
                         </li>
-                        <li class="nav-item" id="logout-container" style="display: none;">
-                            <button id="logout-btn" class="nav-link logout">Cerrar sesión</button>
-                        </li>        
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
-    <div class="contenedor">
-    
-    <section id="inicio" class="sobresaliente" class="carta">
+</section>
+
+<div class="container my-5">
+<h2 class="text-center mb-4">Quienes Somos</h2>
+<div class="row">
+               <section class="card">
         <h2>Bienvenido a Fortis</h2>
         <p>En <strong>Fortis</strong>, creemos que el deporte es mucho más que actividad física: es una herramienta poderosa para mejorar la calidad de vida. Nuestro objetivo es educar, motivar y guiar a las personas en la integración del deporte en su rutina, asegurando que cada paso del proceso sea accesible, seguro y efectivo.</p>
         <p>A través de nuestros módulos, aprenderás desde los fundamentos del bienestar deportivo hasta estrategias avanzadas para mejorar tu rendimiento físico y mental. No importa tu nivel de experiencia: <strong>Fortis</strong> está diseñado para adaptarse a ti.</p>
     </section>
 
-    <section id="nosotros" class="sobresaliente" class="carta"> <!-- oculto -->
+    <section class="card">
         <h2>Sobre Nosotros</h2>
         <p>En <strong>Fortis</strong>, creemos que el deporte es clave para el bienestar físico y mental. Nos basamos en la ciencia del ejercicio, la nutrición y la psicología deportiva para proporcionar una educación completa y accesible para todos.</p>
         <p>Nuestro enfoque es ayudar a cada persona a encontrar la disciplina deportiva adecuada para sus necesidades, fomentando hábitos saludables y sostenibles a largo plazo.</p>
     </section>
 </div>
+
+    </div>
     
 
     
@@ -88,9 +89,14 @@
     </div>
 </footer>
 
-
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
    
-
 </body>
-<script src="../js/app.js"></script>
 </html>

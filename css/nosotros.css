@@ -1,3 +1,4 @@
+
 * {
 
   margin: 0;
@@ -122,101 +123,194 @@ transform: scale(1);
 }
 
 
-.seccion {
-    padding: 20px;
-    text-align: center;
+
+.hero-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
 }
 
-.oculto {
-    display: none;
+.hero-section .display-4 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.modulo {
-    background: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.hero-section .lead {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.modulo h3 {
-    color: #007bff;
-}
-
-
-.sobresaliente {
-width: 400px;
-padding: 20px;
-background: white;
-border-radius: 10px;
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para elevar el div */
-text-align: center;
-font-size: 18px;
-font-weight: bold;
-margin: auto; 
-}
-
-.contenedor {
-  flex: 1; /* Hace que el contenido principal ocupe todo el espacio disponible */
+.social-buttons {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-social {
+  display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
+  width: auto;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 30px;
+  color: #333;
+  font-size: 1rem;
+  border: 2px solid #1d938a;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  gap: 10px;
 }
 
-.carta {
-  background: white;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 12px;
-  overflow: hidden;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.btn-social i {
+  font-size: 1.5rem;
 }
 
-.carta:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.btn-social:hover {
+  background-color: #1d938a;
+  color: white;
+  transform: scale(1.1);
 }
 
-.carta h2 {
-  font-size: 22px;
-  color: #007bff;
-  margin-bottom: 10px;
+.btn-instagram {
+  border-color: #1d938a;
 }
 
-.carta p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 10px;
+.btn-instagram:hover {
+  background-color: #1d938a;
 }
 
-.carta strong {
-  color: #0056b3;
+.btn-youtube {
+  border-color: #1d938a;
+}
+
+.btn-youtube:hover {
+  background-color: #1d938a;
 }
 
 @media (max-width: 768px) {
-  .carta {
-      max-width: 100%;
+  .hero-section .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1.3rem;
+  }
+
+  .social-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .btn-social {
+    padding: 8px 12px;
+    font-size: 1rem;
+    width: auto;
+    height: 45px;
+  }
+
+  .btn-social i {
+    font-size: 1.3rem;
   }
 }
 
-@keyframes moverFondo {
-  from {
-      background-position: 0 0;
+@media (max-width: 576px) {
+  .hero-section .display-4 {
+    font-size: 2rem;
   }
-  to {
-      background-position: 100% 100%;
+
+  .hero-section .lead {
+    font-size: 1.2rem;
+  }
+
+  .btn-social {
+    width: auto;
+    height: 40px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .btn-social i {
+    font-size: 1.2rem;
   }
 }
 
 
+/* Contenedor Principal */
+.contenedor {
+  background-color: #2a8c82; /* Fondo principal */
+  padding: 50px 10%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Estilos de las Tarjetas */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  min-width: 320px;
+}
+
+.card h2 {
+  color: #007bff;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 90%;
+  }
+
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .navbar-nav {
+      text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+      display: block;
+      margin-bottom: 10px;
+  }
+}
+
+/* Footer */
 
 footer {
   background-image: url('../sources/images/footer.png');
@@ -242,7 +336,7 @@ footer {
   background-color: #1d938a;
   color: white;
   border-radius: 50%;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   font-size: 24px;
 }
