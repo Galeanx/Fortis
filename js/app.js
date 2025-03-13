@@ -4,20 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoutBtn = document.getElementById("logout-btn");
     const ingresarBtn = document.querySelector(".ingresar");
     const nombreUsuario = document.getElementById("nombre-usuario");
+    const moduloLinks = document.querySelectorAll(".modulo-link");
 
     function verificarSesion() {
         let usuario = JSON.parse(localStorage.getItem("usuario"));
 
         if (usuario && usuario.nombre) {
-            // Mostrar nombre del usuario y habilitar botones
             if (perfilContainer && nombreUsuario) {
                 perfilContainer.style.display = "block";
                 nombreUsuario.textContent = usuario.nombre.trim();
             }
-            if (logoutContainer) logoutContainer.style.display = "block"; // Asegurar que aparezca
+            if (logoutContainer) logoutContainer.style.display = "block";
             if (ingresarBtn) ingresarBtn.style.display = "none";
         } else {
-            // Usuario no logueado, ocultar botones
             if (perfilContainer) perfilContainer.style.display = "none";
             if (logoutContainer) logoutContainer.style.display = "none";
             if (ingresarBtn) ingresarBtn.style.display = "inline-block";
@@ -26,12 +25,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (logoutBtn) {
         logoutBtn.addEventListener("click", function () {
-            localStorage.removeItem("usuario"); // Eliminar usuario activo
-            verificarSesion(); // Actualizar vista
-            window.location.href = "./vistas/ingreso.html"; // Redirigir al login
+            localStorage.removeItem("usuario");
+            verificarSesion();
+            window.location.href = "./vistas/ingreso.html";
         });
     }
 
-    // Inicializar sesión al cargar la página
+    // Interceptar clics en los enlaces de módulos
+    moduloLinks.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            let usuario = JSON.parse(localStorage.getItem("usuario"));
+            let rutaModulo = this.getAttribute("data-modulo"); // Obtener la ruta del módulo
+
+            if (usuario) {
+                event.preventDefault(); // Evita la navegación predeterminada
+                window.location.href = rutaModulo; // Redirige al módulo si está logueado
+            } else {
+                // Deja que el enlace funcione normalmente y lo mande a ingreso.html
+            }
+        });
+    });
+
     verificarSesion();
 });
