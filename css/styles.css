@@ -25,6 +25,8 @@
   .navbar-nav {
     gap: 30px; /* Ajuste de separación más visible entre botones */
     margin-right: 70px;
+    display: flex;
+    align-items: center;
   }
   
   .navbar-nav .nav-link {
@@ -48,7 +50,7 @@
     transform: translateX(-50%);
   }
   
-  .navbar-nav .nav-link:not(.ingresar):hover::after {
+  .navbar-nav .nav-link:not(.ingresar, .logout):hover::after {
     width: 40%; /* Línea más corta y menos agresiva */
     left: 50%;
     transform: translateX(-50%);
@@ -98,9 +100,6 @@
   display: flex;
   align-items: center;
 }
-
-
-
 
   .hero-section {
     background-color: #f8f9fa;
