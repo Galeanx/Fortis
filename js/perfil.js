@@ -35,3 +35,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Inicializar sesión al cargar la página
     verificarSesion();
 });
+

@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a href="../index.html" class="navbar-brand logo">
-                    <img src="../sources/images/Logoblanco.svg" alt="Logo de Fortis">
+                    <img src="./sources/images/Logoblanco.svg" alt="Logo de Fortis">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,6 +38,9 @@
                         <li class="nav-item" id="perfil-container" style="display: none;">
                             <a href="./vistas/perfil.html" class="nav-link perfil">
                                 <i class="fa-solid fa-user"></i> <span id="nombre-usuario"></span>
+                                <li class="nav-item" id="logout-container" style="display: none;">
+                                    <button id="logout-btn" class="nav-link logout">Cerrar sesión</button>
+                                </li>
                             </a>
                         </li>
                     </ul>
@@ -71,7 +74,7 @@
             <div class="card-body">
                 <h5 class="card-title">Fundamentos del Bienestar Deportivo</h5>
                 <p class="card-text">Conoce los principios esenciales para lograr un bienestar físico y mental a través del deporte.</p>
-                <a href="./vistas/ingreso.html" class="btn btn-primary">Iniciar</a>
+                <a href="./vistas/ingreso.html" class="btn btn-primary modulo-link" data-modulo="./vistas/modulo1.html">Iniciar</a>
             </div>
         </div>
     </div>
@@ -83,7 +86,7 @@
             <div class="card-body">
                 <h5 class="card-title">Entrenamiento Físico Personalizado</h5>
                 <p class="card-text">Descubre los planes de entrenamiento adaptados a tus necesidades y objetivos personales.</p>
-                <a href="./vistas/ingreso.html" class="btn btn-primary">Iniciar</a>
+                <a href="./vistas/ingreso.html" class="btn btn-primary modulo-link" data-modulo="./vistas/modulo2.html">Iniciar</a>
             </div>
         </div>
     </div>
@@ -95,7 +98,7 @@
             <div class="card-body">
                 <h5 class="card-title">Nutrición Deportiva y Salud</h5>
                 <p class="card-text">La alimentación adecuada para maximizar el rendimiento deportivo y mantener un estilo de vida saludable.</p>
-                <a href="./vistas/ingreso.html" class="btn btn-primary">Iniciar</a>
+                <a href="./vistas/ingreso.html" class="btn btn-primary modulo-link" data-modulo="./vistas/modulo3.html">Iniciar</a>
             </div>
         </div>
     </div>
@@ -107,7 +110,7 @@
             <div class="card-body">
                 <h5 class="card-title">Prevención de Lesiones</h5>
                 <p class="card-text">Conoce cómo prevenir lesiones comunes en los deportes y mantener tu cuerpo en óptimas condiciones.</p>
-                <a href="./vistas/ingreso.html" class="btn btn-primary">Iniciar</a>
+                <a href="./vistas/ingreso.html" class="btn btn-primary modulo-link" data-modulo="./vistas/modulo4.html">Iniciar</a>
             </div>
         </div>
     </div>
@@ -119,7 +122,7 @@
             <div class="card-body">
                 <h5 class="card-title">Psicología Deportiva y Salud Emocional</h5>
                 <p class="card-text">Mejora tu rendimiento mental y emocional en el deporte a través de la psicología deportiva.</p>
-                <a href="./vistas/ingreso.html" class="btn btn-primary">Iniciar</a>
+                <a href="./vistas/ingreso.html" class="btn btn-primary modulo-link" data-modulo="./vistas/modulo5.html">Iniciar</a>
             </div>
         </div>
     </div>
@@ -131,7 +134,7 @@
             <div class="card-body">
                 <h5 class="card-title">Integración y Aplicación Práctica</h5>
                 <p class="card-text">Integra todos los conocimientos adquiridos y ponlos en práctica para obtener los mejores resultados.</p>
-                <a href="./vistas/ingreso.html" class="btn btn-primary">Iniciar</a>
+                <a href="./vistas/ingreso.html" class="btn btn-primary modulo-link" data-modulo="./vistas/modulo5.html">Iniciar</a>
             </div>
         </div>
     </div>
@@ -146,45 +149,21 @@
         </div>
     </section>
 <div class="container-fluid ">
-    <section id="contact" class="form-container mt-5 bg-light p-4 rounded">
-        <h2 class="text-center">Inscríbete Ahora</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Nombre</label>
-                <input type="text" class="form-control" id="name" placeholder="Tu Nombre">
-            </div>
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" placeholder="Tu Correo">
-            </div>
-            <div class="form-group">
-                <label for="contact">Número de contacto</label>
-                <input class="form-control" id="contact" rows="3" placeholder="Tu Numero"></input>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-    </section>
 </div> 
-    <footer class="custom-footer bg-dark text-white py-4 d-flex align-items-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Columna de texto -->
-                <div class="col-md-12 text-end text-md-end mb-3 mb-md-0">
-                    <div class="d-flex flex-column align-items-md-end ">
-                        <h5 class="mb-2">FORTIS</h5>
-                        <p class="mb-0">Derechos de autor © Fortis. Todos los derechos reservados.</p>
-                    </div>
-                </div>
-                <!-- Columna de botones -->
-                <div class="col-md-12 text-align-center text-md-end">
-                    <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+
+<footer class="pie-pagina">
+    <div class="contenedor-footer">
+      <div class="footer-logo">
+        <img src="./sources/images/Logoblanco.svg" alt="Logo de MiEmpresa">
+        <p>Somos un MOOC sobre el bienestar del deporte, el cual busca mejorar la calidad de vida de todos nuestros usuarios.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Fortis. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  
+  
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
