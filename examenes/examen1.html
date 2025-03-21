@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Selección Múltiple</title>
+</head>
+<body>
+    <form id="quizForm">
+        <h3>1. ¿Cuál es la capital de Francia?</h3>
+        <label><input type="radio" name="capital" id="q1a" value="Madrid"> Madrid</label><br>
+        <label><input type="radio" name="capital" id="q1b" value="París"> París</label><br>
+        <label><input type="radio" name="capital" id="q1c" value="Berlín"> Berlín</label><br>
+
+        <h3>2. ¿Cuál es el planeta más grande del sistema solar?</h3>
+        <label><input type="radio" name="planeta" id="q2a" value="Marte"> Marte</label><br>
+        <label><input type="radio" name="planeta" id="q2b" value="Júpiter"> Júpiter</label><br>
+        <label><input type="radio" name="planeta" id="q2c" value="Saturno"> Saturno</label><br>
+
+        <h3>3. ¿Cuántos continentes hay en la Tierra?</h3>
+        <label><input type="radio" name="continentes" id="q3a" value="5"> 5</label><br>
+        <label><input type="radio" name="continentes" id="q3b" value="6"> 6</label><br>
+        <label><input type="radio" name="continentes" id="q3c" value="7"> 7</label><br>
+
+        <h3>4. ¿Quién escribió "Don Quijote de la Mancha"?</h3>
+        <label><input type="radio" name="autor" id="q4a" value="Cervantes"> Miguel de Cervantes</label><br>
+        <label><input type="radio" name="autor" id="q4b" value="Shakespeare"> William Shakespeare</label><br>
+        <label><input type="radio" name="autor" id="q4c" value="Garcilaso"> Garcilaso de la Vega</label><br>
+
+        <h3>5. ¿Cuál es el metal más abundante en la corteza terrestre?</h3>
+        <label><input type="radio" name="metal" id="q5a" value="Hierro"> Hierro</label><br>
+        <label><input type="radio" name="metal" id="q5b" value="Aluminio"> Aluminio</label><br>
+        <label><input type="radio" name="metal" id="q5c" value="Cobre"> Cobre</label><br>
+
+        <button type="submit" onclick="capturarRespuestas()">Enviar</button>
+    </form>
+
+    <script src="../js/examenes/examen1.js"></script>
+
+</body>
+</html>
