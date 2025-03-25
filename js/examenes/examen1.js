@@ -1,4 +1,4 @@
-let user = JSON.parse(localStorage.getItem("user") )
+let user = JSON.parse(localStorage.getItem("user") ) || []
 
 const quizForm = document.querySelector('#quizForm')
 
