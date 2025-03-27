@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (user) {
                 messageEl.textContent = 'Inicio de sesión exitoso';
                 messageEl.classList.add('success-message');
-                localStorage.setItem("usuario", JSON.stringify({ nombre: user.user }));
+                localStorage.setItem("user", JSON.stringify({ nombre: user.user }));
 
                 setTimeout(() => { window.location.href = "../index.html"; }, 1000);
             } else {
