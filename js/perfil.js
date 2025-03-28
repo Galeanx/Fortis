@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (logoutBtn) {
         logoutBtn.addEventListener("click", function () {
-            localStorage.removeItem("usuario"); // Eliminar usuario activo
+            localStorage.removeItem("user"); // Eliminar usuario activo
             verificarSesion(); // Actualizar vista
             window.location.href = "./vistas/ingreso.html"; // Redirigir al login
         });
