@@ -81,9 +81,11 @@
   max-width: 400px;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgb(29, 147, 137);
+  box-shadow: 0 10px 30px rgba(29, 147, 137, 0.377);
   padding: 30px;
   transition: all 0.3s ease;
+  margin-top: 30px;
+  margin-block-end: 40px;
 }
 
 .form-header {
@@ -193,48 +195,57 @@
   }
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;
+/* ---------------- FOOTER PRINCIPAL ---------------- */
+
+.pie-pagina {
+  background-color: #1D938A;
+  color: white;
+  padding: 50px 30px 20px 30px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-.footer-text {
-    margin-left: 13%;
-    font-size: 40px;
+/* Contenedor general */
+.contenedor-footer {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.social-buttons {
-    display: flex;
-    gap: 20px;
-    margin-left: -100px;
+/* ---------------- SECCIÓN LOGO Y DESCRIPCIÓN ---------------- */
+
+.footer-logo img {
+  max-width: 156px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 15px;
 }
 
-.social-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: #1d938a;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
-    font-size: 24px;
+.footer-logo p {
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.8;
+  max-width: 600px;
+  padding: 0 10px;
 }
 
-.social-btn:hover {
-    background-color: #14665f;
+/* ---------------- COPYRIGHT ---------------- */
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  font-size: 0.9em;
 }
 
-.derechos-text {
-    position: relative;
-    bottom: -50px;
-    text-align: end;
-    color: #1d938a;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 600px) {
+  .footer-logo img {
+    max-width: 120px; /* Reduce el logo en pantallas pequeñas */
+  }
+
+  .footer-logo p {
+    font-size: 0.95em;
+    padding: 0 5px;
+  }
 }
