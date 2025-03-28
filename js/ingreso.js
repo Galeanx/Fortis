@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     function verificarSesion() {
-        let usuario = JSON.parse(localStorage.getItem("usuario"));
+        let usuario = JSON.parse(localStorage.getItem("user"));
 
         if (usuario && usuario.nombre) {
             elementos.perfilContainer.style.display = "block";

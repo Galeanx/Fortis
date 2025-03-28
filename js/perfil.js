@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nombreUsuario = document.getElementById("nombre-usuario");
 
     function verificarSesion() {
-        let usuario = JSON.parse(localStorage.getItem("usuario"));
+        let usuario = JSON.parse(localStorage.getItem("user"));
 
         if (usuario && usuario.nombre) {
             // Mostrar nombre del usuario y habilitar botones
