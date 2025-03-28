@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const moduloLinks = document.querySelectorAll(".modulo-link");
 
     function verificarSesion() {
-        let usuario = JSON.parse(localStorage.getItem("usuario"));
+        let usuario = JSON.parse(localStorage.getItem("user"));
 
         if (usuario && usuario.nombre) {
             if (perfilContainer && nombreUsuario) {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (logoutBtn) {
         logoutBtn.addEventListener("click", function () {
-            localStorage.removeItem("usuario");
+            localStorage.removeItem("user");
             verificarSesion();
             window.location.href = "./vistas/ingreso.html";
         });
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Interceptar clics en los enlaces de módulos
     moduloLinks.forEach((link) => {
         link.addEventListener("click", function (event) {
-            let usuario = JSON.parse(localStorage.getItem("usuario"));
+            let usuario = JSON.parse(localStorage.getItem("user"));
             let rutaModulo = this.getAttribute("data-modulo"); // Obtener la ruta del módulo
 
             if (usuario) {
