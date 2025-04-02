@@ -1,4 +1,5 @@
 * {
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -98,139 +99,6 @@ white-space: nowrap; /* Evita que el nombre se corte */
 display: flex;
 align-items: center;
 }
-  
-  .hero-section {
-    background-color: #f8f9fa;
-    padding: 80px 0;
-    text-align: center;
-  }
-  
-  .hero-section .display-4 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #1d938a;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .hero-section .lead {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 30px;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .social-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  .btn-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 30px;
-    color: #333;
-    font-size: 1rem;
-    border: 2px solid #1d938a;
-    transition: all 0.3s ease;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    gap: 10px;
-  }
-  
-  .btn-social i {
-    font-size: 1.5rem;
-  }
-  
-  .btn-social:hover {
-    background-color: #1d938a;
-    color: white;
-    transform: scale(1.1);
-  }
-  
-  .btn-instagram {
-    border-color: #1d938a;
-  }
-  
-  .btn-instagram:hover {
-    background-color: #1d938a;
-  }
-  
-  .btn-youtube {
-    border-color: #1d938a;
-  }
-  
-  .btn-youtube:hover {
-    background-color: #1d938a;
-  }
-  
-  @media (max-width: 768px) {
-    .hero-section .display-4 {
-      font-size: 2.5rem;
-    }
-  
-    .hero-section .lead {
-      font-size: 1.3rem;
-    }
-  
-    .social-buttons {
-      flex-direction: row;
-      gap: 15px;
-    }
-  
-    .btn-social {
-      padding: 8px 12px;
-      font-size: 1rem;
-      width: auto;
-      height: 45px;
-    }
-  
-    .btn-social i {
-      font-size: 1.3rem;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .hero-section .display-4 {
-      font-size: 2rem;
-    }
-  
-    .hero-section .lead {
-      font-size: 1.2rem;
-    }
-  
-    .btn-social {
-      width: auto;
-      height: 40px;
-      padding: 6px 10px;
-      font-size: 0.9rem;
-    }
-  
-    .btn-social i {
-      font-size: 1.2rem;
-    }
-  }
-  /*Cards*/
-  
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  h2 {
-    color: #333;
-    margin-bottom: 20px;
-  }
   
   /* Diseño de tarjetas en Grid */
   .modules-grid {
@@ -379,4 +247,59 @@ button {
 
 button:hover {
   background-color: #219150;
+}
+
+/* ---------------- FOOTER PRINCIPAL ---------------- */
+
+.pie-pagina {
+  background-color: #1D938A;
+  color: white;
+  padding: 50px 30px 20px 30px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Contenedor general */
+.contenedor-footer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------------- SECCIÓN LOGO Y DESCRIPCIÓN ---------------- */
+
+.footer-logo img {
+  max-width: 156px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.8;
+  max-width: 600px;
+  padding: 0 10px;
+}
+
+/* ---------------- COPYRIGHT ---------------- */
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  font-size: 0.9em;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 600px) {
+  .footer-logo img {
+    max-width: 120px; /* Reduce el logo en pantallas pequeñas */
+  }
+
+  .footer-logo p {
+    font-size: 0.95em;
+    padding: 0 5px;
+  }
 }

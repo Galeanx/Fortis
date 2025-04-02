@@ -3,53 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortis</title>
+    <title>Fortis · Examen 1</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/examenes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" type="image/x-icon" href="../sources/images/Mini-logo.png">
+    <link rel="icon" type="image/x-icon" href="/sources/images/Mini-logo.png">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a href="/index.html" class="navbar-brand logo">
-                <img src="/sources/images/Logoblanco.svg" alt="Logo de Fortis">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="/index.html" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="/vistas/nosotros.html" class="nav-link">Nosotros</a></li>
-                    <div class="dropdown">
-                        <a href="#" class="dropbtn">Módulos</a>
-                        <div class="dropdown-content">
-                            <a href="./modulo1.html">Módulo 1</a>
-                            <a href="./modulo2.html">Módulo 2</a>
-                            <a href="./modulo3.html">Módulo 3</a>
-                            <a href="./modulo4.html">Módulo 4</a>
-                            <a href="./modulo5.html">Módulo 5</a>
-                        </div>
-                    </div>
-                    <li class="nav-item"><a href="/vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
-                    <li class="nav-item" id="perfil-container" style="display: none;">
-                        <a href="/vistas/perfil.html" class="nav-link perfil">
-                            <i class="fa-solid fa-user"></i></a> <span id="nombre-usuario"></span>
-                    </li>
-                    <li class="nav-item" id="logout-container" style="display: none;">
-                        <button id="logout-btn" class="nav-link logout">Cerrar sesión</button>
-                    </li>
-                                        
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="/index.html" class="navbar-brand logo">
+                    <img src="/sources/images/Logoblanco.svg" alt="Logo de Fortis">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="/index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="./vistas/nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li class="nav-item"><a href="./vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
+                        <li class="nav-item" id="perfil-container" style="display: none;">
+                            <a href="./vistas/perfil.html" class="nav-link perfil">
+                                <i class="fa-solid fa-user"></i>
+                                <span id="nombre-usuario"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item" id="logout-container" style="display: none;">
+                            <button id="logout-btn" class="nav-link logout">Cerrar sesión</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
+    
     <form id="quizForm">
         <h3>1. ¿Cuál es la capital de Francia?</h3>
         <label><input type="radio" name="capital" id="q1a" value="Madrid"> Madrid</label><br>
@@ -79,7 +79,27 @@
         <button type="submit" onclick="capturarRespuestas()">Enviar</button>
     </form>
 
-    <script src="../js/examenes/examen1.js"></script>
-
-</body>
-</html>
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+        <div class="footer-logo">
+            <img src="/sources/images/Logoblanco.svg" alt="Logo de MiEmpresa">
+            <p>Somos un MOOC sobre el bienestar del deporte, el cual busca mejorar la calidad de vida de todos nuestros usuarios.</p>
+        </div>
+        </div>
+        <div class="footer-bottom">
+        <p>&copy; 2025 Fortis. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="/js/examenes/examen1.js"></script>
+    
+    </body>
+    </html>
