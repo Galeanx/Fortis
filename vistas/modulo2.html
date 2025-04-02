@@ -12,13 +12,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../sources/images/Mini-logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a href="/index.html" class="navbar-brand logo">
-                    <img src="/sources/images/Logoblanco.svg" alt="Logo de Fortis">
+                    <img src="../sources/images/Logoblanco.svg" alt="Logo de Fortis">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -39,12 +41,17 @@
                         </div>
                         <li class="nav-item"><a href="/vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
                         <li class="nav-item" id="perfil-container" style="display: none;">
-                            <a href="/vistas/perfil.html" class="nav-link perfil">
-                                <i class="fa-solid fa-user"></i></a> <span id="nombre-usuario"></span>
+                            <a href="../vistas/perfil.html" class="nav-link perfil">
+                                <i class="fa-solid fa-user"></i>
+                                <span id="nombre-usuario"></span>
+                            </a>
                         </li>
                         <li class="nav-item" id="logout-container" style="display: none;">
-                            <button id="logout-btn" class="nav-link logout">Cerrar sesión</button>
+                            <button id="logout-btn" class="nav-link logout">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </button>
                         </li>
+                        
                                             
                     </ul>
                 </div>
@@ -105,6 +112,6 @@
     
         <div class="derechos-text">Derechos de autor © Fortis. Todos los derechos reservados.</div>
     </footer>
-    <script src="../js/modulo1.js"></script>
+    <script src="../js/modulos.js"></script>
 </body>
 </html>
