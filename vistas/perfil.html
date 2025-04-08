@@ -49,20 +49,42 @@
         </nav>
     </header>
 
-    <section class="perfil-container">
-        <div class="perfil-info">
-            <h2>Bienvenido <span id="nombre-usuario"></span></h2>
-            <p>Este es tu panel de usuario donde puedes ver tu progreso en el curso.</p>
+    <section class="perfil-container container my-5">
+        <div class="perfil-info text-center mb-4">
+        <h2>Bienvenido, <span id="nombre-usuario"></span></h2>
+        <p>Este es tu panel de usuario donde puedes ver tu progreso en el curso.</p>
         </div>
-        
-        <div class="progreso-container">
-            <h3>Progreso Global</h3>
-            <div class="progreso-barra">
-                <div id="progreso-barra" class="barra"></div>
+    
+        <div class="row g-4">
+        <!-- Progreso Global -->
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h4 class="card-title">Progreso Global</h4>
+                <div class="progress mb-3" style="height: 25px;">
+                <div id="progreso-barra" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">
+                    <span id="progreso-texto">0%</span>
+                </div>
+                </div>
+                <button id="btn-certificado" class="btn btn-success" style="display: none;">🎓 Descargar Certificado</button>
             </div>
-            <p id="progreso-texto">Progreso: 0%</p>
+            </div>
+        </div>
+    
+        <!-- Módulos Completados -->
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="card-title">Módulos Completados</h4>
+                <ul id="lista-modulos" class="list-group list-group-flush">
+                <!-- JS insertará los módulos aquí -->
+                </ul>
+            </div>
+            </div>
+        </div>
         </div>
     </section>
+    
     
     <footer class="pie-pagina">
         <div class="contenedor-footer">
