@@ -33,15 +33,18 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
-                        <li class="nav-item"><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
-                        <li class="nav-item"><a href="./ingreso.html" class="nav-link ingresar">Ingresar</a></li>
+                        <li class="nav-item"><a href="../vistas/nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li class="nav-item"><a href="../vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
                         <li class="nav-item" id="perfil-container" style="display: none;">
-                            <a href="/index.html" class="nav-link perfil">
-                                <i class="fa-solid fa-user"></i> <span id="nombre-usuario"></span>
-                                <li class="nav-item" id="logout-container" style="display: none;">
-                                    <button id="logout-btn" class="nav-link logout">Cerrar sesión</button>
-                                </li>
+                            <a href="../vistas/perfil.html" class="nav-link perfil">
+                                <i class="fa-solid fa-user"></i>
+                                <span id="nombre-usuario"></span>
                             </a>
+                        </li>
+                        <li class="nav-item" id="logout-container" style="display: none;">
+                            <button id="logout-btn" class="nav-link logout">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -49,7 +52,7 @@
         </nav>
     </header>
 
-    <section class="perfil-container">
+    <section class="perfil-cajon">
         <div class="perfil-info">
             <h2>Bienvenido <span id="nombre-usuario"></span></h2>
             <p>Este es tu panel de usuario donde puedes ver tu progreso en el curso.</p>
