@@ -1,0 +1,479 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", system-ui;
+}
+
+ /* Estilos generales */
+ header {
+  background-color: #1d938a;
+  padding: 15px 30px;
+}
+
+/* Logo */
+.logo img {
+  width: 140px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Evita espacios adicionales */
+  margin-left: 150px;
+}
+
+.navbar-nav {
+  gap: 30px; /* Ajuste de separación más visible entre botones */
+  margin-right: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+/* Animación de la línea en los enlaces, excepto en 'Ingresar' */
+.navbar-nav .nav-link:not(.ingresar)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0; /* Inicia invisible */
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:not(.ingresar, .logout):hover::after {
+  width: 40%; /* Línea más corta y menos agresiva */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilos del botón 'Ingresar' */
+.ingresar {
+  background-color: white;
+  color: #1d938a !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.ingresar:hover {
+  color: #1d938a !important;
+  transform: scale(1.03); /* Aumento más sutil del tamaño */
+}
+
+
+/* Estilos para el botón de perfil */
+.perfil {
+display: flex;
+align-items: center;
+gap: 6px; /* Espacio entre el icono y el nombre */
+background-color: transparent;
+padding: 8px 12px;
+border-radius: 50px;
+transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.perfil i {
+font-size: 20px;
+color: white;
+}
+
+.perfil span {
+font-size: 16px;
+font-weight: bold;
+color: white;
+white-space: nowrap; /* Evita que el nombre se corte */
+}
+
+/* Ajuste en el navbar cuando el perfil aparece */
+#perfil-container {
+display: flex;
+align-items: center;
+}
+
+
+.hero-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-section .display-4 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d938a;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-section .lead {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 30px;
+  color: #333;
+  font-size: 1rem;
+  border: 2px solid #1d938a;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.btn-social i {
+  font-size: 1.5rem;
+}
+
+.btn-social:hover {
+  background-color: #1d938a;
+  color: white;
+  transform: scale(1.1);
+}
+
+.btn-instagram {
+  border-color: #1d938a;
+}
+
+.btn-instagram:hover {
+  background-color: #1d938a;
+}
+
+.btn-youtube {
+  border-color: #1d938a;
+}
+
+.btn-youtube:hover {
+  background-color: #1d938a;
+}
+
+@media (max-width: 768px) {
+  .hero-section .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1.3rem;
+  }
+
+  .social-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .btn-social {
+    padding: 8px 12px;
+    font-size: 1rem;
+    width: auto;
+    height: 45px;
+  }
+
+  .btn-social i {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section .display-4 {
+    font-size: 2rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1.2rem;
+  }
+
+  .btn-social {
+    width: auto;
+    height: 40px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .btn-social i {
+    font-size: 1.2rem;
+  }
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 40px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: 20px;
+}
+
+.slider-item {
+  flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 10px;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-text,
+.card-description {
+  font-size: 1rem;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1d938a;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0 15px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
+}
+
+@media (max-width: 992px) {
+  .slider-item {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .slider-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.btn-primary {
+  background-color: #1d938a;
+  border-radius: 50px;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #125751;
+}
+
+@media (max-width: 767px) {
+  .card-img-top {
+      height: 150px;
+  }
+}
+
+.full-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-content {
+  position: absolute;
+  top: 45%;
+  left: 60%;
+  transform: translate(-25%, -50%);
+  text-align: right;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.full-image-section {
+  height: 100vh;
+  background-image: url('../sources/images/banner1-inicio.png'); /* Cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.text-content p {
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+}
+
+.bottom-left-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.bottom-left-content p {
+  font-size: 18px;
+  margin-right: 10px;
+  font-family: "Montserrat", system-ui;
+}
+
+.bottom-left-content img {
+  width: 99px;
+  height: 99px;
+  object-fit: contain;
+}
+
+.fixed-image-section {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.fixed-image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------------- FOOTER PRINCIPAL ---------------- */
+
+.pie-pagina {
+  background-color: #1D938A;
+  color: white;
+  padding: 50px 30px 20px 30px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Contenedor general */
+.contenedor-footer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------------- SECCIÓN LOGO Y DESCRIPCIÓN ---------------- */
+
+.footer-logo img {
+  max-width: 156px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.8;
+  max-width: 600px;
+  padding: 0 10px;
+}
+
+/* ---------------- COPYRIGHT ---------------- */
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  font-size: 0.9em;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 600px) {
+  .footer-logo img {
+    max-width: 120px; /* Reduce el logo en pantallas pequeñas */
+  }
+
+  .footer-logo p {
+    font-size: 0.95em;
+    padding: 0 5px;
+  }
+}

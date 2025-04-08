@@ -1,0 +1,208 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", system-ui;
+}
+
+ /* Estilos generales */
+ header {
+  background-color: #1d938a;
+  padding: 15px 30px;
+}
+
+/* Logo */
+.logo img {
+  width: 140px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Evita espacios adicionales */
+  margin-left: 150px;
+}
+
+.navbar-nav {
+  gap: 30px; /* Ajuste de separación más visible entre botones */
+  margin-right: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+/* Animación de la línea en los enlaces, excepto en 'Ingresar' */
+.navbar-nav .nav-link:not(.ingresar)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0; /* Inicia invisible */
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:not(.ingresar, .logout):hover::after {
+  width: 40%; /* Línea más corta y menos agresiva */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilos del botón 'Ingresar' */
+.ingresar {
+  background-color: white;
+  color: #1d938a !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.ingresar:hover {
+  color: #1d938a !important;
+  transform: scale(1.03); /* Aumento más sutil del tamaño */
+}
+
+
+/* Estilos para el botón de perfil */
+.perfil {
+display: flex;
+align-items: center;
+gap: 6px; /* Espacio entre el icono y el nombre */
+background-color: transparent;
+padding: 8px 12px;
+border-radius: 50px;
+transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.perfil i {
+font-size: 20px;
+color: white;
+}
+
+.perfil span {
+font-size: 16px;
+font-weight: bold;
+color: white;
+white-space: nowrap; /* Evita que el nombre se corte */
+}
+
+/* Ajuste en el navbar cuando el perfil aparece */
+#perfil-container {
+display: flex;
+align-items: center;
+}
+
+
+.perfil-cajon {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.perfil-info h2 {
+  color: #1d938a;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.perfil-info p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.progreso-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.progreso-barra {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.barra {
+  height: 100%;
+  width: 0%;
+  background-color: #1d938a;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+#progreso-texto {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+.pie-pagina {
+  background-color: #1D938A;
+  color: white;
+  padding: 50px 30px 20px 30px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Contenedor general */
+.contenedor-footer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------------- SECCIÓN LOGO Y DESCRIPCIÓN ---------------- */
+
+.footer-logo img {
+  max-width: 156px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.8;
+  max-width: 600px;
+  padding: 0 10px;
+}
+
+/* ---------------- COPYRIGHT ---------------- */
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  font-size: 0.9em;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 600px) {
+  .footer-logo img {
+    max-width: 120px; /* Reduce el logo en pantallas pequeñas */
+  }
+
+  .footer-logo p {
+    font-size: 0.95em;
+    padding: 0 5px;
+  }
+}
+
