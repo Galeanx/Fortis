@@ -8,19 +8,9 @@
 }
 
  /* Estilos generales */
-header {
-  background-color: #1D938A;
+ header {
+  background-color: #1d938a;
   padding: 15px 30px;
-}
-
-#logout-btn i {
-  font-size: 1.5rem; /* Ajusta el tamaño según necesites */
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-#logout-btn:hover i {
-  transform: scale(1.2); /* Aumenta el tamaño en un 20% */
-  color: #ffb9bf; /* Cambia el color al hacer hover (opcional) */
 }
 
 /* Logo */
@@ -109,6 +99,7 @@ white-space: nowrap; /* Evita que el nombre se corte */
 display: flex;
 align-items: center;
 }
+
 
 .hero-section {
   background-color: #f8f9fa;

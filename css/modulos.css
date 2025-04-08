@@ -324,21 +324,18 @@ align-items: center;
 }
 
 .estilos-intro {
-    width: 100vw; /* Ocupa todo el ancho de la ventana */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    margin: 0; /* Elimina los márgenes */
-    padding: 40px; /* Aumenta el padding para mejor distribución */
-    background: #ffffff;
-    border-radius: 0; /* Elimina el borde redondeado si quieres que cubra toda la pantalla */
-    box-shadow: none; /* Elimina la sombra para un diseño más limpio */
-    display: flex; /* Centra el contenido */
+    padding: 30px 20px 60px 20px;
+    border-radius: 10px;
+    width: 90%; /* Ajuste para pantallas pequeñas */
+    text-align: center; /* Centra el texto */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto; /* Centra el div en la pantalla */
 }
 
 .estilos-intro h3 {
-    text-align: center;
     color: #1d938a;
     font-size: 40px;
     margin-bottom: 20px;
@@ -347,7 +344,5 @@ align-items: center;
 .estilos-intro p {
     font-size: 25px;
     color: #333;
-    text-align: center;
-    max-width: 80%; /* Para que el texto no se extienda demasiado en pantallas grandes */
+    max-width: 80%;
 }
-
