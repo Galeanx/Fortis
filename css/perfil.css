@@ -8,8 +8,8 @@
 }
 
  /* Estilos generales */
-header {
-  background-color: #1D938A;
+ header {
+  background-color: #1d938a;
   padding: 15px 30px;
 }
 
@@ -75,7 +75,6 @@ header {
 .perfil {
 display: flex;
 align-items: center;
-margin-top: 10px;
 gap: 6px; /* Espacio entre el icono y el nombre */
 background-color: transparent;
 padding: 8px 12px;
@@ -101,7 +100,8 @@ display: flex;
 align-items: center;
 }
 
-.perfil-container {
+
+.perfil-cajon {
   max-width: 900px;
   margin: 50px auto;
   padding: 20px;
