@@ -1,0 +1,271 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", system-ui;
+}
+
+ /* Estilos generales */
+header {
+  background-color: #1D938A;
+  padding: 15px 30px;
+}
+
+/* Logo */
+.logo img {
+  width: 140px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Evita espacios adicionales */
+  margin-left: 150px;
+}
+
+.navbar-nav {
+  gap: 30px; /* Ajuste de separación más visible entre botones */
+  margin-right: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+/* Animación de la línea en los enlaces, excepto en 'Ingresar' */
+.navbar-nav .nav-link:not(.ingresar)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0; /* Inicia invisible */
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:not(.ingresar, .logout):hover::after {
+  width: 40%; /* Línea más corta y menos agresiva */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilos del botón 'Ingresar' */
+.ingresar {
+  background-color: white;
+  color: #1d938a !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.ingresar:hover {
+  color: #1d938a !important;
+  transform: scale(1.03); /* Aumento más sutil del tamaño */
+}
+
+
+/* Estilos para el botón de perfil */
+.perfil {
+display: flex;
+align-items: center;
+gap: 6px; /* Espacio entre el icono y el nombre */
+background-color: transparent;
+padding: 8px 12px;
+border-radius: 50px;
+transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.perfil i {
+font-size: 20px;
+color: white;
+}
+
+.perfil span {
+font-size: 16px;
+font-weight: bold;
+color: white;
+white-space: nowrap; /* Evita que el nombre se corte */
+}
+
+/* Ajuste en el navbar cuando el perfil aparece */
+#perfil-container {
+display: flex;
+align-items: center;
+}
+  
+  /* Diseño de tarjetas en Grid */
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #555;
+    font-size: 16px;
+  }
+  
+  /* Botones */
+  .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .modules-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+  
+    .card {
+        padding: 15px;
+    }
+  
+    .btn {
+        width: 100%;
+        padding: 12px;
+    }
+  }
+  
+/* Esto estilos son para los formularios*/
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto;
+  margin-top: 50px;
+}
+
+h3 {
+  color: #1d938a;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #1d938a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #219150;
+}
+
+/* ---------------- FOOTER PRINCIPAL ---------------- */
+
+.pie-pagina {
+  background-color: #1D938A;
+  color: white;
+  padding: 50px 30px 20px 30px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Contenedor general */
+.contenedor-footer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------------- SECCIÓN LOGO Y DESCRIPCIÓN ---------------- */
+
+.footer-logo img {
+  max-width: 156px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.8;
+  max-width: 600px;
+  padding: 0 10px;
+}
+
+/* ---------------- COPYRIGHT ---------------- */
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  font-size: 0.9em;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 600px) {
+  .footer-logo img {
+    max-width: 120px; /* Reduce el logo en pantallas pequeñas */
+  }
+
+  .footer-logo p {
+    font-size: 0.95em;
+    padding: 0 5px;
+  }
+}
