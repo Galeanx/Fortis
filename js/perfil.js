@@ -36,3 +36,31 @@ document.addEventListener("DOMContentLoaded", function () {
     verificarSesion();
 });
 
+// Mostrar progreso y certificado
+const progresoBarra = document.getElementById("progreso-barra");
+const progresoTexto = document.getElementById("progreso-texto");
+const btnCertificado = document.getElementById("btn-certificado");
+const listaModulos = document.getElementById("lista-modulos");
+
+const user = JSON.parse(localStorage.getItem("user")) || { progreso: 0, modulosCompletados: [], certificado: false };
+
+progresoBarra.style.width = `${user.progreso}%`;
+progresoTexto.textContent = `${user.progreso}%`;
+
+if (user.certificado) {
+btnCertificado.style.display = "inline-block";
+btnCertificado.addEventListener("click", () => {
+    window.open("../sources/certificado.pdf", "_blank");
+});
+}
+
+// Mostrar módulos completados
+if (Array.isArray(user.modulosCompletados)) {
+user.modulosCompletados.forEach(mod => {
+    const item = document.createElement("li");
+    item.classList.add("list-group-item");
+    item.textContent = `✅ ${mod}`;
+    listaModulos.appendChild(item);
+});
+}
+

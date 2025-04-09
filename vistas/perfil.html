@@ -33,15 +33,18 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
-                        <li class="nav-item"><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
-                        <li class="nav-item"><a href="./ingreso.html" class="nav-link ingresar">Ingresar</a></li>
+                        <li class="nav-item"><a href="../vistas/nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li class="nav-item"><a href="../vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
                         <li class="nav-item" id="perfil-container" style="display: none;">
-                            <a href="/index.html" class="nav-link perfil">
-                                <i class="fa-solid fa-user"></i> <span id="nombre-usuario"></span>
-                                <li class="nav-item" id="logout-container" style="display: none;">
-                                    <button id="logout-btn" class="nav-link logout">Cerrar sesión</button>
-                                </li>
+                            <a href="../vistas/perfil.html" class="nav-link perfil">
+                                <i class="fa-solid fa-user"></i>
+                                <span id="nombre-usuario"></span>
                             </a>
+                        </li>
+                        <li class="nav-item" id="logout-container" style="display: none;">
+                            <button id="logout-btn" class="nav-link logout">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -49,20 +52,42 @@
         </nav>
     </header>
 
-    <section class="perfil-container">
+    <section class="perfil-cajon">
         <div class="perfil-info">
             <h2>Bienvenido <span id="nombre-usuario"></span></h2>
             <p>Este es tu panel de usuario donde puedes ver tu progreso en el curso.</p>
         </div>
-        
-        <div class="progreso-container">
-            <h3>Progreso Global</h3>
-            <div class="progreso-barra">
-                <div id="progreso-barra" class="barra"></div>
+    
+        <div class="row g-4">
+        <!-- Progreso Global -->
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h4 class="card-title">Progreso Global</h4>
+                <div class="progress mb-3" style="height: 25px;">
+                <div id="progreso-barra" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">
+                    <span id="progreso-texto">0%</span>
+                </div>
+                </div>
+                <button id="btn-certificado" class="btn btn-success" style="display: none;">🎓 Descargar Certificado</button>
             </div>
-            <p id="progreso-texto">Progreso: 0%</p>
+            </div>
+        </div>
+    
+        <!-- Módulos Completados -->
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="card-title">Módulos Completados</h4>
+                <ul id="lista-modulos" class="list-group list-group-flush">
+                <!-- JS insertará los módulos aquí -->
+                </ul>
+            </div>
+            </div>
+        </div>
         </div>
     </section>
+    
     
     <footer class="pie-pagina">
         <div class="contenedor-footer">

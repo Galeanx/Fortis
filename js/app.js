@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         logoutBtn.addEventListener("click", function () {
             localStorage.removeItem("user");
             verificarSesion();
-            window.location.href = "./vistas/ingreso.html";
+            window.location.href = "../vistas/ingreso.html";
         });
     }
 
@@ -57,3 +57,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     verificarSesion();
 });
+
