@@ -1,0 +1,188 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat", system-ui;
+  }
+  
+   /* Estilos generales */
+   header {
+    background-color: #1d938a;
+    padding: 15px 30px;
+  }
+  
+  /* Logo */
+  .logo img {
+    width: 140px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Evita espacios adicionales */
+    margin-left: 150px;
+  }
+  
+  .navbar-nav {
+    gap: 30px; /* Ajuste de separación más visible entre botones */
+    margin-right: 70px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+  }
+  
+  /* Animación de la línea en los enlaces, excepto en 'Ingresar' */
+  .navbar-nav .nav-link:not(.ingresar)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0; /* Inicia invisible */
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-nav .nav-link:not(.ingresar, .logout):hover::after {
+    width: 40%; /* Línea más corta y menos agresiva */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Estilos del botón 'Ingresar' */
+  .ingresar {
+    background-color: white;
+    color: #1d938a !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .ingresar:hover {
+    color: #1d938a !important;
+    transform: scale(1.03); /* Aumento más sutil del tamaño */
+  }
+  
+  
+  /* Estilos para el botón de perfil */
+  .perfil {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Espacio entre el icono y el nombre */
+  background-color: transparent;
+  padding: 8px 12px;
+  border-radius: 50px;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+  }
+  
+  .perfil i {
+  font-size: 20px;
+  color: white;
+  }
+  
+  .perfil span {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap; /* Evita que el nombre se corte */
+  }
+  
+  /* Ajuste en el navbar cuando el perfil aparece */
+  #perfil-container {
+  display: flex;
+  align-items: center;
+  }
+
+  /* Estilo general del formulario */
+#quizForm {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Título de cada pregunta */
+#quizForm h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #1D938A;
+}
+
+/* Estilo de cada opción */
+#quizForm label {
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background-color: #F3F3F3;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid transparent;
+}
+
+/* Resalta opción al pasar el cursor */
+#quizForm label:hover {
+    background-color: #e0f7f5;
+    border-color: #1D938A;
+    transform: scale(1.02);
+}
+
+/* Ajustes para el input (radio) */
+#quizForm input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* Botón de enviar */
+#quizForm button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #1D938A;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover en el botón */
+#quizForm button:hover {
+    background-color: #157a71;
+    transform: scale(1.03);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+    #quizForm {
+        padding: 20px;
+    }
+
+    #quizForm h3 {
+        font-size: 16px;
+    }
+
+    #quizForm label {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    #quizForm button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
