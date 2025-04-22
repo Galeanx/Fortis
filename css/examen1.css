@@ -186,3 +186,59 @@
         padding: 10px;
     }
 }
+
+/* ---------------- FOOTER PRINCIPAL ---------------- */
+
+.pie-pagina {
+    background-color: #1D938A;
+    color: white;
+    padding: 50px 30px 20px 30px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Contenedor general */
+  .contenedor-footer {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* ---------------- SECCIÓN LOGO Y DESCRIPCIÓN ---------------- */
+  
+  .footer-logo img {
+    max-width: 156px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .footer-logo p {
+    margin: 0 auto;
+    font-size: 1em;
+    line-height: 1.8;
+    max-width: 600px;
+    padding: 0 10px;
+  }
+  
+  /* ---------------- COPYRIGHT ---------------- */
+  
+  .footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 15px;
+    font-size: 0.9em;
+  }
+  
+  /* ---------------- RESPONSIVE ---------------- */
+  
+  @media (max-width: 600px) {
+    .footer-logo img {
+      max-width: 120px; /* Reduce el logo en pantallas pequeñas */
+    }
+  
+    .footer-logo p {
+      font-size: 0.95em;
+      padding: 0 5px;
+    }
+  }
+  
