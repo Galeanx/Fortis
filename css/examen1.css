@@ -94,6 +94,7 @@
   white-space: nowrap; /* Evita que el nombre se corte */
   }
   
+
   /* Ajuste en el navbar cuando el perfil aparece */
   #perfil-container {
   display: flex;
@@ -122,7 +123,7 @@
 
 /* Estilo de cada opción */
 #quizForm label {
-    display: block;
+  display: block;
     padding: 10px 15px;
     margin-bottom: 8px;
     background-color: #F3F3F3;
@@ -185,6 +186,7 @@
         font-size: 14px;
         padding: 10px;
     }
+
 }
 
 /* ---------------- FOOTER PRINCIPAL ---------------- */
