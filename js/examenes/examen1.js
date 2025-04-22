@@ -5,18 +5,18 @@ const quizForm = document.querySelector('#quizForm')
 function capturarRespuestas() {
 
     //Obtener valores selesccionados
-    const capital = document.querySelector('input[name="capital"]:checked')?.value;
-    const planeta = document.querySelector('input[name="planeta"]:checked')?.value;
-    const continentes = document.querySelector('input[name="continentes"]:checked')?.value;
-    const autor = document.querySelector('input[name="autor"]:checked')?.value;
-    const metal = document.querySelector('input[name="metal"]:checked')?.value;
+    const elementos = document.querySelector('input[name="elementos"]:checked')?.value;
+    const componente = document.querySelector('input[name="componente"]:checked')?.value;
+    const funciones = document.querySelector('input[name="funciones"]:checked')?.value;
+    const importancia = document.querySelector('input[name="importancia"]:checked')?.value;
+    const relacion = document.querySelector('input[name="relacion"]:checked')?.value;
 
     return{
-        p1: capital,
-        p2: planeta,
-        p3: continentes,
-        p4: autor,
-        p5: metal,
+        p1: elementos,
+        p2: componente,
+        p3: funciones,
+        p4: importancia,
+        p5: relacion,
     }
 }
 
@@ -28,8 +28,8 @@ function validarRespuestas (e) {
         p1: "París",
         p2: "Júpiter",
         p3: "6",
-        p4: "Cervantes",
-        p5: "Aluminio",
+        p4: "Garcilaso",
+        p5: "Cobre",
     }
 
     let acumulado = 0
