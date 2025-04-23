@@ -74,7 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 pass: password,
                 logged: false,
                 progreso: 0,
+                progreso_modulos: {
+                    modulo1: 0,
+                    modulo2: 0,
+                    modulo3: 0,
+                    modulo4: 0,
+                    modulo5: 0
+                },
+                certificado: false
             });
+            
 
             localStorage.setItem('users', JSON.stringify(users));
             messageEl.textContent = 'Registro completado!';
@@ -99,10 +108,11 @@ document.addEventListener("DOMContentLoaded", function () {
             if (user) {
                 messageEl.textContent = 'Inicio de sesión exitoso';
                 messageEl.classList.add('success-message');
-                localStorage.setItem("user", JSON.stringify({ nombre: user.user }));
-
+            
+                localStorage.setItem("user", JSON.stringify(user));
+            
                 setTimeout(() => { window.location.href = "../index.html"; }, 1000);
-            } else {
+            }else {
                 messageEl.textContent = '¡Nombre de usuario o contraseña inválidos!';
                 messageEl.classList.add('error-message');
             }
