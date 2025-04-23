@@ -47,21 +47,20 @@
     </header>
 
     <main>
-        <div class="container">
-          <div class="form-header">
-            <h2>Iniciar Sesión</h2>
-          </div>
-          <form id="form-ingreso" class="form-container active">
-            <input type="email" id="correo-ingreso" class="form-input" placeholder="Correo electrónico" required />
-            <input type="password" id="clave-ingreso" class="form-input" placeholder="Contraseña" required />
-            <button type="submit" class="form-submit">Ingresar</button>
-            <p class="message">¿No tienes una cuenta? 
-              <a href="../vistas/registro.html" style="color: var(--main-color); font-weight: bold;">Regístrate aquí</a>
-            </p>
-            <p class="error-message" id="error-ingreso"></p>
-          </form>
-        </div>
-      </main>
+  <div class="container">
+    <div class="form-header">
+      <h2>Registro</h2>
+    </div>
+    <form id="form-registro" class="form-container active">
+      <input type="text" id="nombre-usuario" class="form-input" placeholder="Nombre de usuario" required />
+      <input type="password" id="clave-registro" class="form-input" placeholder="Contraseña" required />
+      <input type="password" id="confirmar-clave" class="form-input" placeholder="Confirmar Contraseña" required />
+      <button type="submit" class="form-submit">Crear cuenta</button>
+      
+      <p class="error-message" id="error-registro"></p>
+    </form>
+  </div>
+</main>
     
         
         <footer class="pie-pagina">
