@@ -21,7 +21,6 @@ function capturarRespuestas() {
 function validarRespuestas(e) {
     e.preventDefault();
 
-    // Aseguramos que exista progreso_modulos
     if (!user.progreso_modulos) {
         user.progreso_modulos = {
             modulo1: 0,
@@ -32,9 +31,9 @@ function validarRespuestas(e) {
         };
     }
 
-    // Evitar que repita el examen si ya tiene 100%
     if (user.progreso_modulos.modulo1 === 100) {
         alert("⚠️ Ya has completado este examen. No es necesario repetirlo.");
+        console.log("⛔ El examen ya fue completado previamente.");
         return;
     }
 
@@ -57,14 +56,17 @@ function validarRespuestas(e) {
         }
     }
 
+    console.log(`🔎 Respuestas correctas: ${acumulado} de 5`);
+
     if (acumulado >= 3) {
         user.progreso_modulos.modulo1 = 100;
         alert("✅ ¡Examen aprobado! Has completado el módulo.");
+        console.log("🎉 ¡Examen aprobado! Se actualizó el progreso del módulo 1 a 100%");
     } else {
         alert("❌ No alcanzaste la puntuación mínima. Intenta nuevamente.");
+        console.log("😓 Examen no aprobado. No se actualizó el progreso.");
     }
 
     localStorage.setItem("user", JSON.stringify(user));
 }
-
 quizForm.addEventListener("submit", validarRespuestas);

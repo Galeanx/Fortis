@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nombreUsuario: document.getElementById("nombre-usuario"),
         perfilDropdown: document.getElementById("perfilDropdown"),
         registerForm: document.getElementById('registerForm'),
-        loginForm: document.getElementById('loginForm'),
+        loginForm: document.getElementById('loginForm'), 
     };
 
     function verificarSesion() {
