@@ -58,3 +58,19 @@ document.addEventListener("DOMContentLoaded", function () {
     verificarSesion();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const sliderTrack = document.querySelector('.slider-track');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
+
+    const cardWidth = document.querySelector('.slider-item').offsetWidth + 20; // Ancho + gap
+    let scrollAmount = 0;
+
+    nextBtn.addEventListener('click', () => {
+    sliderTrack.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+    sliderTrack.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+});

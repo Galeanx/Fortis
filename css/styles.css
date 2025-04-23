@@ -8,7 +8,7 @@
 }
 
  /* Estilos generales */
- header {
+header {
   background-color: #1d938a;
   padding: 15px 30px;
 }
@@ -221,50 +221,129 @@ align-items: center;
     font-size: 1.2rem;
   }
 }
+
+.modulos-contenido {
+  background-color: #e6f4f3; /* Versión clara del color principal */
+  padding: 60px 40px;
+  border-radius: 12px;
+}
+
+/* Estilos para el título */
+.modulos-contenido .display-4 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d938a;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .modulos-contenido {
+    padding: 40px 20px;
+  }
+
+  .modulos-contenido .display-4 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .modulos-contenido .display-4 {
+    font-size: 1.8rem;
+  }
+}
+
+
 .slider-container {
   position: relative;
   overflow: hidden;
-  padding: 20px 40px;
 }
 
 .slider-track {
   display: flex;
-  transition: transform 0.3s ease;
-  gap: 20px;
+  gap: 40px; /* Espacio entre tarjetas */
+  transition: transform 0.4s ease;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 20px;
 }
 
 .slider-item {
-  flex: 0 0 calc(33.33% - 20px);
-  max-width: calc(33.33% - 20px);
+  flex: 0 0 calc(33.333% - 40px); /* 3 tarjetas por fila, considerando el gap */
+  max-width: calc(33.333% - 40px);
+  scroll-snap-align: center;
 }
 
-.carousel-item {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 350px;
-  margin: 0 10px;
-  transition: transform 0.5s ease;
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
 }
 
 .card {
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  border: none;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 .card-img-top {
-  width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+}
+
+/* Responsive: 2 tarjetas por fila */
+@media (max-width: 992px) {
+  .slider-item {
+    flex: 0 0 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+}
+
+/* Responsive: 1 tarjeta por fila */
+@media (max-width: 600px) {
+  .slider-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Oculta la barra de desplazamiento horizontal */
+.slider-track {
+  scrollbar-width: none; /* Firefox */
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Edge */
 }
 
 .card-body {
