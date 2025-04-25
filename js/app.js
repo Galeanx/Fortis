@@ -1,61 +1,55 @@
-/* 
-Página de Inicio: Si hay un usuario en localStorage y tiene un nombre, se muestra el perfil del usuario, su nombre y el botón de cierre de sesión, mientras que el botón de ingresar se oculta. Cuando no hay usuario, el perfil y el botón de cierre de sesión se ocultan, y el botón de ingresar se muestra. Si el botón de cerrar sesión existe, al hacer clic en él, se elimina la sesión del usuario, se actualiza la interfaz y se redirige a la página de ingreso. Cuando el usuario está autenticado, al hacer clic en un módulo, se evita la navegación predeterminada y se redirige al módulo correspondiente.
-Si no hay sesión, el enlace funciona de manera normal y lleva al usuario a la página de ingreso.
+const btnIniciarSesion = document.querySelector(".ingresar");
+const perfilContainer = document.getElementById("perfil-container");
+const logoutContainer = document.getElementById("logout-container");
+const nombreUsuario = document.getElementById("usuario-pantalla");
+const btnCerrarSesion = document.getElementById("logout-btn");
+const moduloLinks = document.querySelectorAll(".modulo-link");
 
-Página de Ingreso: Primero, al cargarse la página, se verifica si hay un usuario guardado. Si existe y tiene un nombre, se muestra su perfil y se oculta el botón de ingresar. Si no hay usuario, se oculta el perfil y se muestra el botón de ingresar.
-Si el usuario desea cerrar sesión, al hacer clic en el botón correspondiente, su información se elimina del localStorage, se actualiza la interfaz y se redirige a la página de ingreso. En el proceso de registro, el sistema verifica que las contraseñas ingresadas coincidan. Si no lo hacen, muestra un mensaje de error y detiene el registro. Luego, revisa si el nombre de usuario ya existe en el localStorage. Si es así, muestra otro mensaje de error y no permite el registro. Si las validaciones se cumplen, el usuario se guarda en localStorage, mostrando un mensaje de éxito.
-En el inicio de sesión, se comprueba si el nombre de usuario y la contraseña coinciden con un usuario almacenado. Si es correcto, se guarda la sesión, se muestra un mensaje de éxito y se redirige a la página de inicio. Si los datos no coinciden, se muestra un mensaje indicando que las credenciales son inválidas.
- */
+let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-document.addEventListener("DOMContentLoaded", function () {
-    const perfilContainer = document.getElementById("perfil-container");
-    const logoutContainer = document.getElementById("logout-container");
-    const logoutBtn = document.getElementById("logout-btn");
-    const ingresarBtn = document.querySelector(".ingresar");
-    const nombreUsuario = document.getElementById("nombre-usuario");
-    const moduloLinks = document.querySelectorAll(".modulo-link");
+function verificarSesion() {
+    let usuarioLogueado = usuarios.find(u => u.userLogged);
 
-    function verificarSesion() {
-        let usuario = JSON.parse(localStorage.getItem("user"));
+    if (usuarioLogueado) {
+        nombreUsuario.textContent = `${usuarioLogueado.userNU}`;
+        btnIniciarSesion.style.display = "none";
+        perfilContainer.style.display = "flex";
+        logoutContainer.style.display = "flex";
+    } else {
+        nombreUsuario.textContent = "";
+        btnIniciarSesion.style.display = "flex";
+        perfilContainer.style.display = "none";
+        logoutContainer.style.display = "none";
+    }
+}
 
-        if (usuario && usuario.nombre) {
-            if (perfilContainer && nombreUsuario) {
-                perfilContainer.style.display = "block";
-                nombreUsuario.textContent = usuario.nombre.trim();
-            }
-            if (logoutContainer) logoutContainer.style.display = "block";
-            if (ingresarBtn) ingresarBtn.style.display = "none";
-        } else {
-            if (perfilContainer) perfilContainer.style.display = "none";
-            if (logoutContainer) logoutContainer.style.display = "none";
-            if (ingresarBtn) ingresarBtn.style.display = "inline-block";
+function cerrarSesion() {
+    usuarios = usuarios.map(u => ({
+        ...u,
+        userLogged: false
+    }));
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    window.location.href = "./index.html";
+}
+
+document.addEventListener("DOMContentLoaded", verificarSesion);
+btnCerrarSesion.addEventListener("click", cerrarSesion);
+
+// Interceptar clics en los enlaces de módulos
+moduloLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+        const usuario = JSON.parse(localStorage.getItem("usuarios"));
+        const rutaModulo = this.getAttribute("data-modulo") || this.getAttribute("href");
+
+        if (!usuario) {
+            // Si no está logueado, lo dejamos ir a la página de ingreso
+            return;
         }
-    }
 
-    if (logoutBtn) {
-        logoutBtn.addEventListener("click", function () {
-            localStorage.removeItem("user");
-            verificarSesion();
-            window.location.href = "./vistas/ingreso.html";
-        });
-    }
-
-    // Interceptar clics en los enlaces de módulos
-    moduloLinks.forEach((link) => {
-        link.addEventListener("click", function (event) {
-            let usuario = JSON.parse(localStorage.getItem("user"));
-            let rutaModulo = this.getAttribute("data-modulo"); // Obtener la ruta del módulo
-
-            if (usuario) {
-                event.preventDefault(); // Evita la navegación predeterminada
-                window.location.href = rutaModulo; // Redirige al módulo si está logueado
-            } else {
-                // Deja que el enlace funcione normalmente y lo mande a ingreso.html
-            }
-        });
+        // Si está logueado, evitamos el comportamiento por defecto y lo redirigimos
+        event.preventDefault();
+        window.location.href = rutaModulo;
     });
-
-    verificarSesion();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -73,4 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.addEventListener('click', () => {
     sliderTrack.scrollBy({ left: -cardWidth, behavior: 'smooth' });
     });
-});
+});  

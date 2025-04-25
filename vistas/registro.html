@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortis · Ingreso</title>
+    <title>Fortis · Registro</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Owl Carousel CSS -->
@@ -37,7 +37,7 @@
                         <li class="nav-item"><a href="./ingreso.html" class="nav-link ingresar">Ingresar</a></li>
                         <li class="nav-item" id="perfil-container" style="display: none;">
                             <a href="./perfil.html" class="nav-link perfil">
-                                <i class="fa-solid fa-user"></i> <span id="nombre-usuario"></span>
+                                <i class="fa-solid fa-user"></i> <span id="usuario-pantalla"></span>
                             </a>
                         </li>
                     </ul>
@@ -56,12 +56,11 @@
       <input type="password" id="clave-registro" class="form-input" placeholder="Contraseña" required />
       <input type="password" id="confirmar-clave" class="form-input" placeholder="Confirmar Contraseña" required />
       <button type="submit" class="form-submit">Crear cuenta</button>
+      <p id="error-registro" class="error-message"></p>
       
-      <p class="error-message" id="error-registro"></p>
     </form>
   </div>
 </main>
-    
         
         <footer class="pie-pagina">
             <div class="contenedor-footer">
@@ -75,6 +74,6 @@
             </div>
         </footer>
         
-    <script src="../js/ingreso.js"></script>
+    <script src="../js/registro.js"></script>
 </body>
 </html>

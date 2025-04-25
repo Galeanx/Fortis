@@ -1,50 +1,53 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const perfilContainer = document.getElementById("perfil-container");
-    const logoutContainer = document.getElementById("logout-container");
-    const logoutBtn = document.getElementById("logout-btn");
-    const ingresarBtn = document.querySelector(".ingresar");
-    const nombreUsuario = document.getElementById("nombre-usuario");
-    const moduloLinks = document.querySelectorAll(".modulo-link");
+const btnIniciarSesion = document.querySelector(".ingresar");
+const perfilContainer = document.getElementById("perfil-container");
+const logoutContainer = document.getElementById("logout-container");
+const nombreUsuario = document.getElementById("usuario-pantalla");
+const btnCerrarSesion = document.getElementById("logout-btn");
+const moduloLinks = document.querySelectorAll(".modulo-link");
 
-    function verificarSesion() {
-        let usuario = JSON.parse(localStorage.getItem("user"));
+let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-        if (usuario && usuario.nombre) {
-            if (perfilContainer && nombreUsuario) {
-                perfilContainer.style.display = "block";
-                nombreUsuario.textContent = usuario.nombre.trim();
-            }
-            if (logoutContainer) logoutContainer.style.display = "block";
-            if (ingresarBtn) ingresarBtn.style.display = "none";
-        } else {
-            if (perfilContainer) perfilContainer.style.display = "none";
-            if (logoutContainer) logoutContainer.style.display = "none";
-            if (ingresarBtn) ingresarBtn.style.display = "inline-block";
+function verificarSesion() {
+    let usuarioLogueado = usuarios.find(u => u.userLogged);
+
+    if (usuarioLogueado) {
+        nombreUsuario.textContent = `${usuarioLogueado.userNU}`;
+        btnIniciarSesion.style.display = "none";
+        perfilContainer.style.display = "flex";
+        logoutContainer.style.display = "flex";
+    } else {
+        nombreUsuario.textContent = "";
+        btnIniciarSesion.style.display = "flex";
+        perfilContainer.style.display = "none";
+        logoutContainer.style.display = "none";
+    }
+}
+
+function cerrarSesion() {
+    usuarios = usuarios.map(u => ({
+        ...u,
+        userLogged: false
+    }));
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    window.location.href = "./index.html";
+}
+
+document.addEventListener("DOMContentLoaded", verificarSesion);
+btnCerrarSesion.addEventListener("click", cerrarSesion);
+
+// Interceptar clics en los enlaces de módulos
+moduloLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+        const usuario = JSON.parse(localStorage.getItem("usuarios"));
+        const rutaModulo = this.getAttribute("data-modulo") || this.getAttribute("href");
+
+        if (!usuario) {
+            // Si no está logueado, lo dejamos ir a la página de ingreso
+            return;
         }
-    }
 
-    if (logoutBtn) {
-        logoutBtn.addEventListener("click", function () {
-            localStorage.removeItem("user");
-            verificarSesion();
-            window.location.href = "./vistas/ingreso.html";
-        });
-    }
-
-    // Interceptar clics en los enlaces de módulos
-    moduloLinks.forEach((link) => {
-        link.addEventListener("click", function (event) {
-            let usuario = JSON.parse(localStorage.getItem("user"));
-            let rutaModulo = this.getAttribute("data-modulo"); // Obtener la ruta del módulo
-
-            if (usuario) {
-                event.preventDefault(); // Evita la navegación predeterminada
-                window.location.href = rutaModulo; // Redirige al módulo si está logueado
-            } else {
-                // Deja que el enlace funcione normalmente y lo mande a ingreso.html
-            }
-        });
+        // Si está logueado, evitamos el comportamiento por defecto y lo redirigimos
+        event.preventDefault();
+        window.location.href = rutaModulo;
     });
-
-    verificarSesion();
 });

@@ -37,9 +37,9 @@
                         <li class="nav-item"><a href="../vistas/nosotros.html" class="nav-link">Nosotros</a></li>
                         <li class="nav-item"><a href="../vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
                         <li class="nav-item" id="perfil-container" style="display: none;">
-                            <a href="./vistas/perfil.html" class="nav-link perfil">
+                            <a href="../vistas/perfil.html" class="nav-link perfil">
                                 <i class="fa-solid fa-user"></i>
-                                <span id="nombre-usuario"></span>
+                                <span id="usuario-pantalla"></span>
                             </a>
                         </li>
                         <li class="nav-item" id="logout-container" style="display: none;">
@@ -58,31 +58,31 @@
             <h1 style="color: #1d938a; font-weight: bold;">Examen de seleccion multiple</h1>
         </div>
         <h3>1. ¿Qué es el estrés deportivo?</h3>
-        <label><input type="radio" name="estres" value="Reaccion"> Una reacción del cuerpo ante situaciones de presión</label><br>
-        <label><input type="radio" name="estres" value="Debilidad"> Una señal de debilidad mental</label><br>
-        <label><input type="radio" name="estres" value="Fuerza"> Un aumento de la fuerza física</label><br>
+        <label><input type="radio" name="respuesta1" value="Reaccion"> Una reacción del cuerpo ante situaciones de presión</label><br>
+        <label><input type="radio" name="respuesta1" value="Debilidad"> Una señal de debilidad mental</label><br>
+        <label><input type="radio" name="respuesta1" value="Fuerza"> Un aumento de la fuerza física</label><br>
     
         <h3>2. ¿Cuál de las siguientes estrategias ayuda a reducir la ansiedad en el deporte?</h3>
-        <label><input type="radio" name="estrategia" value="Respiracion"> Técnicas de respiración y relajación</label><br>
-        <label><input type="radio" name="estrategia" value="Evitar"> Evitar la competencia</label><br>
-        <label><input type="radio" name="estrategia" value="Sobreentrenar"> Sobreentrenar para mejorar</label><br>
+        <label><input type="radio" name="respuesta2" value="Respiracion"> Técnicas de respiración y relajación</label><br>
+        <label><input type="radio" name="respuesta2" value="Evitar"> Evitar la competencia</label><br>
+        <label><input type="radio" name="respuesta2" value="Sobreentrenar"> Sobreentrenar para mejorar</label><br>
     
         <h3>3. ¿Cómo puede afectar la ansiedad al rendimiento deportivo?</h3>
-        <label><input type="radio" name="rendimiento" value="Negativo"> Puede afectar negativamente la concentración y ejecución</label><br>
-        <label><input type="radio" name="rendimiento" value="Mejorar"> Siempre mejora el rendimiento</label><br>
-        <label><input type="radio" name="rendimiento" value="SinEfecto"> No tiene ningún efecto</label><br>
+        <label><input type="radio" name="respuesta3" value="Mejorar"> Siempre mejora el rendimiento</label><br>
+        <label><input type="radio" name="respuesta3" value="Negativo"> Puede afectar negativamente la concentración y ejecución</label><br>
+        <label><input type="radio" name="respuesta3" value="SinEfecto"> No tiene ningún efecto</label><br>
     
         <h3>4. ¿Qué papel juega la mentalidad en el manejo del estrés deportivo?</h3>
-        <label><input type="radio" name="mentalidad" value="Clave"> Es clave para enfrentar la presión</label><br>
-        <label><input type="radio" name="mentalidad" value="Inutil"> No influye en nada</label><br>
-        <label><input type="radio" name="mentalidad" value="Opcional"> Es opcional</label><br>
-    
+        <label><input type="radio" name="respuesta4" value="Opcional"> Es opcional</label><br>
+        <label><input type="radio" name="respuesta4" value="Inutil"> No influye en nada</label><br>
+        <label><input type="radio" name="respuesta4" value="Clave"> Es clave para enfrentar la presión</label><br>
+        
         <h3>5. ¿Qué técnica puede ayudar a manejar el estrés antes de una competencia?</h3>
-        <label><input type="radio" name="tecnica" value="Meditacion"> Meditación y visualización</label><br>
-        <label><input type="radio" name="tecnica" value="Ignorar"> Ignorar la situación</label><br>
-        <label><input type="radio" name="tecnica" value="NoDormir"> No dormir para estar más alerta</label><br>
+        <label><input type="radio" name="respuesta5" value="Meditacion"> Meditación y visualización</label><br>
+        <label><input type="radio" name="respuesta5" value="Ignorar"> Ignorar la situación</label><br>
+        <label><input type="radio" name="respuesta5" value="NoDormir"> No dormir para estar más alerta</label><br>
     
-        <button type="submit">Enviar</button>
+        <button type="submit" onclick="capturarRespuestas()">Enviar</button>
     </form>
     
     <footer class="pie-pagina">
@@ -108,7 +108,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
     <!-- Bootstrap JS -->
-    <script src="../js/examenes/examen1.js"></script>
+    <script src="../js/examenes/examen3.js"></script>
 
 </body>
 

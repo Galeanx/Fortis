@@ -37,9 +37,9 @@
                         <li class="nav-item"><a href="../vistas/nosotros.html" class="nav-link">Nosotros</a></li>
                         <li class="nav-item"><a href="../vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
                         <li class="nav-item" id="perfil-container" style="display: none;">
-                            <a href="./vistas/perfil.html" class="nav-link perfil">
+                            <a href="../vistas/perfil.html" class="nav-link perfil">
                                 <i class="fa-solid fa-user"></i>
-                                <span id="nombre-usuario"></span>
+                                <span id="usuario-pantalla"></span>
                             </a>
                         </li>
                         <li class="nav-item" id="logout-container" style="display: none;">
@@ -58,31 +58,31 @@
                 <h1 style="color: #1d938a; font-weight: bold;">Examen de seleccion multiple</h1>
             </div>
             <h3>1. ¿Cuál es la mejor fuente de proteínas para el desarrollo muscular?</h3>
-            <label><input type="radio" name="proteina" value="Pollo"> Pollo</label><br>
-            <label><input type="radio" name="proteina" value="Arroz"> Arroz</label><br>
-            <label><input type="radio" name="proteina" value="Manzana"> Manzana</label><br>
+            <label><input type="radio" name="respuesta1" value="Pollo"> Pollo</label><br>
+            <label><input type="radio" name="respuesta1" value="Arroz"> Arroz</label><br>
+            <label><input type="radio" name="respuesta1" value="Manzana"> Manzana</label><br>
 
             <h3>2. ¿Cuál es el macronutriente principal en una dieta de resistencia?</h3>
-            <label><input type="radio" name="macronutriente" value="Proteína"> Proteína</label><br>
-            <label><input type="radio" name="macronutriente" value="Grasas"> Grasas</label><br>
-            <label><input type="radio" name="macronutriente" value="Carbohidratos"> Carbohidratos</label><br>
+            <label><input type="radio" name="respuesta2" value="Proteína"> Proteína</label><br>
+            <label><input type="radio" name="respuesta2" value="Grasas"> Grasas</label><br>
+            <label><input type="radio" name="respuesta2" value="Carbohidratos"> Carbohidratos</label><br>
 
             <h3>3. ¿Qué bebida es ideal para la hidratación durante el ejercicio?</h3>
-            <label><input type="radio" name="hidratacion" value="Refresco"> Refresco</label><br>
-            <label><input type="radio" name="hidratacion" value="Agua"> Agua</label><br>
-            <label><input type="radio" name="hidratacion" value="Café"> Café</label><br>
+            <label><input type="radio" name="respuesta3" value="Refresco"> Refresco</label><br>
+            <label><input type="radio" name="respuesta3" value="Agua"> Agua</label><br>
+            <label><input type="radio" name="respuesta3" value="Café"> Café</label><br>
 
             <h3>4. ¿Qué vitamina es clave para la salud ósea?</h3>
-            <label><input type="radio" name="vitamina" value="Vitamina A"> Vitamina A</label><br>
-            <label><input type="radio" name="vitamina" value="Vitamina C"> Vitamina C</label><br>
-            <label><input type="radio" name="vitamina" value="Vitamina D"> Vitamina D</label><br>
+            <label><input type="radio" name="respuesta4" value="Vitamina A"> Vitamina A</label><br>
+            <label><input type="radio" name="respuesta4" value="Vitamina C"> Vitamina C</label><br>
+            <label><input type="radio" name="respuesta4" value="Vitamina D"> Vitamina D</label><br>
 
             <h3>5. ¿Cuál de estos alimentos es una fuente saludable de grasas?</h3>
-            <label><input type="radio" name="grasas" value="Mantequilla"> Mantequilla</label><br>
-            <label><input type="radio" name="grasas" value="Aguacate"> Aguacate</label><br>
-            <label><input type="radio" name="grasas" value="Azúcar"> Azúcar</label><br>
+            <label><input type="radio" name="respuesta5" value="Mantequilla"> Mantequilla</label><br>
+            <label><input type="radio" name="respuesta5" value="Aguacate"> Aguacate</label><br>
+            <label><input type="radio" name="respuesta5" value="Azúcar"> Azúcar</label><br>
 
-            <button type="submit">Enviar</button>
+            <button type="submit" onclick="capturarRespuestas()">Enviar</button>
         </form>
         <footer class="pie-pagina">
             <div class="contenedor-footer">

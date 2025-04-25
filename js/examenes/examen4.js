@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoutContainer = document.getElementById("logout-container");
     const nombreUsuario = document.getElementById("usuario-pantalla");
     const btnCerrarSesion = document.getElementById("logout-btn");
+    const moduloLinks = document.querySelectorAll(".modulo-link");
 
     function verificarSesion() {
         let usuarioLogueado = usuarios.find(u => u.userLogged);
@@ -56,25 +57,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 };
             }
 
-            if (usuarioLogueado.progreso_modulos.modulo1 === 100) {
+            if (usuarioLogueado.progreso_modulos.modulo4 === 100) {
                 alert("⚠️ Ya has completado este examen.");
                 return;
             }
 
             const respuestasUser = {
-                p1: document.querySelector('input[name="elementos"]:checked')?.value,
-                p2: document.querySelector('input[name="componente"]:checked')?.value,
-                p3: document.querySelector('input[name="funciones"]:checked')?.value,
-                p4: document.querySelector('input[name="importancia"]:checked')?.value,
-                p5: document.querySelector('input[name="relacion"]:checked')?.value,
+            p1: document.querySelector('input[name="respuesta1"]:checked')?.value,
+            p2: document.querySelector('input[name="respuesta2"]:checked')?.value,
+            p3: document.querySelector('input[name="respuesta3"]:checked')?.value,
+            p4: document.querySelector('input[name="respuesta4"]:checked')?.value,
+            p5: document.querySelector('input[name="respuesta5"]:checked')?.value,
             };
 
             const respuestasCorrectas = {
-                p1: "París",
-                p2: "Júpiter",
-                p3: "6",
-                p4: "Garcilaso",
-                p5: "Cobre",
+            p1: "Rendimiento",
+            p2: "Esfuerzo",
+            p3: "Concentracion",
+            p4: "Visualizacion",
+            p5: "Superacion",
             };
 
             let acumulado = 0;
@@ -87,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (acumulado >= 3) {
                 alert("✅ ¡Examen aprobado!");
                 usuarioLogueado.progreso += 20;
-                usuarioLogueado.progreso1 = 100;
-                usuarioLogueado.progreso_modulos.modulo1 = 100;
+                usuarioLogueado.progreso4 = 100;
+                usuarioLogueado.progreso_modulos.modulo4 = 100;
                 console.log("🎉 ¡Progreso actualizado!");
             } else {
                 alert("❌ No alcanzaste la puntuación mínima. Intenta nuevamente.");

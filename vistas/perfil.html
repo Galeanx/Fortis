@@ -38,7 +38,7 @@
                         <li class="nav-item" id="perfil-container" style="display: none;">
                             <a href="../vistas/perfil.html" class="nav-link perfil">
                                 <i class="fa-solid fa-user"></i>
-                                <span id="nombre-usuario"></span>
+                                <span id="usuario-pantalla"></span>
                             </a>
                         </li>
                         <li class="nav-item" id="logout-container" style="display: none;">
@@ -54,84 +54,97 @@
 
     <section class="perfil-cajon">
         <div class="perfil-info">
-            <h2>Bienvenido <span id="nombre-usuario"></span></h2>
+            <h2>Bienvenido <span id="usuario-pantalla"></span></h2>
             <p>Este es tu panel de usuario donde puedes ver tu progreso en el curso.</p>
         </div>
-    
-        <div class="row g-4">
+        
+        <div class="contenedor-barras row g-4">
             <!-- Progreso Global -->
             <div class="col-12">
                 <div class="card shadow-sm">
                     <div class="card-body text-center">
                         <h4 class="card-title">Progreso Global</h4>
                         <div class="progress mb-3" style="height: 25px;">
-                            <div id="progreso-global" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">0%</div>
+                            <div id="progreso-global" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">
+                                <span class="porcentaje">0%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-    
+        
             <!-- Barras por Módulo -->
-            <div class="col-md-6">
+            <div class="col-12">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <h4 class="card-title">Módulo 1: Bienestar Deportivo</h4>
                         <div class="progress">
-                            <div id="modulo1-barra" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">0%</div>
+                            <div id="modulo1-barra" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">
+                                <span class="porcentaje">0%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-    
-            <!-- Repite esto para módulos 2, 3, 4 y 5 -->
-            <div class="col-md-6">
+        
+            <div class="col-12">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <h4 class="card-title">Módulo 2: Nutrición y Salud</h4>
                         <div class="progress">
-                            <div id="modulo2-barra" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">0%</div>
+                            <div id="modulo2-barra" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">
+                                <span class="porcentaje">0%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Repite esto para módulos 2, 3, 4 y 5 -->
-            <div class="col-md-6">
+        
+            <div class="col-12">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <h4 class="card-title">Módulo 3: Manejo del Estrés y la Ansiedad en el Deporte</h4>
                         <div class="progress">
-                            <div id="modulo3-barra" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">0%</div>
+                            <div id="modulo3-barra" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">
+                                <span class="porcentaje">0%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Repite esto para módulos 2, 3, 4 y 5 -->
-            <div class="col-md-6">
+        
+            <div class="col-12">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <h4 class="card-title">Módulo 4: Psicología del Deporte y Bienestar Emocional</h4>
                         <div class="progress">
-                            <div id="modulo4-barra" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">0%</div>
+                            <div id="modulo4-barra" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">
+                                <span class="porcentaje">0%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Repite esto para módulos 2, 3, 4 y 5 -->
-            <div class="col-md-6">
+        
+            <div class="col-12">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <h4 class="card-title">Módulo 5: Prevención de Lesiones en el Deporte</h4>
                         <div class="progress">
-                            <div id="modulo5-barra" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">0%</div>
+                            <div id="modulo5-barra" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="100">
+                                <span class="porcentaje">0%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+        
+            <!-- Botón de Certificado -->
+                <button class="btn-sm mt-4 px-4 btn-des" disabled>
+                    <h4>Descargar certificado</h4>
+                </button>
         </div>
+        
     </section>    
     
     <footer class="pie-pagina">

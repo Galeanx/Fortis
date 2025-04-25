@@ -1,97 +1,112 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const perfilContainer = document.getElementById("perfil-container");
-    const logoutContainer = document.getElementById("logout-container");
-    const logoutBtn = document.getElementById("logout-btn");
-    const ingresarBtn = document.querySelector(".ingresar");
-    const nombreUsuario = document.getElementById("nombre-usuario");
-
+document.addEventListener("DOMContentLoaded", () => {
+    const btnIniciarSesion = document.querySelector(".ingresar");
+    const btnCerrarSesion = document.querySelector("#logout-btn");
+    const contenedorPerfil = document.querySelector("#perfil-container");
+    const contenedorCerrarSesion = document.querySelector("#logout-container");
+    const usuarioPantalla = document.querySelectorAll("#usuario-pantalla");
+    const btnDescargar = document.querySelector(".btn-des");
+  
+    const barraGlobal = document.querySelector("#progreso-global");
+    const barra1 = document.querySelector("#modulo1-barra");
+    const barra2 = document.querySelector("#modulo2-barra");
+    const barra3 = document.querySelector("#modulo3-barra");
+    const barra4 = document.querySelector("#modulo4-barra");
+    const barra5 = document.querySelector("#modulo5-barra");
+  
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  
     function verificarSesion() {
-        let usuario = JSON.parse(localStorage.getItem("user"));
-
-        if (usuario && usuario.nombre) {
-            // Mostrar nombre del usuario y habilitar botones
-            if (perfilContainer && nombreUsuario) {
-                perfilContainer.style.display = "block";
-                nombreUsuario.textContent = usuario.nombre.trim();
-            }
-            if (logoutContainer) logoutContainer.style.display = "block"; // Asegurar que aparezca
-            if (ingresarBtn) ingresarBtn.style.display = "none";
-        } else {
-            // Usuario no logueado, ocultar botones
-            if (perfilContainer) perfilContainer.style.display = "none";
-            if (logoutContainer) logoutContainer.style.display = "none";
-            if (ingresarBtn) ingresarBtn.style.display = "inline-block";
+      for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].userLogged) {
+          const nombreUsuario = usuarios[i].userNU;
+          
+          // Mostrar nombre del usuario en todos los elementos #usuario-pantalla
+          usuarioPantalla.forEach(el => el.textContent = nombreUsuario);
+  
+          // Mostrar perfil y botón cerrar sesión
+          contenedorPerfil.style.display = "block";
+          contenedorCerrarSesion.style.display = "block";
+  
+          // Ocultar botón Iniciar Sesión
+          btnIniciarSesion.style.display = "none";
+          return;
         }
+      }
+  
+      // Si no hay usuario logueado
+      contenedorPerfil.style.display = "none";
+      contenedorCerrarSesion.style.display = "none";
+      btnIniciarSesion.style.display = "block";
     }
-
-    if (logoutBtn) {
-        logoutBtn.addEventListener("click", function () {
-            localStorage.removeItem("user"); // Eliminar usuario activo
-            verificarSesion(); // Actualizar vista
-            window.location.href = "./vistas/ingreso.html"; // Redirigir al login
-        });
+  
+    function cerrarSesion() {
+      for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].userLogged) {
+          usuarios[i].userLogged = false;
+          localStorage.setItem("usuarios", JSON.stringify(usuarios));
+          window.location.href = "../index.html";
+          return;
+        }
+      }
     }
+  
+    function actualizarBarras() {
+      for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].userLogged) {
+          barraGlobal.style.width = `${usuarios[i].progreso}%`;
+          barraGlobal.textContent = `${usuarios[i].progreso}%`;
+  
+          barra1.style.width = `${usuarios[i].progreso1}%`;
+          barra1.textContent = `${usuarios[i].progreso1}%`;
+  
+          barra2.style.width = `${usuarios[i].progreso2}%`;
+          barra2.textContent = `${usuarios[i].progreso2}%`;
+  
+          barra3.style.width = `${usuarios[i].progreso3}%`;
+          barra3.textContent = `${usuarios[i].progreso3}%`;
 
-    // Inicializar sesión al cargar la página
+          barra4.style.width = `${usuarios[i].progreso4}%`;
+          barra4.textContent = `${usuarios[i].progreso4}%`;
+
+          barra5.style.width = `${usuarios[i].progreso5}%`;
+          barra5.textContent = `${usuarios[i].progreso5}%`;
+  
+          return;
+        }
+      }
+    }
+  
+    function activarDescarga() {
+      if (!btnDescargar) return;
+    
+      for (let i = 0; i < usuarios.length; i++) {
+        const user = usuarios[i];
+    
+        if (user.userLogged && user.progreso === 100) {
+          btnDescargar.disabled = false;
+          btnDescargar.style.backgroundColor = "#7f1b33";
+          btnDescargar.style.cursor = "pointer";
+          user.certificado = true;
+    
+          // Guardar en LocalStorage
+          localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    
+          // Redirigir al hacer clic
+          btnDescargar.addEventListener("click", () => {
+            window.location.href = "../vistas/certificado.html";
+          });
+    
+          return;
+        }
+      }
+    }    
+  
     verificarSesion();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const nombreUsuario = document.getElementById("nombre-usuario");
-    const progresoGlobal = document.getElementById("progreso-global");
-    const moduloBarras = {
-        modulo1: document.getElementById("modulo1-barra"),
-        modulo2: document.getElementById("modulo2-barra"),
-        modulo3: document.getElementById("modulo3-barra"),
-        modulo4: document.getElementById("modulo4-barra"),
-        modulo5: document.getElementById("modulo5-barra")
-    };
-    const btnCertificado = document.getElementById("btn-certificado");
-
-    let user = JSON.parse(localStorage.getItem("user")) || {
-        nombre: "Invitado",
-        progreso: 0,
-        progreso_modulos: {
-            modulo1: 0,
-            modulo2: 0,
-            modulo3: 0,
-            modulo4: 0,
-            modulo5: 0
-        },
-        certificado: false
-    };
-
-    // Mostrar nombre
-    nombreUsuario.textContent = user.nombre;
-
-    // Actualizar barras de módulos
-    for (let modulo in moduloBarras) {
-        let porcentaje = user.progreso_modulos[modulo] || 0;
-        moduloBarras[modulo].style.width = `${porcentaje}%`;
-        moduloBarras[modulo].textContent = `${porcentaje}%`;
+    actualizarBarras();
+    activarDescarga();
+  
+    if (btnCerrarSesion) {
+      btnCerrarSesion.addEventListener("click", cerrarSesion);
     }
-
-    // Calcular progreso global
-    let modulosCompletados = Object.values(user.progreso_modulos).filter(val => val === 100).length;
-    user.progreso = modulosCompletados * 20;
-    progresoGlobal.style.width = `${user.progreso}%`;
-    progresoGlobal.textContent = `${user.progreso}%`;
-
-    // Guardar progreso global en localStorage
-    localStorage.setItem("user", JSON.stringify(user));
-
-    // Mostrar botón certificado solo si progreso === 100
-    if (user.progreso === 100) {
-        user.certificado = true;
-        btnCertificado.disabled = false;
-        btnCertificado.classList.remove("disabled");
-    } else {
-        user.certificado = false;
-        btnCertificado.disabled = true;
-        btnCertificado.classList.add("disabled");
-    }
-
-    // Actualizar LocalStorage por si se desbloquea certificado
-    localStorage.setItem("user", JSON.stringify(user));
-});
-
+  });
+  

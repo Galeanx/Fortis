@@ -100,7 +100,6 @@ display: flex;
 align-items: center;
 }
 
-
 .perfil-cajon {
   max-width: 900px;
   margin: 50px auto;
@@ -123,35 +122,46 @@ align-items: center;
   margin-bottom: 20px;
 }
 
-.progreso-container {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-  text-align: center;
+.contenedor-barras {
+  display: flex;
+  flex-direction: column; /* 👈 Esto apila en columna (una por línea) */
+  gap: 10px; /* 👈 Espacio entre cada barra, opcional */
 }
 
-.progreso-barra {
-  width: 100%;
+.progress-bar {
+  position: relative;
+  transition: width 1s ease-in-out;
+  overflow: visible; /* Muy importante para que no recorte el span */
+  font-weight: bold;
+  font-size: 14px;
+  width: 100%; /* 👈 Ocupa todo el ancho disponible */
+}
+
+ /* Barras de progreso más llamativas */
+ .progress {
   height: 20px;
-  background-color: #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
-  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #1D938A;
 }
 
-.barra {
-  height: 100%;
-  width: 0%;
+.btn-des {
+  background-color: transparent;
+  border: 2px solid #1d938a;
+  color: #1d938a;
+  font-family: 'Poppins', sans-serif; /* O usa la tipografía que prefieras */
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-des:hover {
   background-color: #1d938a;
-  border-radius: 10px;
-  transition: width 0.5s ease-in-out;
+  color: white;
+  cursor: pointer;
 }
-
-#progreso-texto {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
 
 .pie-pagina {
   background-color: #1D938A;
