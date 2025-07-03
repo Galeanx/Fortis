@@ -157,12 +157,6 @@ align-items: center;
   transition: all 0.3s ease;
 }
 
-.btn-des:hover {
-  background-color: #1d938a;
-  color: white;
-  cursor: pointer;
-}
-
 .pie-pagina {
   background-color: #1D938A;
   color: white;

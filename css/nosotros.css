@@ -55,6 +55,54 @@ header {
   transform: translateX(-50%);
 }
 
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px; /* Ajuste del padding */
+    font-size: 18px; /* Igual que los otros botones */
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex; 
+    align-items: center; /* Alinea el texto verticalmente */
+}
+
+.dropdown {
+  position: relative;
+  z-index: 999;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1d938a;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000; /* Asegura que se superponga */
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #136f66;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #136f66;
+}
+
 /* Estilos del botón 'Ingresar' */
 .ingresar {
   background-color: white;
@@ -66,10 +114,10 @@ header {
 }
 
 .ingresar:hover {
-  color: #1d938a !important;
+  background-color: #136f66;
+  color: white !important;
   transform: scale(1.03); /* Aumento más sutil del tamaño */
 }
-
 
 /* Estilos para el botón de perfil */
 .perfil {
@@ -100,199 +148,163 @@ display: flex;
 align-items: center;
 }
 
-.hero-section {
-  background-color: #f8f9fa;
-  padding: 80px 0;
+.banner-nosotros {
+  position: relative;
+  background-image: url("../sources/images/Equipo.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   text-align: center;
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.hero-section .display-4 {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* oscurece un poco la imagen para que el texto se lea bien */
+  z-index: 1;
+}
+
+.contenido-banner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin-top: 150px;
+  text-shadow: 5px 5px 10px rgba(37, 196, 156, 0.603)
+}
+
+.contenido-banner h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: #1d938a;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
 }
 
-.hero-section .lead {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 30px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.social-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.btn-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 30px;
-  color: #333;
-  font-size: 1rem;
-  border: 2px solid #1d938a;
-  transition: all 0.3s ease;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  gap: 10px;
-}
-
-.btn-social i {
-  font-size: 1.5rem;
-}
-
-.btn-social:hover {
-  background-color: #1d938a;
-  color: white;
-  transform: scale(1.1);
-}
-
-.btn-instagram {
-  border-color: #1d938a;
-}
-
-.btn-instagram:hover {
-  background-color: #1d938a;
-}
-
-.btn-youtube {
-  border-color: #1d938a;
-}
-
-.btn-youtube:hover {
-  background-color: #1d938a;
+.contenido-banner p {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-  .hero-section .display-4 {
-    font-size: 2.5rem;
+  .banner-nosotros {
+    height: auto;
+    padding: 80px 20px;
+    background-position: center top;
   }
 
-  .hero-section .lead {
-    font-size: 1.3rem;
-  }
-
-  .social-buttons {
-    flex-direction: row;
-    gap: 15px;
-  }
-
-  .btn-social {
-    padding: 8px 12px;
-    font-size: 1rem;
-    width: auto;
-    height: 45px;
-  }
-
-  .btn-social i {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-section .display-4 {
+  .banner-nosotros .contenido-banner h1 {
     font-size: 2rem;
   }
 
-  .hero-section .lead {
-    font-size: 1.2rem;
-  }
-
-  .btn-social {
-    width: auto;
-    height: 40px;
-    padding: 6px 10px;
-    font-size: 0.9rem;
-  }
-
-  .btn-social i {
-    font-size: 1.2rem;
+  .banner-nosotros .contenido-banner p {
+    font-size: 1rem;
   }
 }
 
-h2 {
+@media (max-width: 480px) {
+  .banner-nosotros .contenido-banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-nosotros .contenido-banner p {
+    font-size: 0.95rem;
+  }
+}
+
+.presentacion-fortis {
+  background-color: #f9f9f9;
+}
+
+.titulo-fortis {
+  font-size: 2.5rem;
+  font-weight: 800;
   color: #1d938a;
-  font-size: 60px;
-  font-style: italic;
-
-}
-.contenedor-cards {
-  display: flex;
-  justify-content: center; /* Centra las cards horizontalmente */
-  align-items: flex-start;
-  gap: 50px; /* Mayor separación entre las cards */
-  flex-wrap: wrap; /* Permite que se ajusten en pantallas pequeñas */
-  max-width: 1300px;
-  margin: 10px auto; /* Más espacio superior e inferior */
-  padding: 40px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Estilos para las cards */
-.card {
-  background: #FFFFFF;
-  color: #333;
-  width: 450px; /* Tamaño más amplio para mejor distribución */
-  padding: 35px;
-  border-radius: 20px;
-  box-shadow: 0px 10px 25px #1d938a;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-/* Efecto hover */
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.18);
-}
-
-/* Estilos para títulos */
-.card h2 {
-  font-size: 28px;
-  color: #1D938A;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-/* Estilos para párrafos */
-.card p {
-  font-size: 18px;
+.texto-fortis {
+  font-size: 1.15rem;
+  color: #444;
   line-height: 1.8;
-  color: #303030;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Resaltado de texto importante */
-.card strong {
-  color: #1D938A;
-  font-weight: bold;
+.fortis-seccion-info {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
 }
 
-/* Responsividad */
-@media (max-width: 1024px) {
-  .contenedor-cards {
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
+.info-bloque {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.info-texto {
+  padding: 20px;
+}
+
+.info-texto h2 {
+  color: #1d938a;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.info-texto p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.video-loop {
+  width: 80%;
+  max-height: 620px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .fortis-seccion-info .info-bloque {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
   }
 
-  .card {
-      width: 85%;
-      max-width: 500px;
+  .fortis-seccion-info .info-texto,
+  .fortis-seccion-info .info-video {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .fortis-seccion-info .info-texto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .fortis-seccion-info .info-texto p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .fortis-seccion-info .video-loop {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
   }
 }
-
-
-/* Diseño personalizado para las cards */
 
 /* ---------------- FOOTER PRINCIPAL ---------------- */
 

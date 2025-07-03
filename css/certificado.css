@@ -1,134 +1,128 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Montserrat", system-ui;
-  }
+}
 
 body {
-    font-family: sans-serif;
-    background-color: #1d938a;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px 20px;
     min-height: 100vh;
-    
 }
 
 .certificado-container {
-    background: white;
-    padding: 120px;
-    border-radius: 8px;
-    width: 50%;
-}
-
-.certificado-borde {
-    border: 5px solid #125751;/* Color del borde principal */
-    border-radius: 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 50px auto;
-    margin-top: 50px;
-}
-
-.certificado-contenido {
-    text-align: center;
-    background: white;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #fff;
+    border: 10px solid #1d938a;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 .certificado-header {
+    text-align: center;
     margin-bottom: 30px;
 }
 
-.logo {
-    max-height: 80px;
-    margin-bottom: 15px;
+.certificado-header .logo {
+    width: 300px;
+    margin-bottom: 20px;
 }
 
-h1 {
+.certificado-header h1 {
+    font-size: 2.5rem;
     color: #1d938a;
-    font-size: 2.5em;
-    margin-top: 0;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Montserrat", system-ui;
 }
 
 .certificado-body {
-    margin-bottom: 40px;
-    background-color: #f8f9fa;
-    padding: 80px 0;
     text-align: center;
+    margin: 30px 0;
 }
 
-.linea {
-    font-size: 1.2em;
-    color: #555;
+.certificado-body .linea {
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
 .nombre-estudiante {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
-    color: #1d938a;
-    margin-bottom: 15px;
+    color: #000;
+    margin: 15px 0;
 }
 
 .nombre-curso {
-    font-size: 1.6em;
-    color: #333;
-    font-style: italic;
-    margin-bottom: 10px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #1d938a;
 }
 
-.descripcion-curso {
-    font-size: 1em;
-    color: #777;
-    margin-bottom: 20px;
-}
-
+.descripcion-curso,
 .fecha-completion {
-    font-size: 1.1em;
-    color: #555;
-    margin-top: 20px;
+    font-size: 1rem;
+    margin-top: 8px;
 }
-
 .certificado-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.9em;
-    color: #777;
-}
-
-.firma-seccion {
+    justify-content: center; /* ✅ Centra horizontalmente las firmas */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
     text-align: center;
 }
 
+.firma-seccion {
+    flex: 1 1 30%;
+    min-width: 220px;
+}
+
 .firma-linea {
-    border-bottom: 1px solid #333;
-    width: 150px;
-    margin: 10px auto;
+    margin-bottom: 5px;
 }
 
 .firma-nombre {
     font-weight: bold;
-    margin-bottom: 5px;
+}
+
+.firma-titulo {
+    font-size: 0.9rem;
+    color: #555;
 }
 
 .id-seccion {
-    text-align: right;
+    width: 100%;
+    margin-top: 40px;
+    text-align: center; /* ✅ Centrado en todos los tamaños */
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+    border-top: 1px solid #ccc;
+    padding-top: 12px;
 }
 
-.qr-code {
-    max-height: 50px;
-    margin-top: 10px;
-}
 
-/* Puedes añadir más estilos para personalizar el diseño */
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .certificado-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .firma-seccion {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    .id-seccion {
+        text-align: center;
+    }
+}

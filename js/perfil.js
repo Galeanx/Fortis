@@ -84,7 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
         if (user.userLogged && user.progreso === 100) {
           btnDescargar.disabled = false;
-          btnDescargar.style.backgroundColor = "#7f1b33";
+          btnDescargar.style.backgroundColor = "#1d938a";
+          btnDescargar.style.color = "white";
           btnDescargar.style.cursor = "pointer";
           user.certificado = true;
     
@@ -93,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
           // Redirigir al hacer clic
           btnDescargar.addEventListener("click", () => {
-            window.location.href = "../vistas/certificado.html";
+            window.location.href = "/vistas/descarga.html";
           });
     
           return;

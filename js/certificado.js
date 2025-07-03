@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Insertar el nombre del usuario
-    nombreEl.textContent = usuarioLogueado.userNU;
-
+    const nombreDesdeInput = localStorage.getItem("nombreCertificado");
+    nombreEl.textContent = nombreDesdeInput || usuarioLogueado.userNU;
+    
     // Insertar la fecha actual
     const fecha = new Date();
     const fechaFormateada = fecha.toLocaleDateString("es-ES", {

@@ -13,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../sources/images/Mini-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 <body>
     <header>
@@ -58,19 +57,41 @@
             </div>
         </nav>
     </header>
+
+        <h2 class="text-center mb-4 titulo-modulos">Módulos de Bienestar Deportivo</h2>            
+
         <div class="container my-5">
-            <h2 class="text-center mb-4">Módulos de Bienestar Deportivo</h2>
-            
             <div class="row">
                 <div class="col-md-12 mb-5">
                     <div class="estilos-intro">
                     <h3>Nutrición Deportiva y Salud</h3>
                     <p><strong>Objetivo:</strong> Comprender la relación entre una alimentación equilibrada y el rendimiento deportivo óptimo.</p>
-                    <img src="nutricion.jpg" class="img-fluid mb-3" alt="Nutrición Deportiva y Salud">
+
+<section class="consejo-fortis my-5">
+  <div class="container">
+    <div class="consejo-card">
+      <div class="card-body text-center">
+        <h4 class="card-title mb-3">
+          <i class="fas fa-apple-alt text-success me-2"></i> Consejo de Fortis · Módulo 2
+        </h4>
+        <p class="consejo-descripcion">
+          Un recordatorio sobre la importancia de una alimentación equilibrada y su impacto en el rendimiento deportivo. ¡Nutre tu cuerpo, potencia tu mente!
+        </p>
+        <audio controls class="w-100 mt-3">
+          <source src="/sources/audios/fortis-002.mp3" type="audio/mpeg">
+          Tu navegador no soporta el audio.
+        </audio>
+      </div>
+    </div>
+  </div>
+</section>
                     <p>Este módulo aborda los macronutrientes esenciales, la hidratación y estrategias alimenticias para potenciar la energía y recuperación muscular.</p>
                     </div>
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/example2" title="Video sobre Nutrición Deportiva" allowfullscreen></iframe>
+                    <div class="video-vertical-wrapper">
+                        <video controls>
+                            <source src="/sources/videos/Modulo2.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
                     </div>
                     <div class="modulo">
                         <h2>Nutrición Deportiva y Salud</h2>
@@ -101,9 +122,12 @@
                     
                         <p>📥 <a href="documento_nutricion.pdf" download>Descargar Guía de Nutrición Deportiva y Salud</a></p>
 
-                        <a href="../examenes-html/examen2.html">
-                            <button id="examenBtn">Ir al Examen</button>
-                        </a>
+                         <div class="contenedor-examen">
+                            <a href="../examenes-html/examen2.html">
+                                <button id="examenBtn">Ir al Examen</button>
+                            </a>
+                        </div>
+                      
 
                     </div>
                     

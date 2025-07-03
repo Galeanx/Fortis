@@ -23,6 +23,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
+
             <div class="container-fluid">
                 <a href="./index.html" class="navbar-brand logo">
                     <img src="./sources/images/Logoblanco.svg" alt="Logo de Fortis">
@@ -34,6 +35,16 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a href="./index.html" class="nav-link">Inicio</a></li>
                         <li class="nav-item"><a href="./vistas/nosotros.html" class="nav-link">Nosotros</a></li>
+                          <div class="dropdown">
+                            <a href="#" class="dropbtn">Módulos</a>
+                            <div class="dropdown-content">
+                                <a href="/vistas/modulo1.html">Módulo 1</a>
+                                <a href="/vistas/modulo2.html">Módulo 2</a>
+                                <a href="/vistas/modulo3.html">Módulo 3</a>
+                                <a href="/vistas/modulo4.html">Módulo 4</a>
+                                <a href="/vistas/modulo5.html">Módulo 5</a>
+                            </div>
+                        </div>
                         <li class="nav-item"><a href="./vistas/ingreso.html" class="nav-link ingresar">Ingresar</a></li>
                         <li class="nav-item" id="perfil-container" style="display: none;">
                             <a href="./vistas/perfil.html" class="nav-link perfil">
@@ -54,19 +65,16 @@
 
     
 
-<section class="hero-section text-center p-5" style="background-color: #f8f9fa;">
-<div class="content">
-    <h1 class="display-4 mb-3">BIENVENIDOS A FORTIS</h1>
-    <p class="lead mb-4">Tu Camino Hacia El Bienestar Deportivo!</p>
-    <div class="social-buttons">
-    <a href="https://www.instagram.com" class="btn btn-social btn-instagram">
-        <i class="fa-brands fa-instagram"></i> Instagram
+<section class="hero-rediseñado d-flex align-items-center text-center text-white">
+  <div class="container">
+    <h1 class="hero-title animate__animated animate__fadeInDown">Bienvenidos a Fortis</h1>
+    <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+      Tu camino hacia el bienestar deportivo comienza aquí
+    </p>
+    <a href="/vistas/proyecto.html" class="btn btn-light mt-4 animate__animated animate__fadeInUp animate__delay-2s">
+      Explorar Proyectos
     </a>
-    <a href="https://www.youtube.com" class="btn btn-social btn-youtube">
-        <i class="fa-brands fa-youtube"></i> YouTube
-    </a>
-    </div>
-</div>
+  </div>
 </section>
 
 <section class="modulos-slider-section container my-5">
@@ -143,15 +151,54 @@
     </div>
   </section>
   
-    
-<section class="fixed-image-section">
-    <div class="container-fluid p-0">
-        <!-- Imagen fija en pantallas grandes -->
-        <div class="d-none d-sm-block">
-            <img src="./sources/images/encuestas.png" alt="Imagen Encuestas" class="img-fluid w-100">
-        </div>
-    </section>
-</div> 
+<section class="sect2">
+
+  <!-- Beneficio 1 -->
+  <div class="beneficios">
+    <div class="img-beneficios">
+      <img src="../sources/images/Curiosity.png" alt="Curiosity" class="imgbeneficios col-lg-12 col-sm-12">
+    </div>
+    <div class="des-beneficios">
+      <h1 class="col-lg-9 col-sm-12 tit-beneficios">Explora con libertad</h1>
+      <p class="col-lg-9 col-sm-12 par-beneficios">Curiosity te guía paso a paso para que aprendas de forma divertida y sin complicaciones.</p>
+    </div>
+  </div>
+
+  <!-- Beneficio 2 -->
+  <div class="beneficios2">
+    <div class="img-beneficios2">
+      <img src="../sources/images/Daniel.png" alt="Daniel" class="imgbeneficios2 col-lg-12 col-sm-12">
+    </div>
+    <div class="des-beneficios2">
+      <h1 class="col-lg-9 col-sm-12 tit-beneficios">Consejos de un experto</h1>
+      <p class="col-lg-9 col-sm-12 par-beneficios">Daniel te enseña fundamentos deportivos claves para cuidar tu cuerpo y entrenar mejor.</p>
+    </div>
+  </div>
+
+  <!-- Beneficio 3 -->
+  <div class="beneficios3">
+    <div class="img-beneficios3">
+      <img src="../sources/images/Marcos.png" alt="Marcos" class="imgbeneficios3 col-lg-12 col-sm-12">
+    </div>
+    <div class="des-beneficios3">
+      <h1 class="col-lg-9 col-sm-12 tit-beneficios">Motívate día a día</h1>
+      <p class="col-lg-9 col-sm-12 par-beneficios">Marcos te recuerda que con constancia, energía y pasión todo es posible.</p>
+    </div>
+  </div>
+
+  <!-- Beneficio 4 -->
+  <div class="beneficios4">
+    <div class="img-beneficios4">
+      <img src="../sources/images/Ana.png" alt="Ana" class="imgbeneficios4 col-lg-12 col-sm-12">
+    </div>
+    <div class="des-beneficios4">
+      <h1 class="col-lg-9 col-sm-12 tit-beneficios">Transforma tu bienestar</h1>
+      <p class="col-lg-9 col-sm-12 par-beneficios">Ana te inspira a construir una rutina saludable con equilibrio entre mente y cuerpo.</p>
+    </div>
+  </div>
+
+</section>
+
 
 <footer class="pie-pagina">
     <div class="contenedor-footer">

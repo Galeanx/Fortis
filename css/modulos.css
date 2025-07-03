@@ -61,18 +61,20 @@ header {
     width: 40%;
 }
 
-.ingresar {
-    background-color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+.navbar-nav .nav-link.ingresar {
+  background-color: white;
+  color: #1d938a !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.ingresar:hover {
-    background-color: #136f66;
-    color: white !important;
-    transform: scale(1.03);
+
+.navbar-nav .nav-link.ingresar:hover {
+  background-color: #136f66;
+  color: white !important;
+  transform: scale(1.03); /* Aumento más sutil del tamaño */
 }
 
 .dropbtn {
@@ -88,20 +90,19 @@ header {
 }
 
 .dropdown {
-    position: relative;
-    display: flex; /* Asegura alineación con los otros elementos */
-    align-items: center; /* Alinea el botón con la barra */
+  position: relative;
+  z-index: 999;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #1d938a;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 100%; /* Asegura que se despliegue justo debajo del botón */
-    left: 0;  /* Alineado con el botón */
+  display: none;
+  position: absolute;
+  background-color: #1d938a;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000; /* Asegura que se superponga */
+  top: 100%;
+  left: 0;
 }
 
 .dropdown-content a {
@@ -113,6 +114,7 @@ header {
 
 .dropdown-content a:hover {
     background-color: #136f66;
+    display: block;
 }
 
 .dropdown:hover .dropdown-content {
@@ -122,7 +124,6 @@ header {
 .dropdown:hover .dropbtn {
     background-color: #136f66;
 }
-
 
 /* Estilos para el botón de perfil */
 .perfil {
@@ -281,6 +282,74 @@ align-items: center;
     }
 }
 
+.titulo-modulos {
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  background: linear-gradient(180deg, #1D938A, #ffffff);
+  padding: 120px 20px 60px; /* Espaciado arriba para que no choque con header */
+  animation: fadeInColor 2s ease-in-out;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* ✨ Animación suave */
+@keyframes fadeInColor {
+  0% {
+    opacity: 0;
+    color: #ccc;
+  }
+  100% {
+    opacity: 1;
+    color: #ffffff;
+  }
+}
+
+
+.consejo-card {
+  background-color: #e8f9f7;
+  border-left: 6px solid #1d938a;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.consejo-descripcion {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.audio-player {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.video-vertical-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.video-vertical-wrapper video {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
 /* Estilos específicos para el módulo de Prevención de Lesiones */
 .modulo {
     background-color: #f8f9fa;
@@ -345,6 +414,32 @@ align-items: center;
     font-size: 25px;
     color: #333;
     max-width: 80%;
+}
+
+#examenBtn {
+  background-color: #1d938a;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 50px; /* Opcional para dar espacio */
+}
+
+#examenBtn:hover {
+  background-color: #136f66;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.contenedor-examen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ---------------- FOOTER PRINCIPAL ---------------- */

@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function cerrarSesion() {
         usuarios = usuarios.map(u => ({ ...u, userLogged: false }));
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
     }
 
     if (btnCerrarSesion) {
@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 usuarioLogueado.progreso1 = 100;
                 usuarioLogueado.progreso_modulos.modulo1 = 100;
                 console.log("🎉 ¡Progreso actualizado!");
+                window.location.href = "/vistas/perfil.html";
             } else {
                 alert("❌ No alcanzaste la puntuación mínima. Intenta nuevamente.");
                 console.log("😓 Examen no aprobado. No se actualizó el progreso.");

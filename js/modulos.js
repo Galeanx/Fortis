@@ -29,7 +29,7 @@ function cerrarSesion() {
         userLogged: false
     }));
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    window.location.href = "./index.html";
+    window.location.href = "../index.html";
 }
 
 document.addEventListener("DOMContentLoaded", verificarSesion);

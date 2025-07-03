@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function cerrarSesion() {
         usuarios = usuarios.map(u => ({ ...u, userLogged: false }));
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
     }
 
     if (btnCerrarSesion) {

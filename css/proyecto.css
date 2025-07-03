@@ -1,0 +1,325 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", system-ui;
+}
+
+ /* Estilos generales */
+header {
+  background-color: #1d938a;
+  padding: 15px 30px;
+}
+
+/* Logo */
+.logo img {
+  width: 140px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Evita espacios adicionales */
+  margin-left: 150px;
+}
+
+.navbar-nav {
+  gap: 30px; /* Ajuste de separación más visible entre botones */
+  margin-right: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+/* Animación de la línea en los enlaces, excepto en 'Ingresar' */
+.navbar-nav .nav-link:not(.ingresar)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0; /* Inicia invisible */
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:not(.ingresar, .logout):hover::after {
+  width: 40%; /* Línea más corta y menos agresiva */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px; /* Ajuste del padding */
+    font-size: 18px; /* Igual que los otros botones */
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex; 
+    align-items: center; /* Alinea el texto verticalmente */
+}
+
+.dropdown {
+  position: relative;
+  z-index: 999;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1d938a;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000; /* Asegura que se superponga */
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #136f66;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #136f66;
+}
+
+/* Estilos del botón 'Ingresar' */
+.ingresar {
+  background-color: white;
+  color: #1d938a !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.ingresar:hover {
+  color: #1d938a !important;
+  transform: scale(1.03); /* Aumento más sutil del tamaño */
+}
+
+/* Estilos para el botón de perfil */
+.perfil {
+display: flex;
+align-items: center;
+gap: 6px; /* Espacio entre el icono y el nombre */
+background-color: transparent;
+padding: 8px 12px;
+border-radius: 50px;
+transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.perfil i {
+font-size: 20px;
+color: white;
+}
+
+.perfil span {
+font-size: 16px;
+font-weight: bold;
+color: white;
+white-space: nowrap; /* Evita que el nombre se corte */
+}
+
+/* Ajuste en el navbar cuando el perfil aparece */
+#perfil-container {
+display: flex;
+align-items: center;
+}
+
+/* Banner de proyectos */
+.banner-proyectos {
+  background: linear-gradient(#1D938A, rgba(255, 255, 255, 0.6)), url('../sources/images/Todos.png') no-repeat center center;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.banner-proyectos h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.banner-proyectos p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Sección de tarjetas */
+.seccion-documentos {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.seccion-documentos h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #1d938a;
+  font-weight: bold;
+}
+
+.img-identidad {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+
+.tarjeta-proyecto {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.tarjeta-proyecto:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-proyecto h3 {
+  color: #1d938a;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.tarjeta-proyecto p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.btn-proyecto {
+  background-color: #1d938a;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+  display: inline-block;
+}
+
+.btn-proyecto:hover {
+  background-color: #136f66;
+  color: #fff;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .banner-proyectos h1 {
+    font-size: 2.2rem;
+  }
+  .banner-proyectos p {
+    font-size: 1rem;
+  }
+}
+
+.pie-pagina {
+  background-color: #1D938A;
+  color: white;
+  padding: 50px 30px 20px 30px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Contenedor general */
+.contenedor-footer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+}
+
+.btn-fortis {
+  background-color: #1d938a;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-fortis:hover {
+  background-color: #136f66;
+  transform: scale(1.05);
+  color: white;
+}
+
+/* ---------------- SECCIÓN LOGO Y DESCRIPCIÓN ---------------- */
+
+.footer-logo img {
+  max-width: 156px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.8;
+  max-width: 600px;
+  padding: 0 10px;
+}
+
+/* ---------------- COPYRIGHT ---------------- */
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  font-size: 0.9em;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 600px) {
+  .footer-logo img {
+    max-width: 120px; /* Reduce el logo en pantallas pequeñas */
+  }
+
+  .footer-logo p {
+    font-size: 0.95em;
+    padding: 0 5px;
+  }
+}
