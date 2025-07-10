@@ -85,12 +85,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (acumulado >= 3) {
-                alert("✅ ¡Examen aprobado!");
                 usuarioLogueado.progreso += 20;
                 usuarioLogueado.progreso1 = 100;
                 usuarioLogueado.progreso_modulos.modulo1 = 100;
                 console.log("🎉 ¡Progreso actualizado!");
-                window.location.href = "../vistas/perfil.html";
+                alert("✅ Examen completado. Serás redirigido a tu perfil.");
+                window.location.href = "../../vistas/perfil.html";
+
             } else {
                 alert("❌ No alcanzaste la puntuación mínima. Intenta nuevamente.");
                 console.log("😓 Examen no aprobado. No se actualizó el progreso.");
