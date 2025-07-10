@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 usuarioLogueado.progreso_modulos.modulo1 = 100;
                 console.log("🎉 ¡Progreso actualizado!");
                 alert("✅ Examen completado. Serás redirigido a tu perfil.");
-                window.location.href = "./../vistas/perfil.html";
+                window.location.href = "../vistas/perfil.html";
 
             } else {
                 alert("❌ No alcanzaste la puntuación mínima. Intenta nuevamente.");
