@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 usuarioLogueado.progreso_modulos.modulo4 = 100;
                 console.log("🎉 ¡Progreso actualizado!");
                 alert("✅ Examen completado. Serás redirigido a tu perfil.");
-                window.location.href = "../../vistas/perfil.html";
+                window.location.href = "./vistas/perfil.html";
             } else {
                 alert("❌ No alcanzaste la puntuación mínima. Intenta nuevamente.");
                 console.log("😓 Examen no aprobado. No se actualizó el progreso.");
