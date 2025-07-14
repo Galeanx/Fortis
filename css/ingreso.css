@@ -195,6 +195,45 @@ color: green;
 }
 }
 
+.popup {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-caja {
+  background: linear-gradient(to right, #1d938a, #1d9375, #29aa74, #29c785);
+  color: white;
+  padding: 60px 30px;
+  border-radius: 25px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Pop-C1 {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.img-pop2,
+.img-pop4 {
+  width: 100px;
+  margin-top: 20px;
+}
+
 /* ---------------- FOOTER PRINCIPAL ---------------- */
 
 .pie-pagina {
