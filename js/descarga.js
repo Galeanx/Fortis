@@ -11,5 +11,5 @@ document.getElementById("form-nombre").addEventListener("submit", function(e) {
     localStorage.setItem("nombreCertificado", nombre);
 
     // Redirigir a certificado.html
-    window.location.href = "../vistas/certificado.html"; // Ajusta ruta si es necesario
+    window.location.href = "./vistas/certificado.html"; // Ajusta ruta si es necesario
   });
