@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
           // Redirigir al hacer clic
           btnDescargar.addEventListener("click", () => {
-            window.location.href = "/vistas/descarga.html";
+            window.location.href = "./descarga.html";
           });
     
           return;
