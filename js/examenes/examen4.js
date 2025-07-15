@@ -85,22 +85,53 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            if (acumulado >= 3) {
-                usuarioLogueado.progreso += 20;
-                usuarioLogueado.progreso4 = 100;
-                usuarioLogueado.progreso_modulos.modulo4 = 100;
-                console.log("🎉 ¡Progreso actualizado!");
-                alert("✅ Examen completado. Serás redirigido a tu perfil.");
-                window.location.href = "../vistas/perfil.html";
-            } else {
-                alert("❌ No alcanzaste la puntuación mínima. Intenta nuevamente.");
-                console.log("😓 Examen no aprobado. No se actualizó el progreso.");
-            }
+// ✅ ACTUALIZACIÓN DEL PROGRESO + MODAL
+      const popup = document.getElementById("popup-examen");
+      const mensajePrincipal = document.getElementById("mensajePrincipal");
+      const mensajeSecundario = document.getElementById("mensajeSecundario");
+      const imagenPopupExito = document.getElementById("imagenPopupExito");
+      const imagenPopupError = document.getElementById("imagenPopupError");
+      const continuarBtnContainer = document.getElementById("continuarBtnContainer");
 
-            localStorage.setItem("usuarios", JSON.stringify(usuarios));
-            console.log(`🔎 Respuestas correctas: ${acumulado} de 5`);
-        });
-    }
+      if (acumulado >= 3) {
+        usuarioLogueado.progreso += 20;
+        usuarioLogueado.progreso4 = 100;
+        usuarioLogueado.progreso_modulos.modulo4 = 100;
 
-    verificarSesion();
+        // 🔄 Reemplazar en el array original
+        const index = usuarios.findIndex(u => u.userNU === usuarioLogueado.userNU);
+        if (index !== -1) {
+          usuarios[index] = usuarioLogueado;
+        }
+
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+        popup.style.display = "flex";
+        mensajePrincipal.textContent = "¡Examen aprobado!";
+        mensajeSecundario.textContent = `Tu puntaje es ${acumulado} de 5`;
+        imagenPopupExito.style.display = "block";
+        imagenPopupError.style.display = "none";
+        continuarBtnContainer.style.display = "block";
+
+      } else {
+        popup.style.display = "flex";
+        mensajePrincipal.textContent = "Debes repetir el examen";
+        mensajeSecundario.textContent = `Tu puntaje es ${acumulado} de 5`;
+        imagenPopupExito.style.display = "none";
+        imagenPopupError.style.display = "block";
+        continuarBtnContainer.style.display = "none";
+      }
+
+      // 🔘 Botones
+      document.getElementById("cerrarPopup").addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+
+      document.getElementById("irPerfilBtn").addEventListener("click", () => {
+        window.location.href = "../vistas/perfil.html";
+      });
+    });
+  }
+
+  verificarSesion(); // ⚠️ NUNCA eliminar esta llamada
 });

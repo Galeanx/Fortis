@@ -1,130 +1,72 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
 }
 
-.certificado-container {
-    width: 100%;
-    max-width: 1000px;
-    background-color: #fff;
-    border: 10px solid #1d938a;
-    padding: 40px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+.container1 {
+  max-width: 1000px;
+  width: 100%;
 }
 
-.certificado-header {
-    text-align: center;
-    margin-bottom: 30px;
+.certificate {
+  background: white;
+  padding: 60px;
+  border: 10px solid #1d938a;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.certificado-header .logo {
-    width: 300px;
-    margin-bottom: 20px;
+.titulo .tit1 {
+  color: #1d938a;
+  font-size: 3rem;
+  margin-bottom: 0;
 }
 
-.certificado-header h1 {
-    font-size: 2.5rem;
-    color: #1d938a;
-    margin: 0;
+.titulo .tit2 {
+  font-size: 1.8rem;
+  margin-top: 0;
 }
 
-.certificado-body {
-    text-align: center;
-    margin: 30px 0;
+.otor1 {
+  margin-top: 20px;  
+  margin-bottom: 40px; /* Menor espacio hacia otor2 */
 }
 
-.certificado-body .linea {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+.otor2 {
+  margin-bottom: 0px; /* Mayor espacio hacia otor3 */
 }
 
-.nombre-estudiante {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #000;
-    margin: 15px 0;
+.texto .tex1 {
+  font-size: 1.1rem;
+  margin: 30px 0;
 }
 
-.nombre-curso {
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-top: 10px;
-    color: #1d938a;
+.firmas {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
-.descripcion-curso,
-.fecha-completion {
-    font-size: 1rem;
-    margin-top: 8px;
-}
-.certificado-footer {
-    display: flex;
-    justify-content: center; /* ✅ Centra horizontalmente las firmas */
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
-    text-align: center;
+.firm1 {
+  width: 80px;
+  margin-bottom: 10px;
 }
 
-.firma-seccion {
-    flex: 1 1 30%;
-    min-width: 220px;
+.firm3 {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-.firma-linea {
-    margin-bottom: 5px;
+.logo-certificado {
+  margin-top: 30px;
 }
 
-.firma-nombre {
-    font-weight: bold;
-}
-
-.firma-titulo {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.id-seccion {
-    width: 100%;
-    margin-top: 40px;
-    text-align: center; /* ✅ Centrado en todos los tamaños */
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #555;
-    border-top: 1px solid #ccc;
-    padding-top: 12px;
-}
-
-
-/* 📱 Responsive */
-@media (max-width: 768px) {
-    .certificado-footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .firma-seccion {
-        flex: 1 1 100%;
-        margin: 10px 0;
-    }
-
-    .id-seccion {
-        text-align: center;
-    }
+.logo-img {
+  width: 200px;
 }
 
 .btn-descargar {

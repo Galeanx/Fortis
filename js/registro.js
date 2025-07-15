@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       cerrarPopup('popup-exito');
       window.location.href = "../vistas/ingreso.html";
-    }, 5000);
+    }, 3000);
   });
 });
 

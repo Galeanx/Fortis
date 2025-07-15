@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       mostrarPopup("popup-bienvenida");
 
-      // Redirige a index después de 2.5 segundos
+      // Redirige a index después de 3 segundos
       setTimeout(() => {
         cerrarPopup("popup-bienvenida");
         window.location.href = "../index.html";
-      }, 2500);
+      }, 3000);
     } else {
       mostrarPopup("popup-error-login");
       formulario.reset();

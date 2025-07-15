@@ -20,37 +20,39 @@ header {
   margin-left: 150px;
 }
 
-.navbar-nav {
-  gap: 30px; /* Ajuste de separación más visible entre botones */
-  margin-right: 70px;
-}
-
-.navbar-nav .nav-link {
-  color: white;
-  font-size: 18px;
-  position: relative;
-  padding-bottom: 5px;
-  transition: color 0.3s;
-}
-
-/* Animación de la línea en los enlaces, excepto en 'Ingresar' */
-.navbar-nav .nav-link:not(.ingresar)::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0; /* Inicia invisible */
-  height: 2px;
-  background: white;
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-  transform: translateX(-50%);
-}
-
-.navbar-nav .nav-link:not(.ingresar):hover::after {
-  width: 40%; /* Línea más corta y menos agresiva */
-  left: 50%;
-  transform: translateX(-50%);
-}
+  .navbar-nav {
+    gap: 30px; /* Ajuste de separación más visible entre botones */
+    margin-right: 70px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+  }
+  
+  /* Animación de la línea en los enlaces, excepto en 'Ingresar' */
+  .navbar-nav .nav-link:not(.ingresar)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0; /* Inicia invisible */
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-nav .nav-link:not(.ingresar, .logout):hover::after {
+    width: 40%; /* Línea más corta y menos agresiva */
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
 /* Estilos del botón 'Ingresar' */
 .ingresar {
